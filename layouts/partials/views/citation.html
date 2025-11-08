@@ -1,0 +1,66 @@
+{{ $item := .item }}
+{{ $index := .index }}
+{{ $has_attachments := partial "functions/has_attachments" $item }}
+
+<div class="pub-list-item view-citation" style="margin-bottom: 1rem; position: relative; padding-left: 1.8rem;">
+  {{/* 顺序编号（悬挂在左侧） */}}
+  <span class="pub-number" style="position: absolute; left: 0; top: 0; font-weight: 600;">[{{ add $index 1 }}]</span>
+
+  {{/* 文献内容区域（两端对齐，最后一行左对齐） */}}
+  <div style="text-align: justify; text-align-last: left;">
+    {{/* 自定义样式（基于 APA，但有修改） */}}
+    {{/* 作者 */}}
+  {{ $authors := partial "page_metadata_authors" $item }}
+  {{ if $authors }}
+  <span class="article-metadata li-cite-author">
+    {{ $authors }}
+  </span>,
+  {{ end }}
+
+  {{/* 标题（加引号） */}}
+  <a href="{{ $item.RelPermalink }}" class="underline">"{{ $item.Title }}"</a>
+
+  {{/* 期刊/会议名称（斜体）：显示为"期刊全称(简写)"；若缺少其中一项则退回到存在的项 */}}
+  {{ $pub := $item.Params.publication }}
+  {{ $short := $item.Params.publication_short }}
+  {{ if or $pub $short }}
+    ,{{ if and $pub $short }}
+    <em>{{ $pub | markdownify }} ({{ $short | markdownify }})</em>
+    {{ else if $pub }}
+    <em>{{ $pub | markdownify }}</em>
+    {{ else if $short }}
+    <em>{{ $short | markdownify }}</em>
+    {{ end }}
+  {{ end }}
+
+  {{/* 日期（仅在有效日期时显示） */}}
+  {{ $year := $item.Date.Format "2006" }}
+  {{ if and $year (ne $year "0001") }}
+    , {{ $year }}
+  {{ end }}
+
+  {{/* Status（如果存在则加粗显示在最后） */}}
+  {{ with $item.Params.status }}
+    , <strong>{{ . }}</strong>
+  {{ end }}.
+
+  {{/* Cite/DOI 链接 */}}
+  {{ if $has_attachments }}
+  <div class="flex flex-wrap space-x-3 pub-links-hover">
+    {{ partial "page_links" (dict "page" $item "is_list" 1) }}
+  </div>
+  {{ end }}
+  </div>{{/* 结束文献内容区域 */}}
+
+</div>
+
+<style>
+/* Citation View 自定义样式 */
+.pub-links-hover a {
+  text-decoration: none;
+}
+
+.pub-links-hover a:hover {
+  text-decoration: underline;
+}
+</style>

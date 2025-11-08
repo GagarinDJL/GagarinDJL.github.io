@@ -1,0 +1,112 @@
+{{/* Hugo Blox Builder - Resume Biography Education View
+     这个文件会覆盖主题默认的 education 渲染
+     用于 resume-biography-3 block
+*/}}
+{{ $person := "" }}
+{{ if .username }}
+  {{ $person = site.GetPage (printf "/authors/%s" .username) }}
+{{ else }}
+  {{ $person = site.GetPage "/authors/admin/_index.md" }}
+{{ end }}
+
+{{ $education := $person.Params.education }}
+
+{{/* Education Section */}}
+{{ if $education }}
+<div class="space-y-4">
+  <ol class="relative w-full border-s border-gray-200 dark:border-gray-700 education-timeline">
+    {{ range $education }}
+    <li class="mb-10 ms-6 education-item">
+      <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"></path></svg>
+      </span>
+      
+      {{/* 标题 - 最大 */}}
+      <h3 class="education-title">
+        {{ .area }}
+      </h3>
+      
+      {{/* 机构 - 第二大，深灰色 */}}
+      <span class="education-institution">
+        {{- if .institution_url -}}
+          <a href="{{ .institution_url }}" target="_blank" rel="noopener">
+            {{ .institution }}
+          </a>
+        {{- else -}}
+          {{ .institution }}
+        {{- end -}}
+      </span>
+      
+      {{/* 日期 - 第二大，深灰色 */}}
+      {{ if or .date_start .date_end }}
+      <time class="education-date">
+        {{ if .date_start }}
+          {{ dateFormat "January 2006" .date_start }} –
+        {{ end }}
+        {{ if .date_end }}
+          {{ if .expected }}<span class="expected-badge">Expected</span> {{ end }}{{ dateFormat "January 2006" .date_end }}
+        {{ else }}
+          Present
+        {{ end }}
+      </time>
+      {{ end }}
+
+      {{/* 导师 - 第二大，深灰色 */}}
+      {{ $advisors := .advisors }}
+      {{ with $advisors }}
+      {{ $count := len . }}
+      <div class="education-advisors">
+        <span>{{ if gt $count 1 }}Advisors{{ else }}Advisor{{ end }}: </span>
+        {{ range $index, $advisor := . }}
+          {{ if gt $index 0 }}, {{ end }}
+          {{ if $advisor.url }}
+            <a href="{{ $advisor.url }}" target="_blank" rel="noopener">{{ $advisor.name }}</a>
+          {{ else }}
+            <span>{{ $advisor.name }}</span>
+          {{ end }}
+          {{ with $advisor.affiliation }} ({{ . }}){{ end }}
+        {{ end }}
+      </div>
+      {{ end }}
+      
+      {{/* 描述 - 第三大或与第二大一样 */}}
+      {{ $isHome := $.Page.IsHome }}
+      {{ $homeSummary := .summary_home }}
+      {{ $fullSummary := .summary }}
+      
+      {{ if $isHome }}
+        {{/* 首页模式：简短摘要 */}}
+        {{ if $homeSummary }}
+        <div class="prose prose-sm max-w-none dark:prose-invert">
+          {{ $homeSummary | markdownify }}
+        </div>
+        {{ else if $fullSummary }}
+        <div class="prose prose-sm max-w-none dark:prose-invert">
+          {{ $fullSummary | markdownify }}
+        </div>
+        {{ end }}
+      {{ else }}
+        {{/* 详情页模式：直接显示完整内容 */}}
+        {{ if $fullSummary }}
+        <div class="prose prose-sm max-w-none dark:prose-invert">
+          {{ $fullSummary | markdownify }}
+        </div>
+        {{ end }}
+      {{ end }}
+    </li>
+    {{ end }}
+  </ol>
+</div>
+{{ end }}
+
+{{ if $.Page.IsHome }}
+{{/* 首页底部添加查看详情链接 */}}
+<div class="mt-6 text-center">
+  <a href="/education/" class="inline-flex items-center px-4 py-2 text-sm font-medium text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 bg-primary-50 hover:bg-primary-100 dark:bg-primary-900/20 dark:hover:bg-primary-900/30 rounded-lg transition-all duration-200 border border-primary-200 dark:border-primary-800">
+    <span>查看完整教育背景</span>
+    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+    </svg>
+  </a>
+</div>
+{{ end }}
