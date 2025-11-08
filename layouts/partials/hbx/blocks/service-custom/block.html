@@ -1,0 +1,168 @@
+{{/* Hugo Blox: Service Custom Block */}}
+{{/* Based on service shortcode with collapsible homepage view */}}
+
+{{ $block := .wcBlock }}
+{{ $page := .wcPage }}
+
+{{ $author := $block.content.username | default "admin" }}
+{{ $person_page_path := (printf "/authors/%s" $author) }}
+{{ $person_page := site.GetPage $person_page_path }}
+{{ if not $person_page }}
+  {{ errorf "Could not find author page at `%s`" $person_page_path }}
+{{ end }}
+{{ $person := $person_page.Params }}
+{{ $service := $person.service }}
+{{ $isHomepage := $page.IsHome }}
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6">
+
+{{ with $block.content.title }}
+  <div class="home-section-heading">{{ . }}</div>
+{{ end }}
+
+{{ if $service }}
+<div class="service-container w-full" id="service">
+  {{ range $service }}
+    {{ $categoryHasItems := false }}
+    {{ range .items }}
+      {{ if $isHomepage }}
+        {{ if .show_on_homepage }}
+          {{ $categoryHasItems = true }}
+        {{ end }}
+      {{ else }}
+        {{ $categoryHasItems = true }}
+      {{ end }}
+    {{ end }}
+    
+    {{ if $categoryHasItems }}
+    <div class="service-section mb-8">
+      <h3 class="service-subtitle text-center text-[1.35rem] font-bold mt-8 mb-6 text-gray-800 dark:text-gray-50 first:mt-2">{{ .category }}</h3>
+      {{ range .items }}
+        {{ $showItem := true }}
+        {{ if $isHomepage }}
+          {{ $showItem = .show_on_homepage }}
+        {{ end }}
+        
+        {{ if $showItem }}
+        <div class="service-item mb-6 pl-6 relative border-l-2 border-gray-300 dark:border-gray-600 py-1 transition-colors duration-300 hover:border-blue-400">
+          <div class="service-title text-[1.1rem] font-semibold text-gray-900 dark:text-gray-100 mb-1">{{ .position }}</div>
+          <div class="service-org text-[0.95rem] text-gray-600 dark:text-gray-300 mb-1">{{ .institution }}</div>
+          {{ if .date_start }}
+            <div class="service-date text-sm text-gray-400 dark:text-gray-500 italic mb-2">
+              {{ $start := time.AsTime .date_start }}
+              {{ $end := "" }}
+              {{ if .date_end }}
+                {{ $end = time.AsTime .date_end }}
+              {{ end }}
+              {{ $start.Format "2006" }}–{{ if $end }}{{ $end.Format "2006" }}{{ else }}Present{{ end }}
+            </div>
+          {{ end }}
+          {{ with .summary }}
+            <div class="service-desc text-[0.925rem] text-gray-700 dark:text-gray-200 leading-relaxed">{{ . | markdownify }}</div>
+          {{ end }}
+        </div>
+        {{ end }}
+      {{ end }}
+    </div>
+    {{ end }}
+  {{ end }}
+  
+  {{/* View All Service link for homepage */}}
+  {{ if $isHomepage }}
+  <div class="mt-6 text-center w-full">
+    <a href="/service/" class="inline-flex items-center text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-medium transition-colors duration-200">
+      <span>View All Service</span>
+      <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </a>
+  </div>
+  {{ end }}
+</div>
+{{ end }}
+
+</div>
+
+<style>
+/* ========================================
+   Service Custom Block - 专属样式
+   仅保留Tailwind无法实现的复杂样式
+   ======================================== */
+
+/* ========================================
+   首页 Service 板块样式 - 折叠面板设计
+   使用 #author-bio 的存在来判断是首页
+   ======================================== */
+
+/* 首页的service容器 - 只在有#author-bio的页面生效（即首页） */
+#author-bio ~ section #service .service-item,
+.landing-page section:has(~ #author-bio) #service .service-item,
+body:has(#author-bio) #service .service-item {
+	cursor: pointer !important;
+	padding: 0.75rem 0.75rem 0.75rem 1.5rem !important;
+	border-radius: 0.5rem !important;
+	transition: all 0.3s ease !important;
+	background: transparent !important;
+}
+
+/* 悬停效果增强 */
+body:has(#author-bio) #service .service-item:hover {
+	background: rgba(59, 130, 246, 0.05) !important;
+	border-left-color: rgba(59, 130, 246, 0.5) !important;
+}
+
+/* 首页：职位标题添加展开图标（使用伪元素） */
+body:has(#author-bio) #service .service-title {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+	font-size: 1.05rem !important;
+}
+
+body:has(#author-bio) #service .service-title::after {
+	content: '▼' !important;
+	font-size: 0.75rem !important;
+	color: #d1d5db !important;
+	transition: all 0.3s ease !important;
+	margin-left: 0.5rem !important;
+}
+
+/* 首页：机构名称始终显示但样式更紧凑 */
+body:has(#author-bio) #service .service-org {
+	font-size: 0.875rem !important;
+	color: #9ca3af !important;
+	margin-bottom: 0 !important;
+}
+
+/* 首页：默认隐藏日期和描述（使用复杂的状态管理） */
+body:has(#author-bio) #service .service-date,
+body:has(#author-bio) #service .service-desc {
+	max-height: 0 !important;
+	overflow: hidden !important;
+	opacity: 0 !important;
+	transition: all 0.3s ease !important;
+	margin-bottom: 0 !important;
+}
+
+/* 首页：展开状态 - 使用:hover */
+body:has(#author-bio) #service .service-item:hover .service-date,
+body:has(#author-bio) #service .service-item:hover .service-desc {
+	max-height: 500px !important;
+	opacity: 1 !important;
+	margin-top: 0.5rem !important;
+	margin-bottom: 0.25rem !important;
+}
+
+/* 首页：展开时图标旋转 */
+body:has(#author-bio) #service .service-item:hover .service-title::after {
+	transform: rotate(180deg) !important;
+	color: rgba(59, 130, 246, 0.8) !important;
+}
+
+/* 首页暗色模式 */
+@media (prefers-color-scheme: dark) {
+	body:has(#author-bio) #service .service-item:hover {
+		background: rgba(59, 130, 246, 0.1) !important;
+	}
+}
+</style>

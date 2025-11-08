@@ -1,0 +1,96 @@
+{{/* Hugo Blox: Contact Block */}}
+{{/* Custom contact section with email, links, and status */}}
+
+{{ $block := .wcBlock }}
+{{ $page := .wcPage }}
+
+{{ $author := $block.content.username | default "admin" }}
+{{ $person_page_path := (printf "/authors/%s" $author) }}
+{{ $person_page := site.GetPage $person_page_path }}
+{{ if not $person_page }}
+  {{ errorf "Could not find author page at `%s`" $person_page_path }}
+{{ end }}
+{{ $person := $person_page.Params }}
+
+<div class="flex flex-col items-center max-w-2xl mx-auto gap-6 px-6">
+  {{ with $block.content.title }}
+    <div class="home-section-heading">{{ . }}</div>
+  {{ end }}
+
+  <!-- Email and Links from profiles -->
+  {{ with $person.profiles }}
+  <div class="w-full text-center space-y-3">
+    {{ $email := "" }}
+    {{ $links := slice }}
+    
+    {{/* Separate email from other links */}}
+    {{ range . }}
+      {{ if hasPrefix .url "mailto:" }}
+        {{ $email = strings.TrimPrefix "mailto:" .url }}
+      {{ else }}
+        {{ $links = $links | append . }}
+      {{ end }}
+    {{ end }}
+    
+    {{/* Display Email */}}
+    {{ with $email }}
+    <div class="text-base">
+      <strong>Email:</strong> 
+      <a href="mailto:{{ . }}" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+        {{ . }}
+      </a>
+    </div>
+    {{ end }}
+    
+    {{/* Display Preferred Name */}}
+    {{ with $person.alternateName }}
+    <div class="text-base text-gray-800 dark:text-gray-200 italic">
+      <strong>Preferred name:</strong> {{ . }}
+    </div>
+    {{ end }}
+
+    {{/* Display Links */}}
+    {{ if $links }}
+    <div class="text-base">
+      <strong>Links:</strong>
+      {{ range $i, $link := $links }}
+        {{ if gt $i 0 }}
+          <span class="text-gray-400 dark:text-gray-600"> · </span>
+        {{ end }}
+        {{ $displayName := .label }}
+        {{ if not $displayName }}
+          {{ if eq .icon "academicons/google-scholar" }}
+            {{ $displayName = "Google Scholar" }}
+          {{ else if eq .icon "brands/github" }}
+            {{ $displayName = "GitHub" }}
+          {{ else if eq .icon "academicons/orcid" }}
+            {{ $displayName = "ORCID" }}
+          {{ else }}
+            {{ $displayName = .icon }}
+          {{ end }}
+        {{ end }}
+        <a href="{{ .url }}" 
+           target="_blank" rel="noopener noreferrer"
+           class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
+          {{ $displayName }}
+        </a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <!-- Status Information -->
+  {{ with $block.content.status }}
+  <div class="flex justify-center items-center gap-8 mt-6 text-sm text-gray-600 dark:text-gray-400 flex-wrap w-full">
+    {{ range . }}
+    <span class="flex items-center gap-1">
+      {{ with .icon }}
+        {{ partial "functions/get_icon" (dict "name" . "attributes" "class=\"w-4 h-4 flex-shrink-0\"") }}
+      {{ end }}
+      <span>{{ .text }}</span>
+    </span>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>

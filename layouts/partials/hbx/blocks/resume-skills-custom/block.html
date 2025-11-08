@@ -1,0 +1,58 @@
+{{/* Hugo Blox: Skills - Custom Version */}}
+{{/* Documentation: https://hugoblox.com/blocks/ */}}
+{{/* License: https://github.com/HugoBlox/hugo-blox-builder/blob/main/LICENSE.md */}}
+
+{{/* Initialise */}}
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $author := $block.content.username | default "admin" }}
+
+{{ $person_page_path := (printf "/authors/%s" $author) }}
+{{ $person_page := site.GetPage $person_page_path }}
+{{ if not $person_page }}
+{{ errorf "Could not find an author page at `%s`. Please check the value of `author` in your Skill block and create an associated author page if one does not already exist. See https://docs.hugoblox.com/page-builder/#about " $person_page_path }}
+{{end}}
+{{ $skills := $person_page.Params.skills }}
+
+<div class="flex flex-col items-center max-w-4xl mx-auto gap-3 justify-center">
+  <div class="mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
+    {{ $block.content.title | markdownify | emojify }}
+  </div>
+
+  {{ with $block.content.text }}<p>{{ . | markdownify | emojify }}</p>{{ end }}
+</div>
+
+{{/* Courses I can teach (chips) - fall back to block or site params if author page missing */}}
+{{ $courses_raw := or $person_page.Params.courses_can_teach $block.content.courses_can_teach site.Params.courses_can_teach }}
+{{ with $courses_raw }}
+  {{ $courses_clean := replaceRE "\\s*·\\s*" "·" . }}
+  <div class="max-w-4xl mx-auto mt-6 mb-6 px-6 md:px-0">
+    <h3 class="text-base font-semibold text-gray-900 dark:text-white mb-2">Courses I can teach</h3>
+    {{ $courses_display := replace $courses_clean "·" " · " }}
+    <p class="text-base text-gray-700 dark:text-gray-300">{{ $courses_display | plainify }}</p>
+  </div>
+{{ end }}
+{{ $columns := 2 }}
+<div class="grid grid-cols-1 md:grid-cols-2 items-start max-w-4xl mx-auto gap-6 px-6 md:px-0">
+  {{ range $skills }}
+  
+  <div class="w-full rounded-2xl border border-gray-200/70 dark:border-gray-700/60 bg-white/60 dark:bg-gray-900/40 p-5">
+    <div class="mb-3 text-lg font-semibold text-gray-900 dark:text-white tracking-tight">
+      {{ .name | markdownify | emojify }}
+      {{ with .description }}<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">{{ . | markdownify | emojify }}</p>{{ end }}
+    </div>
+    <ul class="list-none pl-0 space-y-1.5 leading-6 text-[15px] text-gray-700 dark:text-gray-300">
+      {{ range .items }}
+        <li class="flex items-center gap-3">
+          {{ with .icon }}
+            <span class="flex-shrink-0 flex items-center justify-center w-5 h-5 text-gray-600 dark:text-gray-400">
+              {{ partial "functions/get_icon" (dict "name" . "attributes" "class='w-4 h-4'") }}
+            </span>
+          {{ end }}
+          <span class="flex-1">{{ .name | markdownify | emojify }}</span>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}
+</div>

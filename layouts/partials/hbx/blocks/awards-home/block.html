@@ -1,0 +1,104 @@
+{{/* Hugo Blox: Awards Home Block */}}
+{{/* Homepage view: displays awards in two columns */}}
+
+{{ $block := .wcBlock }}
+{{ $page := .wcPage }}
+
+{{ $author := $block.content.username | default "admin" }}
+{{ $person_page_path := (printf "/authors/%s" $author) }}
+{{ $person_page := site.GetPage $person_page_path }}
+{{ if not $person_page }}
+  {{ errorf "Could not find author page at `%s`" $person_page_path }}
+{{ end }}
+{{ $person := $person_page.Params }}
+{{ $awards := $person.awards }}
+
+<div class="flex flex-col items-center max-w-6xl mx-auto gap-3 justify-center px-6">
+
+{{ with $block.content.title }}
+  <div class="home-section-heading">{{ . }}</div>
+{{ end }}
+
+{{ if $awards }}
+<div class="awards-container w-full">
+  {{/* Homepage: only show titles in two columns */}}
+  {{ $homepageAwards := slice }}
+  {{ range $awards }}
+    {{ if .show_on_homepage }}
+      {{ $homepageAwards = $homepageAwards | append . }}
+    {{ end }}
+  {{ end }}
+  
+  {{/* Sort by order field */}}
+  {{ $sortedAwards := slice }}
+  {{ range seq 1 200 }}
+    {{ $currentOrder := . }}
+    {{ range $homepageAwards }}
+      {{ if eq .order $currentOrder }}
+        {{ $sortedAwards = $sortedAwards | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  
+  {{ if $sortedAwards }}
+  <div class="awards-two-columns w-full flex justify-center">
+    <ul class="list-none p-0 m-0 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 w-full max-w-4xl">
+      {{ range $sortedAwards }}
+      <li class="block">
+        <div class="awards-item-wrapper flex items-start gap-3 p-3 rounded-lg transition-all duration-200 hover:bg-gray-50 dark:hover:bg-gray-800/20">
+          {{/* Award Icon */}}
+          {{ if .icon }}
+          <div class="awards-icon flex-shrink-0 mt-0.5 w-6 h-6 text-gray-500 dark:text-gray-400 flex-shrink-0">
+            {{ partial "functions/get_icon" (dict "name" .icon "attributes" "class=\"w-6 h-6\"")  }}
+          </div>
+          {{ end }}
+          {{/* Award Title */}}
+          <span class="awards-item-text flex-1 text-left leading-[1.5] text-[1.05rem] font-medium text-gray-800 dark:text-gray-200">
+            {{ if .homepage_title }}{{ .homepage_title }}{{ else }}{{ .title }}{{ end }}
+          </span>
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  
+  <div class="awards-view-all mt-6 text-center w-full">
+    <a href="/awards/" class="inline-flex items-center text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-medium transition-colors duration-200 text-base">
+      <span>View All Awards & Honors</span>
+      <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </a>
+  </div>
+  {{ end }}
+</div>
+{{ end }}
+
+</div>
+
+<style>
+/* ========================================
+   Awards Custom Block - 专属样式
+   浅蓝色主题，简约风格
+   ======================================== */
+
+/* "View All" 按钮移除下划线 */
+#awards .awards-view-all a {
+    text-decoration: none !important;
+}
+#awards .awards-view-all a:hover {
+    text-decoration: none !important;
+}
+
+/* 悬停时图标颜色变深 - 浅蓝色系 */
+.awards-item-wrapper:hover .awards-icon svg {
+    color: #3b82f6 !important;
+    transition: color 0.2s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+    .awards-item-wrapper:hover .awards-icon svg {
+        color: #60a5fa !important;
+    }
+}
+</style>
