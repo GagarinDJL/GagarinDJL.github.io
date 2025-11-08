@@ -29,6 +29,12 @@ tags:
 - Source Themes
 featured: false
 
+draft: true
+build:
+  render: never
+  list: never
+  publishResources: false
+
 hugoblox:
   ids:
     arxiv: 1512.04133v1
