@@ -1,0 +1,65 @@
+{{/* Projects Home Block - 首页项目展示 */}}
+{{/* 数据来源: _index.md 的 content.projects */}}
+
+{{ $block := .wcBlock }}
+{{ $page := .wcPage }}
+
+<div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6 md:px-0">
+  {{ with $block.content.title }}
+    <div class="home-section-heading mb-10 md:mb-12 text-3xl font-bold text-gray-900 dark:text-white">
+      {{ . | emojify | $page.RenderString }}
+    </div>
+    {{ with $block.content.subtitle }}
+      <div class="text-base md:text-lg text-gray-600 dark:text-gray-400 mb-4 max-w-prose text-center">
+        {{ . | emojify | $page.RenderString }}
+      </div>
+    {{ end }}
+  {{ end }}
+</div>
+
+<div class="flex flex-col items-center px-6">
+  <div class="max-w-3xl w-full space-y-4 mt-6 md:mt-8">
+    {{ range $block.content.projects }}
+      <div class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 hover:shadow-md transition-shadow">
+        
+        {{/* 项目标题 */}}
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+          {{ .title }}
+        </h3>
+        
+        {{/* 角色、机构、时间 */}}
+        <div class="flex flex-wrap gap-x-3 gap-y-1 text-sm text-gray-600 dark:text-gray-400 mb-3">
+          {{ with .role }}
+            <span class="font-medium text-gray-700 dark:text-gray-300">{{ . }}</span>
+          {{ end }}
+          {{ with .institution }}
+            <span>{{ . }}</span>
+          {{ end }}
+          {{ with .period }}
+            <span class="text-gray-500 dark:text-gray-500">({{ . }})</span>
+          {{ end }}
+        </div>
+        
+        {{/* 产出描述 */}}
+        {{ with .description }}
+          <p class="text-gray-700 dark:text-gray-300 text-justify leading-relaxed">
+            {{ . | markdownify }}
+          </p>
+        {{ end }}
+        
+      </div>
+    {{ end }}
+  </div>
+</div>
+
+<style>
+/* Projects Home Block 样式 */
+.home-section-heading {
+  text-align: center;
+}
+
+/* 确保产品描述的 markdownify 输出没有额外的 margin */
+#section-projects p {
+  margin: 0;
+}
+</style>

@@ -1,0 +1,242 @@
+{{/*
+  education-custom/block.html
+  复制自 Hugo Blox 模块缓存中 resume-experience 的 education 部分
+  来源示例路径（模块缓存）:
+  ~/Library/Caches/hugo_cache/modules/.../blox/resume-experience/block.html
+  目的：保留主题原始渲染逻辑，便于安全定制
+*/}}
+
+{{/* Hugo Blox: Education (extracted from resume-experience) */}}
+
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $text := $block.content.text | emojify | $page.RenderString }}
+
+{{ $author := $block.content.username | default "admin" }}
+{{ $person_page_path := (printf "/authors/%s" $author) }}
+{{ $person_page := site.GetPage $person_page_path }}
+{{ if not $person_page }}
+  {{ errorf "Could not find an author page at `%s`. Please check the value of `author` in your block and create an associated author page if missing." $person_page_path }}
+{{ end }}
+{{ $person := $person_page.Params }}
+
+{{ if $person.education }}
+  <div class="education-custom-container px-4 sm:px-6 lg:px-8">
+    <h3 class="mb-6 text-3xl font-bold text-gray-900 dark:text-white text-center">{{ i18n "education" }}</h3>
+    {{ with $block.content.description }}
+    <p class="text-center text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
+      {{ . }}
+    </p>
+    {{ end }}
+    <ol class="relative w-full max-w-3xl mx-auto border-s border-gray-200 dark:border-gray-700 education-timeline">
+      {{ range $idx, $key := $person.education }}
+      <li class="mb-10 ms-6 education-item">
+        <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"></path></svg>
+        </span>
+        <h3 class="flex items-center mb-1 text-lg font-semibold leading-7 text-gray-900 dark:text-white">{{.area}}</h3>
+        <span class="block mb-2 text-base font-medium leading-none text-gray-600 dark:text-gray-400">
+          {{ if .institution_url }}
+            <a href="{{.institution_url}}" target="_blank" rel="noopener" class="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">{{.institution}}</a>
+          {{ else }}
+            {{.institution}}
+          {{ end }}
+        </span>
+        <time class="block mb-2 text-base font-medium leading-none text-gray-600 dark:text-gray-400">
+          {{ if .date_start }}
+            {{ (time .date_start) | time.Format ($block.design.date_format | default "January 2006") }} –
+          {{ end }}
+          {{ if .date_end}}
+            {{ if .expected }}<span class="inline text-base font-medium text-gray-600 dark:text-gray-400 mr-1">Expected</span> {{ end }}{{ (time .date_end) | time.Format ($block.design.date_format | default "January 2006") }}
+          {{else}}
+            {{ i18n "present" | default "Present" }}
+          {{end}}
+        </time>
+
+        {{ if .advisors }}
+        <div class="block text-base -mt-1 mb-1.5 education-advisors">
+          <span class="text-base font-medium text-gray-600 dark:text-gray-400">Advisors: </span>
+          {{ range $i, $advisor := .advisors }}
+            {{ if $i }}, {{ end }}
+            {{ if $advisor.url }}
+              <a href="{{ $advisor.url }}" target="_blank" rel="noopener" class="education-advisor-link text-base font-medium text-gray-600 dark:text-gray-400 underline underline-offset-2 cursor-pointer hover:text-blue-600 dark:hover:text-blue-400">{{ $advisor.name }}</a>
+            {{ else }}
+              <span class="text-base text-gray-600 dark:text-gray-400">{{ $advisor.name }}</span>
+            {{ end }}
+          {{ end }}
+        </div>
+        {{ end }}
+
+        <div class="mt-0 mb-4 text-base font-normal text-gray-500 dark:text-gray-300 prose max-w-none prose-slate dark:prose-invert">{{.summary | $page.RenderString}}</div>
+
+        {{ with .button }}
+        <a href="{{.url}}" target="_blank" rel="noopener" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg transition-colors hover:bg-gray-100 hover:text-gray-900 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-gray-900 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:text-white dark:focus:ring-gray-700"><svg class="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z"/>
+          <path d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
+        </svg> {{.text}}</a>
+        {{ end }}
+
+      </li>
+      {{ end }}
+    </ol>
+  </div>
+{{ end }}
+
+<style>
+/* ========================================
+   Education Custom Block - 专属样式
+   仅保留必需的复杂样式（伪元素、复杂选择器、动画）
+   ======================================== */
+
+/* Container - 保留最大宽度和居中 */
+.education-custom-container {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+/* Timeline 宽度控制 - 90% */
+.education-timeline {
+	width: 90%;
+}
+
+/* Advisor 链接箭头伪元素 - 必须保留 */
+.education-advisor-link::after {
+	content: "↗";
+	display: inline-block;
+	margin-left: 0.25rem;
+	font-size: 0.8rem;
+	vertical-align: text-top;
+	color: currentColor;
+}
+
+/* 首页 - 悬停展开效果（复杂交互，必须保留） */
+.education-item-homepage {
+	position: relative;
+	padding: 0;
+	padding-left: 1.5rem;
+	margin-left: -0.5rem;
+	margin-right: 0;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.education-item-homepage:hover {
+	background-color: rgba(243, 244, 246, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+	.education-item-homepage:hover {
+		background-color: rgba(55, 65, 81, 0.3);
+	}
+}
+
+/* 折叠内容动画 - 必须保留 */
+.education-item-homepage .education-collapsible {
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+.education-item-homepage:hover .education-collapsible {
+	max-height: 1000px;
+	opacity: 1;
+	margin-top: 0.5rem;
+}
+
+/* 悬停时图标背景色变化 */
+.education-item-homepage:hover span.absolute.bg-primary-100 {
+	background-color: rgba(59, 130, 246, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+	.education-item-homepage:hover span.absolute.bg-primary-900 {
+		background-color: rgba(59, 130, 246, 0.3);
+	}
+}
+
+/* 详情页 - 渐变背景和复杂样式（必须保留） */
+.education-page .education-item {
+	background: linear-gradient(135deg, rgba(59, 130, 246, 0.03), rgba(37, 99, 235, 0.03));
+	border-radius: 0.75rem;
+	padding: 1.5rem;
+	margin-bottom: 1.5rem;
+	border-left: 4px solid;
+	border-image: linear-gradient(to bottom, #3b82f6, #2563eb) 1;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+	transition: all 0.3s ease;
+}
+
+.education-page .education-item:hover {
+	box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+	transform: translateX(4px);
+}
+
+@media (prefers-color-scheme: dark) {
+	.education-page .education-item {
+		background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(37, 99, 235, 0.08));
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+	}
+	
+	.education-page .education-item:hover {
+		box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+	}
+}
+
+/* 详情页逻辑控制（必须保留） */
+.education-detail-page .education-summary-full,
+.blox-education .education-summary-full,
+.education-detail-section .education-summary-full {
+	position: static;
+	opacity: 1;
+	pointer-events: auto;
+	box-shadow: none;
+	border: none;
+	padding: 0;
+	background: transparent;
+}
+
+.education-detail-page .education-summary-short,
+.blox-education .education-summary-short,
+.education-detail-section .education-summary-short {
+	display: none;
+}
+
+.blox-education .education-item,
+.education-detail-section .education-item {
+	cursor: default;
+}
+
+.blox-education .education-item:hover .education-summary-short,
+.education-detail-section .education-item:hover .education-summary-short {
+	opacity: 1;
+}
+
+/* 移动端优化 - 直接显示完整信息 */
+@media (max-width: 768px) {
+	.education-summary-full {
+		position: static;
+		opacity: 1;
+		pointer-events: auto;
+		margin-top: 0.5rem;
+		box-shadow: none;
+		border: none;
+		padding: 0;
+		background: transparent;
+	}
+	
+	.education-item:hover .education-summary-short {
+		opacity: 1;
+	}
+	
+	.education-summary-short {
+		display: none;
+	}
+	
+	.education-page .education-item {
+		padding: 1rem;
+		margin-bottom: 1rem;
+	}
+}
+</style>

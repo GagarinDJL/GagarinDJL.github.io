@@ -1,0 +1,97 @@
+{{/* Education Section with Timeline style */}}
+{{ $person := . }}
+{{ with $person.education }}
+<div class="mb-16">
+  <div class="flex items-center gap-4 mb-8">
+    <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center">
+      {{ partial "functions/get_icon" (dict "name" "academic-cap" "attributes" "class='w-6 h-6 text-primary-600 dark:text-primary-400'") }}
+    </div>
+    <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white tracking-tight">Education</h3>
+  </div>
+
+  <ol class="relative w-full border-s border-gray-200 dark:border-gray-700 education-timeline" style="left: 1rem;">
+    {{ range . }}
+    <li class="relative mb-10 education-item education-item-homepage">
+      <span class="absolute flex items-center justify-center w-6 h-6 bg-primary-100 rounded-full dark:bg-primary-900" style="left: -0.3rem; top: 0rem;">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256" class="w-5 h-5 text-primary-800 dark:text-primary-300"><path d="M251.76,88.94l-120-64a8,8,0,0,0-7.52,0l-120,64a8,8,0,0,0,0,14.12L32,117.87v48.42a15.91,15.91,0,0,0,4.06,10.65C49.16,191.53,78.51,216,128,216a130,130,0,0,0,48-8.76V240a8,8,0,0,0,16,0V199.51a115.63,115.63,0,0,0,27.94-22.57A15.91,15.91,0,0,0,224,166.29V117.87l27.76-14.81a8,8,0,0,0,0-14.12ZM128,200c-43.27,0-68.72-21.14-80-33.71V126.4l76.24,40.66a8,8,0,0,0,7.52,0L176,143.47v46.34C163.4,195.69,147.52,200,128,200Zm80-33.75a97.83,97.83,0,0,1-16,14.25V134.93l16-8.53ZM188,118.94l-.22-.13-56-29.87a8,8,0,0,0-7.52,14.12L171,128l-43,22.93L25,96,128,41.07,231,96Z"></path></svg>
+      </span>
+      
+      {{/* 标题 - 最大 */}}
+      <h3 class="education-title">
+        <span>{{ .area }}</span>
+      </h3>
+      
+      {{/* 机构 - 第二大，深灰色，始终可见 */}}
+      <span class="education-institution">
+        {{- if .institution_url -}}
+          <a href="{{ .institution_url }}" target="_blank" rel="noopener">
+            {{ .institution }}
+          </a>
+        {{- else -}}
+          {{ .institution }}
+        {{- end -}}
+      </span>
+      
+      {{/* 可折叠内容区域 */}}
+      <div class="education-collapsible">
+        {{/* 日期 - 第二大，深灰色 */}}
+        {{ if or .date_start .date_end }}
+        <time class="education-date">
+          {{ if .date_start }}
+            {{ dateFormat "January 2006" .date_start }} –
+          {{ end }}
+          {{ if .date_end }}
+            {{ if .expected }}<span class="expected-badge">Expected</span> {{ end }}{{ dateFormat "January 2006" .date_end }}
+          {{ else }}
+            Present
+          {{ end }}
+        </time>
+        {{ end }}
+
+        {{/* 导师 - 第二大，深灰色 */}}
+        {{ $advisors := .advisors }}
+        {{ with $advisors }}
+        {{ $count := len . }}
+        <div class="education-advisors">
+          <span>{{ if gt $count 1 }}Advisors{{ else }}Advisor{{ end }}: </span>
+          {{ range $index, $advisor := . }}
+            {{ if gt $index 0 }}, {{ end }}
+            {{ if $advisor.url }}
+              <a href="{{ $advisor.url }}" target="_blank" rel="noopener">{{ $advisor.name }}</a>
+            {{ else }}
+              <span>{{ $advisor.name }}</span>
+            {{ end }}
+            {{ with $advisor.affiliation }} ({{ . }}){{ end }}
+          {{ end }}
+        </div>
+        {{ end }}
+        
+        {{/* 描述 - 第三大或与第二大一样 */}}
+        {{ $homeSummary := .summary_home }}
+        {{ $fullSummary := .summary }}
+        
+        {{ if $homeSummary }}
+        <div class="prose prose-sm max-w-none dark:prose-invert">
+          {{ $homeSummary | markdownify }}
+        </div>
+        {{ else if $fullSummary }}
+        <div class="prose prose-sm max-w-none dark:prose-invert">
+          {{ $fullSummary | markdownify }}
+        </div>
+        {{ end }}
+      </div>
+    </li>
+    {{ end }}
+  </ol>
+
+  {{/* View All Education link */}}
+  <div class="mt-6 text-center w-full">
+    <a href="/education/" class="inline-flex items-center text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-medium transition-colors duration-200">
+      <span>View All Education</span>
+      <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </a>
+  </div>
+</div>
+{{ end }}

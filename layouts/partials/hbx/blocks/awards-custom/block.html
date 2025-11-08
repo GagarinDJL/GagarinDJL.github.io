@@ -1,0 +1,91 @@
+{{/* Hugo Blox: Awards Custom Block */}}
+{{/* Homepage view: displays awards in two columns */}}
+
+{{ $block := .wcBlock }}
+{{ $page := .wcPage }}
+
+{{ $author := $block.content.username | default "admin" }}
+{{ $person_page_path := (printf "/authors/%s" $author) }}
+{{ $person_page := site.GetPage $person_page_path }}
+{{ if not $person_page }}
+  {{ errorf "Could not find author page at `%s`" $person_page_path }}
+{{ end }}
+{{ $person := $person_page.Params }}
+{{ $awards := $person.awards }}
+
+<div class="flex flex-col items-center max-w-6xl mx-auto gap-3 justify-center px-6">
+
+{{ with $block.content.text }}
+  <div class="prose prose-slate lg:prose-xl dark:prose-invert max-w-prose">{{ . | $page.RenderString }}</div>
+{{ end }}
+
+{{ if $awards }}
+<div class="awards-container w-full">
+  {{/* Homepage: only show titles in two columns */}}
+  {{ $homepageAwards := slice }}
+  {{ range $awards }}
+    {{ if .show_on_homepage }}
+      {{ $homepageAwards = $homepageAwards | append . }}
+    {{ end }}
+  {{ end }}
+  
+  {{/* Sort by order field */}}
+  {{ $sortedAwards := slice }}
+  {{ range seq 1 200 }}
+    {{ $currentOrder := . }}
+    {{ range $homepageAwards }}
+      {{ if eq .order $currentOrder }}
+        {{ $sortedAwards = $sortedAwards | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  
+  {{ if $sortedAwards }}
+  <div class="awards-two-columns w-full flex justify-center">
+    <ul class="list-none p-0 m-0 grid grid-cols-1 md:grid-cols-[auto_auto] gap-x-8 gap-y-2 justify-items-center md:justify-items-start">
+      {{ range $sortedAwards }}
+      <li class="block">
+        <span class="awards-item-text text-left relative pl-6 leading-[1.4] block text-[1.1rem] font-medium text-gray-800 dark:text-gray-200 whitespace-normal md:whitespace-nowrap md:overflow-hidden md:text-ellipsis">
+          {{ if .homepage_title }}{{ .homepage_title }}{{ else }}{{ .title }}{{ end }}
+        </span>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  
+  <div class="awards-view-all mt-6 text-center w-full">
+    <a href="/awards/" class="inline-flex items-center text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-medium transition-colors duration-200 text-base">
+      <span>View All Awards & Honors</span>
+      <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </a>
+  </div>
+  {{ end }}
+</div>
+{{ end }}
+
+</div>
+
+<style>
+/* ========================================
+   Awards Custom Block - 专属样式
+   仅保留Tailwind无法实现的复杂样式
+   ======================================== */
+
+/* 给每个span添加圆点（伪元素 - Tailwind无法实现） */
+.awards-item-text::before {
+	content: '•' !important;
+	position: absolute !important;
+	left: 0 !important;
+	color: inherit !important;
+}
+
+/* "View All" 按钮移除下划线 */
+#awards .awards-view-all a {
+    text-decoration: none !important;
+}
+#awards .awards-view-all a:hover {
+    text-decoration: none !important;
+}
+</style>
