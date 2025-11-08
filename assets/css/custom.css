@@ -1,0 +1,140 @@
+/* ========================================
+   全局CSS - Hugo Blox Personal Site
+   
+   CSS组织策略: "就近原则 + 分层管理"
+   
+   ✅ 本文件仅包含以下三类样式：
+   
+   【层级1】真正的全站通用样式
+   - 跨多个自定义Block共享的样式
+   - 例：.home-section-heading (被多个block使用)
+   
+   【层级2】主题自带Block的样式覆盖
+   - 覆盖Hugo Blox主题默认Block的样式
+   - 例：.blox-markdown, .blox-resume-skills
+   
+   【层级3】全局工具类
+   - 跨页面/跨模块复用的通用样式
+   - 例：隐藏社交分享按钮
+   
+   ❌ 本文件不包含：
+   - 自定义Block专属样式 → 已移至各block.html文件末尾
+   - 单一页面专属样式 → 已移至对应的block或view文件
+   
+   📁 自定义Block CSS位置：
+   - Resume Biography: layouts/partials/hbx/blocks/resume-biography-custom/block.html
+   - Education: layouts/partials/hbx/blocks/education-custom/block.html
+   - Service: layouts/partials/hbx/blocks/service-custom/block.html
+   - Awards: layouts/partials/hbx/blocks/awards-custom/block.html
+   - Collection: layouts/partials/hbx/blocks/collection-custom/block.html
+   - Citation View: layouts/partials/views/citation.html
+   
+   最后更新：2025年10月28日
+   ======================================== */
+
+/* ========================================
+   【层级1】全站通用样式
+   ======================================== */
+
+/* 首页各区块统一的标题样式（被多个block共享） */
+.home-section-heading {
+	font-size: 1.75rem !important;
+	font-weight: 800 !important;
+	text-align: center !important;
+	margin: 0 0 0.75rem !important;
+	color: #111827 !important;
+}
+
+@media (prefers-color-scheme: dark) {
+	.home-section-heading {
+		color: #ffffff !important;
+	}
+}
+
+/* ========================================
+   【层级2】主题自带Block的样式覆盖
+   ======================================== */
+
+/* 2.1 Markdown Block - 内容宽度和对齐方式 */
+.hbb-section.blox-markdown .prose,
+.hbb-section.blox-markdown .max-w-prose,
+.hbb-section.blox-markdown .max-w-3xl {
+	max-width: 80rem !important;
+	width: 70% !important;
+	padding-left: 0rem !important;
+	padding-right: 0rem !important;
+}
+
+.hbb-section.blox-markdown .prose {
+	margin-left: auto !important;
+	margin-right: auto !important;
+	width: fit-content !important;
+	max-width: 85rem !important;
+	min-width: 20% !important;
+}
+
+.hbb-section.blox-markdown .prose * {
+	text-align: left !important;
+}
+
+/* Markdown Block 内的标题样式 */
+.hbb-section.blox-markdown .home-section-heading,
+.hbb-section.blox-markdown .mb-6,
+.hbb-section.blox-markdown .max-w-prose .mb-6,
+.hbb-section.blox-markdown .text-3xl,
+.hbb-section.blox-markdown .text-4xl,
+.hbb-section.blox-markdown .section-subheading,
+.hbb-section.blox-markdown h1,
+.hbb-section.blox-markdown h2,
+.hbb-section.blox-markdown h3 {
+	font-size: 1.75rem !important;
+	font-weight: 800 !important;
+	text-align: center !important;
+	margin-bottom: 0.75rem !important;
+}
+
+/* Markdown Block 垂直间距 */
+.hbb-section.blox-markdown {
+	padding-top: 2.5rem !important;
+	padding-bottom: 2.5rem !important;
+}
+
+/* 2.2 Skills Block - 宽度调整 */
+.blox-resume-skills .max-w-prose {
+	max-width: 52rem !important;
+}
+
+.blox-resume-skills .grid {
+	max-width: 52rem !important;
+}
+
+@media (min-width: 768px) {
+	.blox-resume-skills .grid {
+		gap: 1.25rem !important;
+	}
+}
+
+@media (min-width: 1280px) {
+	.blox-resume-skills .max-w-prose {
+		max-width: 60rem !important;
+	}
+	
+	.blox-resume-skills .grid {
+		max-width: 60rem !important;
+		gap: 1.75rem !important;
+	}
+}
+
+/* ========================================
+   【层级3】全局工具类
+   ======================================== */
+
+/* 隐藏文章页的社交分享按钮（保留可选的邮件分享） */
+article section a[id^="share-link-"] {
+	display: none !important;
+}
+
+/* 如需显示邮件分享，取消下面注释：
+article section a#share-link-email {
+	display: flex !important;
+} */
