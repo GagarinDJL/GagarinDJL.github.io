@@ -4,18 +4,34 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Appearance
+title: 'Jialing Dai'
 appearance:
   mode: system
-  color: indigo
+  theme_day: minimal
+  theme_night: minimal
+  font: classic
+  color_theme: ocean
 
 # SEO
 marketing:
   seo:
     site_type: Person
     local_business_type: ''
-    org_name: ''
-    description: 'The highly-customizable Hugo Academic theme powered by Hugo Blox Builder. Easily create your personal academic website.'
-    twitter: 'GetResearchDev'
+    org_name: 'University of Chinese Academy of Sciences (UCAS)'
+    description: 'Ph.D. candidate at UCAS and visiting researcher at UTD, focusing on data analytics, influence maximization, network diffusion, and optimization for decision making in complex systems.'
+    keywords:
+      - Influence Maximization
+      - Network Diffusion
+      - Submodular Optimization
+      - Non-Submodular Optimization
+      - Reinforcement Learning
+      - Data-Driven Decision Analytics
+      - Computational Social Networks
+      - Opinion Dynamics
+      - Group Behavior
+      - Information Systems
+      - Business Analytics
+    twitter: ''
   analytics:
     google_analytics: ''
     baidu_tongji: ''
@@ -35,12 +51,12 @@ header:
     show_search: true
     show_theme_chooser: true
     logo:
-      text: 'Your Name'
+      text: 'Jialing Dai'
 
 # Site footer
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} Jialing Dai. This work is licensed under {license}'
     license:
       enable: true
       allow_derivatives: false
@@ -55,6 +71,6 @@ locale:
 # Site features
 features:
   math:
-    enable: false
+    enable: true
   privacy_pack:
     enable: false
