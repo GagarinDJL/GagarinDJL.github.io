@@ -1,0 +1,117 @@
+{{ if .Params.pager | default true }}
+  {{/* 自定义排序逻辑：已发表优先 → 一作优先 → 时间优先 */}}
+  {{ $currentPage := . }}
+  
+  {{/* 获取所有 publications */}}
+  {{ $allPubs := where site.RegularPages "Section" "publications" }}
+  {{ $allPubs = where $allPubs "Params.draft" "!=" true }}
+  
+  {{/* 获取管理员信息 */}}
+  {{ $adminPage := site.GetPage "authors/admin" }}
+  {{ $adminName := "" }}
+  {{ with $adminPage }}
+    {{ $adminName = .Title }}
+  {{ end }}
+  
+  {{/* 分类：已发表一作、已发表非一作、未发表一作、未发表非一作 */}}
+  {{ $publishedFirst := slice }}
+  {{ $publishedOthers := slice }}
+  {{ $unpublishedFirst := slice }}
+  {{ $unpublishedOthers := slice }}
+  
+  {{ range $allPubs }}
+    {{ $auth := .Params.authors }}
+    {{ $firstName := "" }}
+    {{ if and $auth (gt (len $auth) 0) }}
+      {{ $firstName = index $auth 0 }}
+    {{ end }}
+    {{ $isFirstAuthor := or (eq $firstName "admin") (eq $firstName $adminName) }}
+    {{ $isPublished := not .Params.status }}
+    
+    {{ if $isPublished }}
+      {{ if $isFirstAuthor }}
+        {{ $publishedFirst = $publishedFirst | append . }}
+      {{ else }}
+        {{ $publishedOthers = $publishedOthers | append . }}
+      {{ end }}
+    {{ else }}
+      {{ if $isFirstAuthor }}
+        {{ $unpublishedFirst = $unpublishedFirst | append . }}
+      {{ else }}
+        {{ $unpublishedOthers = $unpublishedOthers | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  
+  {{/* 每组内按时间降序排序 */}}
+  {{ $publishedFirst = sort $publishedFirst "Date" "desc" }}
+  {{ $publishedOthers = sort $publishedOthers "Date" "desc" }}
+  {{ $unpublishedFirst = sort $unpublishedFirst "Date" "desc" }}
+  {{ $unpublishedOthers = sort $unpublishedOthers "Date" "desc" }}
+  
+  {{/* 合并为自定义排序列表 */}}
+  {{ $sortedPubs := $publishedFirst | append $publishedOthers | append $unpublishedFirst | append $unpublishedOthers }}
+  
+  {{/* 找到当前页面在排序列表中的位置 */}}
+  {{ $currentIndex := -1 }}
+  {{ range $i, $pub := $sortedPubs }}
+    {{ if eq $pub.RelPermalink $currentPage.RelPermalink }}
+      {{ $currentIndex = $i }}
+    {{ end }}
+  {{ end }}
+  
+  {{/* 获取上一篇和下一篇（注意：在降序列表中，prev是index+1，next是index-1） */}}
+  {{ $prev := cond (lt $currentIndex (sub (len $sortedPubs) 1)) (index $sortedPubs (add $currentIndex 1)) nil }}
+  {{ $next := cond (gt $currentIndex 0) (index $sortedPubs (sub $currentIndex 1)) nil }}
+  
+  {{ if ge $currentIndex 0 | and (or $next $prev) }}
+    {{ if (eq (.Scratch.Get "invert_pager") true) | default .Params.invert_pager | default false }}
+      {{ $next = cond (lt $currentIndex (sub (len $sortedPubs) 1)) (index $sortedPubs (add $currentIndex 1)) nil }}
+      {{ $prev = cond (gt $currentIndex 0) (index $sortedPubs (sub $currentIndex 1)) nil }}
+    {{ end }}
+<div class="pt-1 no-prose w-full">
+  <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+  <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
+    <div class="">
+      {{ if $prev }}
+        <a class="group flex no-underline" href="{{ $prev.RelPermalink }}">
+          <span
+            class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+            ><span class="ltr:inline rtl:hidden">&larr;</span></span>
+          <span class="flex flex-col">
+            <span
+              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+            >{{ $prev.Title }}</span>
+            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+              {{ if .Params.show_date | default true }}
+                {{ time.Format (site.Params.locale.date_format | default ":date_long") $prev.Date }}
+              {{ end }}
+            </span>
+          </span>
+        </a>
+      {{ end }}
+    </div>
+    <div class="">
+      {{ if $next }}
+        <a class="group flex text-right no-underline" href="{{ $next.RelPermalink }}">
+          <span class="flex flex-col">
+            <span
+              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+            >{{ $next.Title }}</span
+            >
+            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+              {{ if .Params.show_date | default true }}
+                {{ time.Format (site.Params.locale.date_format | default ":date_long") $next.Date }}
+              {{ end }}
+            </span>
+          </span>
+          <span
+            class="mt-[-0.3rem] ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+            ><span class="ltr:inline">&rarr;</span></span>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}
+{{ end }}
