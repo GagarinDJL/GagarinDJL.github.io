@@ -45,10 +45,9 @@
 	color: #111827 !important;
 }
 
-@media (prefers-color-scheme: dark) {
-	.home-section-heading {
-		color: #ffffff !important;
-	}
+/* Update: Use .dark class instead of media query to respect manual theme toggling */
+.dark .home-section-heading {
+	color: #ffffff !important;
 }
 
 /* ========================================
