@@ -27,7 +27,7 @@ main:
     url: /#skills
     weight: 80
   - name: CV
-    url: /uploads/cv.pdf
+    url: /uploads/CV-Lynn.pdf
     weight: 90
   - name: Contact
     url: /#contact

@@ -17,14 +17,14 @@
       </span>
       
       {{/* 标题 - 最大 */}}
-      <h3 class="education-title">
+      <h3 class="education-title text-lg font-bold text-gray-900 dark:text-white mb-0.5 leading-7">
         <span>{{ .area }}</span>
       </h3>
       
       {{/* 机构 - 第二大，深灰色，始终可见 */}}
-      <span class="education-institution">
+      <span class="education-institution block text-base font-medium text-gray-600 dark:text-gray-300 mb-0 leading-tight">
         {{- if .institution_url -}}
-          <a href="{{ .institution_url }}" target="_blank" rel="noopener">
+          <a href="{{ .institution_url }}" target="_blank" rel="noopener" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 no-underline transition-colors">
             {{ .institution }}
           </a>
         {{- else -}}
@@ -36,7 +36,7 @@
       <div class="education-collapsible">
         {{/* 日期 - 第二大，深灰色 */}}
         {{ if or .date_start .date_end }}
-        <time class="education-date">
+        <time class="education-date block text-base font-medium text-gray-600 dark:text-gray-300 mb-1 leading-tight">
           {{ if .date_start }}
             {{ dateFormat "January 2006" .date_start }} –
           {{ end }}
@@ -52,16 +52,16 @@
         {{ $advisors := .advisors }}
         {{ with $advisors }}
         {{ $count := len . }}
-        <div class="education-advisors">
-          <span>{{ if gt $count 1 }}Advisors{{ else }}Advisor{{ end }}: </span>
+        <div class="education-advisors text-base text-gray-600 dark:text-gray-400 mt-1 mb-2 leading-relaxed">
+          <span class="font-medium text-gray-700 dark:text-gray-300">{{ if gt $count 1 }}Advisors{{ else }}Advisor{{ end }}: </span>
           {{ range $index, $advisor := . }}
             {{ if gt $index 0 }}, {{ end }}
             {{ if $advisor.url }}
-              <a href="{{ $advisor.url }}" target="_blank" rel="noopener">{{ $advisor.name }}</a>
+              <a href="{{ $advisor.url }}" target="_blank" rel="noopener" class="text-blue-600 dark:text-blue-400 hover:underline">{{ $advisor.name }}</a>
             {{ else }}
-              <span>{{ $advisor.name }}</span>
+              <span class="text-gray-800 dark:text-gray-200">{{ $advisor.name }}</span>
             {{ end }}
-            {{ with $advisor.affiliation }} ({{ . }}){{ end }}
+            {{ with $advisor.affiliation }} <span class="text-gray-500 dark:text-gray-500">({{ . }})</span>{{ end }}
           {{ end }}
         </div>
         {{ end }}
@@ -71,11 +71,11 @@
         {{ $fullSummary := .summary }}
         
         {{ if $homeSummary }}
-        <div class="prose prose-sm max-w-none dark:prose-invert">
+        <div class="prose prose-sm prose-gray dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
           {{ $homeSummary | markdownify }}
         </div>
         {{ else if $fullSummary }}
-        <div class="prose prose-sm max-w-none dark:prose-invert">
+        <div class="prose prose-sm prose-gray dark:prose-invert max-w-none text-gray-600 dark:text-gray-300">
           {{ $fullSummary | markdownify }}
         </div>
         {{ end }}

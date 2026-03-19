@@ -198,10 +198,10 @@
           </div>
           <div class="flex flex-wrap gap-5">
             {{ range . }}
-            <span class="inline-block bg-primary-50 dark:bg-gray-800 text-primary-800 dark:text-primary-200 text-base font-medium px-4 py-2 rounded-full border border-primary-200/50 dark:border-primary-800/50
-                           hover:bg-primary-100 
-                           dark:hover:bg-primary-500 dark:hover:text-gray-900 dark:hover:border-primary-500
-                           transition-all duration-200 cursor-default">
+            <span class="inline-block bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-base font-medium px-4 py-2 rounded-full border border-gray-200 dark:border-gray-700
+                           hover:bg-gray-100 hover:text-black hover:border-gray-300
+                           dark:hover:bg-gray-700 dark:hover:text-white dark:hover:border-gray-600
+                           transition-all duration-200 cursor-default shadow-sm">
               {{ . | markdownify | emojify }}
             </span>
             {{ end }}
@@ -268,38 +268,12 @@
   gap: 0.6rem !important;
 }
 
-/* Interests 标签样式 */
+/* Interests 标签样式 - 已迁移至 Tailwind 类，移除 CSS color/bg 覆盖 */
 #author-bio .md\:col-span-8 > div:nth-child(4) span {
   font-size: 1.0rem !important;
   padding: 0.5rem 0.8rem !important;
   line-height: 1.2 !important;
   white-space: nowrap !important;
-  color: #000000 !important;
-  font-weight: 500 !important;
-  background-color: rgba(255, 255, 255, 0.4) !important;
-  border: 1px solid rgba(0, 0, 0, 0.1) !important;
-}
-
-@media (prefers-color-scheme: dark) {
-  #author-bio .md\:col-span-8 > div:nth-child(4) span {
-    color: #ffffff !important;
-    background-color: rgba(255, 255, 255, 0.15) !important;
-    border-color: rgba(255, 255, 255, 0.2) !important;
-  }
-}
-
-#author-bio .md\:col-span-8 > div:nth-child(4) span:hover {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-  border-color: rgba(0, 0, 0, 0.2) !important;
-  transform: translateY(-1px);
-  transition: all 0.2s ease !important;
-}
-
-@media (prefers-color-scheme: dark) {
-  #author-bio .md\:col-span-8 > div:nth-child(4) span:hover {
-    background-color: rgba(255, 255, 255, 0.25) !important;
-    border-color: rgba(255, 255, 255, 0.3) !important;
-  }
 }
 
 @media (max-width: 767px) {
@@ -354,102 +328,47 @@
   margin-bottom: 0.5rem !important;
 }
 
-/* Education Homepage 样式 - 必需的伪元素和复杂选择器 */
+/* Education Homepage 样式 - 已优化为 Tailwind 类 */
 .education-item-homepage .education-title {
-	font-size: 1.125rem !important;
-	font-weight: 700 !important;
-	color: #000000 !important;
-	margin-bottom: 0.125rem !important;
-	line-height: 1.75rem !important;
+/* 移除了冲突的 color !important */
 }
 
-@media (prefers-color-scheme: dark) {
-	.education-item-homepage .education-title {
-		color: #ffffff !important;
-	}
-}
+/* 移除了 prefers-color-scheme 暗黑模式样式，因为使用了 Tailwind dark: */
 
 .education-item-homepage .education-institution {
 	display: block !important;
-	font-size: 1rem !important;
-	font-weight: 500 !important;
-	color: #4b5563 !important;
-	margin-bottom: 0rem !important;
-	line-height: 1.2rem !important;
+/* 移除了 color !important */
 }
 
 .education-item-homepage .education-institution a {
-	color: #4b5563 !important;
+/* 移除了 color !important */
 	text-decoration: none !important;
 	transition: color 0.2s ease !important;
 }
 
-.education-item-homepage .education-institution a:hover {
-	color: #2563eb !important;
-}
-
-@media (prefers-color-scheme: dark) {
-	.education-item-homepage .education-institution,
-	.education-item-homepage .education-institution a {
-		color: #9ca3af !important;
-	}
-	
-	.education-item-homepage .education-institution a:hover {
-		color: #60a5fa !important;
-	}
-}
+/* 移除了 :hover 和 dark 模式冲突样式 */
 
 .education-item-homepage .education-date {
 	display: block !important;
-	font-size: 1rem !important;
-	font-weight: 500 !important;
-	color: #4b5563 !important;
-	margin-bottom: 0.25rem !important;
-	line-height: 1.2rem !important;
-}
-
-@media (prefers-color-scheme: dark) {
-	.education-item-homepage .education-date {
-		color: #9ca3af !important;
-	}
+/* 移除了 color !important */
 }
 
 .education-item-homepage .expected-badge {
 	display: inline !important;
-	font-size: 1rem !important;
-	font-weight: 500 !important;
-	color: #4b5563 !important;
+/* 移除了 color !important */
 	margin-right: 0rem !important;
-}
-
-@media (prefers-color-scheme: dark) {
-	.education-item-homepage .expected-badge {
-		color: #9ca3af !important;
-	}
 }
 
 .education-item-homepage .education-advisors {
 	display: block !important;
-	font-size: 1rem !important;
-  line-height: 1.2rem !important;
 }
 
 .education-item-homepage .education-advisors > span:first-child {
-	font-size: 1rem !important;
-	font-weight: 500 !important;
-	color: #4b5563 !important;
-}
-
-@media (prefers-color-scheme: dark) {
-	.education-item-homepage .education-advisors > span:first-child {
-		color: #9ca3af !important;
-	}
+/* 移除了 color !important */
 }
 
 .education-item-homepage .education-advisors a {
-	font-size: 1rem !important;
-	font-weight: 500 !important;
-	color: #4b5563 !important;
+/* 移除了 color !important */
 	text-decoration: underline !important;
 	text-underline-offset: 2px !important;
 	transition: color 0.2s ease !important;
@@ -465,33 +384,12 @@
 	color: currentColor;
 }
 
-.education-item-homepage .education-advisors a:hover {
-	color: #2563eb !important;
-	text-decoration: underline !important;
-}
-
-@media (prefers-color-scheme: dark) {
-	.education-item-homepage .education-advisors a {
-		color: #9ca3af !important;
-	}
-	
-	.education-item-homepage .education-advisors a:hover {
-		color: #60a5fa !important;
-	}
-}
+/* 移除了 advisors 链接的冲突样式 */
 
 .education-item-homepage .education-collapsible .prose {
-	font-size: 0.95rem !important;
-	font-weight: 400 !important;
-	color: #6b7280 !important;
+/* 移除了 color !important */
 	line-height: 1.2 !important;
   margin-top: 0.5rem !important;
-}
-
-@media (prefers-color-scheme: dark) {
-	.education-item-homepage .education-collapsible .prose {
-		color: #9ca3af !important;
-	}
 }
 
 /* Education 折叠悬浮功能 - 必需的动画 */

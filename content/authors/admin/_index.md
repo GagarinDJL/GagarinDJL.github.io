@@ -132,13 +132,21 @@ education:
 service:
   - category: Academic Service
     items:
+      - position: Program Committee Member
+        institution: AAIM 2026 – 20th International Conference on Algorithmic Aspects in Information and Management
+        date_start: 2026-06-19
+        date_end: 2026-06-21
+        show_on_homepage: true
+        summary: |
+          Program Committee Member for the [20th International Conference on Algorithmic Aspects in Information and Management (AAIM 2026)](https://theory.utdallas.edu/AAIM2026/index.html), held at the University of Texas at Dallas, June 19–21, 2026.
+
       - position: Peer Reviewer
-        institution: IEEE T-CSS, WWW Journal
+        institution: IEEE/ACM ToN, IEEE T-CSS, WWW Journal
         date_start: 2023-01-01
         date_end: ''
         show_on_homepage: true
         summary: |
-          Reviewed submissions for IEEE Transactions on Computational Social Systems (T-CSS) and the World Wide Web Journal (WWW).
+          Reviewed submissions for IEEE/ACM Transactions on Networking (ToN), IEEE Transactions on Computational Social Systems (T-CSS), and the World Wide Web Journal (WWW).
       - position: Teaching Assistant
         institution: University of Chinese Academy of Sciences (UCAS)
         date_start: 2021-09-01

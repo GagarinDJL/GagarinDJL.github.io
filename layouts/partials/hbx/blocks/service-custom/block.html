@@ -165,4 +165,26 @@ body:has(#author-bio) #service .service-item:hover .service-title::after {
 		background: rgba(59, 130, 246, 0.1) !important;
 	}
 }
+
+/* Service描述中的链接样式 - 确保链接可见且可点击 */
+.service-desc a {
+	color: #3b82f6 !important;
+	text-decoration: underline !important;
+	font-weight: 500 !important;
+	position: relative !important;
+	z-index: 20 !important; /* 确保在悬浮层之上 */
+}
+
+.service-desc a:hover {
+	color: #2563eb !important;
+}
+
+@media (prefers-color-scheme: dark) {
+	.service-desc a {
+		color: #60a5fa !important;
+	}
+	.service-desc a:hover {
+		color: #93c5fd !important;
+	}
+}
 </style>
