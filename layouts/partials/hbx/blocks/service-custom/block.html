@@ -3,6 +3,9 @@
 
 {{ $block := .wcBlock }}
 {{ $page := .wcPage }}
+{{ $isZh := eq site.Language.Lang "zh" }}
+{{ $presentText := cond $isZh "至今" "Present" }}
+{{ $viewAllText := cond $isZh "查看全部服务经历" "View All Service" }}
 
 {{ $author := $block.content.username | default "admin" }}
 {{ $person_page_path := (printf "/authors/%s" $author) }}
@@ -57,7 +60,7 @@
               {{ if and $end (eq ($start.Format "2006") ($end.Format "2006")) }}
                 {{ $start.Format "2006" }}
               {{ else }}
-                {{ $start.Format "2006" }}–{{ if $end }}{{ $end.Format "2006" }}{{ else }}Present{{ end }}
+                {{ $start.Format "2006" }}–{{ if $end }}{{ $end.Format "2006" }}{{ else }}{{ $presentText }}{{ end }}
               {{ end }}
             </div>
           {{ end }}
@@ -74,8 +77,8 @@
   {{/* View All Service link for homepage */}}
   {{ if $isHomepage }}
   <div class="mt-6 text-center w-full">
-    <a href="/service/" class="inline-flex items-center text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-medium transition-colors duration-200">
-      <span>View All Service</span>
+    <a href="{{ "/service/" | relLangURL }}" class="inline-flex items-center text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-medium transition-colors duration-200">
+      <span>{{ $viewAllText }}</span>
       <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
       </svg>

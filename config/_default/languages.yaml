@@ -10,8 +10,43 @@ en:
   # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
   # contentDir: content/en
 
-# zh:
-#   languageCode: zh-Hans
-#   languageName: 中文
-#   weight: 2
-#   contentDir: content/zh
+zh:
+  languageCode: zh-Hans
+  languageName: 中文
+  weight: 2
+  contentDir: content-zh
+  title: 戴佳苓
+  params:
+    header:
+      navbar:
+        logo:
+          text: 戴佳苓
+    marketing:
+      seo:
+        description: 中国科学院大学计算机科学博士候选人、德克萨斯大学达拉斯分校访问研究员，研究方向包括计算建模、复杂性分析、组合优化、机器学习实现与数据驱动决策。
+  menus:
+    main:
+      - name: 首页
+        url: /zh/
+        weight: 10
+      - name: 论文
+        url: /zh/#papers
+        weight: 20
+      - name: 项目
+        url: /zh/#projects
+        weight: 30
+      - name: 服务
+        url: /zh/#service
+        weight: 40
+      - name: 荣誉
+        url: /zh/#awards
+        weight: 60
+      - name: 技能
+        url: /zh/#skills
+        weight: 80
+      - name: CV
+        url: https://gagarindjl.github.io/uploads/CV-Lynn.pdf
+        weight: 90
+      - name: 联系
+        url: /zh/#contact
+        weight: 100

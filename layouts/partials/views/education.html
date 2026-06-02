@@ -10,6 +10,13 @@
 {{ end }}
 
 {{ $education := $person.Params.education }}
+{{ $isZh := eq site.Language.Lang "zh" }}
+{{ $expectedText := cond $isZh "预计" "Expected" }}
+{{ $presentText := cond $isZh "至今" "Present" }}
+{{ $advisorText := cond $isZh "导师" "Advisor" }}
+{{ $advisorsText := cond $isZh "导师" "Advisors" }}
+{{ $viewAllText := cond $isZh "查看完整教育背景" "View full education background" }}
+{{ $dateFormat := cond $isZh "2006年1月" "January 2006" }}
 
 {{/* Education Section */}}
 {{ if $education }}
@@ -41,12 +48,12 @@
       {{ if or .date_start .date_end }}
       <time class="education-date">
         {{ if .date_start }}
-          {{ dateFormat "January 2006" .date_start }} –
+          {{ dateFormat $dateFormat .date_start }} –
         {{ end }}
         {{ if .date_end }}
-          {{ if .expected }}<span class="expected-badge">Expected</span> {{ end }}{{ .date_end_text | default (dateFormat "January 2006" .date_end) }}
+          {{ if .expected }}<span class="expected-badge">{{ $expectedText }}</span> {{ end }}{{ .date_end_text | default (dateFormat $dateFormat .date_end) }}
         {{ else }}
-          Present
+          {{ $presentText }}
         {{ end }}
       </time>
       {{ end }}
@@ -56,7 +63,7 @@
       {{ with $advisors }}
       {{ $count := len . }}
       <div class="education-advisors">
-        <span>{{ if gt $count 1 }}Advisors{{ else }}Advisor{{ end }}: </span>
+        <span>{{ if gt $count 1 }}{{ $advisorsText }}{{ else }}{{ $advisorText }}{{ end }}: </span>
         {{ range $index, $advisor := . }}
           {{ if gt $index 0 }}, {{ end }}
           {{ if $advisor.url }}
@@ -102,8 +109,8 @@
 {{ if $.Page.IsHome }}
 {{/* 首页底部添加查看详情链接 */}}
 <div class="mt-6 text-center">
-  <a href="/education/" class="inline-flex items-center px-4 py-2 text-sm font-medium text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 bg-primary-50 hover:bg-primary-100 dark:bg-primary-900/20 dark:hover:bg-primary-900/30 rounded-lg transition-all duration-200 border border-primary-200 dark:border-primary-800">
-    <span>查看完整教育背景</span>
+  <a href="{{ "/education/" | relLangURL }}" class="inline-flex items-center px-4 py-2 text-sm font-medium text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 bg-primary-50 hover:bg-primary-100 dark:bg-primary-900/20 dark:hover:bg-primary-900/30 rounded-lg transition-all duration-200 border border-primary-200 dark:border-primary-800">
+    <span>{{ $viewAllText }}</span>
     <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
     </svg>

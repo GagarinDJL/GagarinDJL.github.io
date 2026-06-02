@@ -15,6 +15,14 @@
   {{- $published = $page.Date -}}
 {{- end -}}
 {{- $modified := $page.Lastmod -}}
+{{- $description := "" -}}
+{{- with $page.Params.summary -}}
+  {{- $description = . -}}
+{{- else -}}
+  {{- with $page.Params.abstract -}}
+    {{- $description = . | markdownify | plainify -}}
+  {{- end -}}
+{{- end -}}
 
 <script type="application/ld+json">
 {
@@ -50,6 +58,6 @@
       "url": {{ $logo_url }}
     }
   },
-  "description": {{ $summary }}
+  "description": {{ $description }}
 }
 </script>

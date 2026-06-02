@@ -3,6 +3,10 @@
 
 {{ $block := .wcBlock }}
 {{ $page := .wcPage }}
+{{ $isZh := eq site.Language.Lang "zh" }}
+{{ $emailText := cond $isZh "邮箱" "Email" }}
+{{ $preferredNameText := cond $isZh "常用名" "Preferred name" }}
+{{ $linksText := cond $isZh "链接" "Links" }}
 
 {{ $author := $block.content.username | default "admin" }}
 {{ $person_page_path := (printf "/authors/%s" $author) }}
@@ -35,7 +39,7 @@
     {{/* Display Email */}}
     {{ with $email }}
     <div class="text-base">
-      <strong>Email:</strong> 
+      <strong>{{ $emailText }}:</strong>
       <a href="mailto:{{ . }}" class="hover:text-primary-600 dark:hover:text-primary-400 transition-colors">
         {{ . }}
       </a>
@@ -45,14 +49,14 @@
     {{/* Display Preferred Name */}}
     {{ with $person.alternateName }}
     <div class="text-base text-gray-800 dark:text-gray-200 italic">
-      <strong>Preferred name:</strong> {{ . }}
+      <strong>{{ $preferredNameText }}:</strong> {{ . }}
     </div>
     {{ end }}
 
     {{/* Display Links */}}
     {{ if $links }}
     <div class="text-base">
-      <strong>Links:</strong>
+      <strong>{{ $linksText }}:</strong>
       {{ range $i, $link := $links }}
         {{ if gt $i 0 }}
           <span class="text-gray-400 dark:text-gray-600"> · </span>

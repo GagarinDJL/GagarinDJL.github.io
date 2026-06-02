@@ -27,7 +27,7 @@ main:
     url: /#skills
     weight: 80
   - name: CV
-    url: /uploads/CV-Lynn.pdf
+    url: https://gagarindjl.github.io/uploads/CV-Lynn.pdf
     weight: 90
   - name: Contact
     url: /#contact

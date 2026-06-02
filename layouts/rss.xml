@@ -1,6 +1,7 @@
 {{- /* Generate RSS v2 while omitting date tags for undated pages. */ -}}
 {{- $page_context := cond .IsHome site . -}}
-{{- $pages := $page_context.RegularPages -}}
+{{- $pages := where $page_context.RegularPages "Draft" "!=" true -}}
+{{- $pages = where $pages "Language.Lang" site.Language.Lang -}}
 {{- $limit := site.Config.Services.RSS.Limit -}}
 {{- if ge $limit 1 -}}
   {{- $pages = $pages | first $limit -}}
@@ -33,7 +34,15 @@
       <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
       {{- end }}
       <guid>{{ .Permalink }}</guid>
-      <description>{{ .Content | html }}</description>
+      {{- $description := "" -}}
+      {{- with .Params.summary -}}
+        {{- $description = . -}}
+      {{- else -}}
+        {{- with .Params.abstract -}}
+          {{- $description = . -}}
+        {{- end -}}
+      {{- end }}
+      <description>{{ $description | markdownify | plainify | html }}</description>
     </item>
     {{ end }}
   </channel>
