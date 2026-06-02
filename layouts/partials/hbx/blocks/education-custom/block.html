@@ -11,6 +11,11 @@
 {{ $page := .wcPage }}
 {{ $block := .wcBlock }}
 {{ $text := $block.content.text | emojify | $page.RenderString }}
+{{ $isZh := eq site.Language.Lang "zh" }}
+{{ $expectedText := cond $isZh "预计" "Expected" }}
+{{ $presentText := cond $isZh "至今" "Present" }}
+{{ $advisorsText := cond $isZh "导师：" "Advisors: " }}
+{{ $dateFormat := cond $isZh "2006年1月" ($block.design.date_format | default "January 2006") }}
 
 {{ $author := $block.content.username | default "admin" }}
 {{ $person_page_path := (printf "/authors/%s" $author) }}
@@ -44,18 +49,18 @@
         </span>
         <time class="block mb-2 text-base font-medium leading-none text-gray-600 dark:text-gray-400">
           {{ if .date_start }}
-            {{ (time .date_start) | time.Format ($block.design.date_format | default "January 2006") }} –
+            {{ (time .date_start) | time.Format $dateFormat }} –
           {{ end }}
           {{ if .date_end}}
-            {{ if .expected }}<span class="inline text-base font-medium text-gray-600 dark:text-gray-400 mr-1">Expected</span> {{ end }}{{ .date_end_text | default ((time .date_end) | time.Format ($block.design.date_format | default "January 2006")) }}
+            {{ if .expected }}<span class="inline text-base font-medium text-gray-600 dark:text-gray-400 mr-1">{{ $expectedText }}</span> {{ end }}{{ .date_end_text | default ((time .date_end) | time.Format $dateFormat) }}
           {{else}}
-            {{ i18n "present" | default "Present" }}
+            {{ i18n "present" | default $presentText }}
           {{end}}
         </time>
 
         {{ if .advisors }}
         <div class="block text-base -mt-1 mb-1.5 education-advisors">
-          <span class="text-base font-medium text-gray-600 dark:text-gray-400">Advisors: </span>
+          <span class="text-base font-medium text-gray-600 dark:text-gray-400">{{ $advisorsText }}</span>
           {{ range $i, $advisor := .advisors }}
             {{ if $i }}, {{ end }}
             {{ if $advisor.url }}

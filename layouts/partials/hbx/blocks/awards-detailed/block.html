@@ -6,6 +6,11 @@
 {{ $page := .wcPage }}
 {{ $block := .wcBlock }}
 {{ $author := $block.content.username | default "admin" }}
+{{ $isZh := eq site.Language.Lang "zh" }}
+{{ $awarderText := cond $isZh "授予方" "Awarder" }}
+{{ $presentText := cond $isZh "至今" "Present" }}
+{{ $certificateText := cond $isZh "查看证书" "See certificate" }}
+{{ $dateFormat := cond $isZh "2006年1月" ($block.design.date_format | default "January 2006") }}
 
 {{ $person_page_path := (printf "/authors/%s" $author) }}
 {{ $person_page := site.GetPage $person_page_path }}
@@ -39,12 +44,12 @@
   </div>
 
   <div class="block mb-3 text-base font-semibold leading-none text-gray-700 dark:text-gray-200 w-full">
-    <span class="text-gray-500 dark:text-gray-400 font-medium">Awarder:</span> {{.awarder}} <span class="text-gray-400 dark:text-gray-500">&#8729;</span>
+    <span class="text-gray-500 dark:text-gray-400 font-medium">{{ $awarderText }}:</span> {{.awarder}} <span class="text-gray-400 dark:text-gray-500">&#8729;</span>
     <span class="text-gray-500 dark:text-gray-400 font-medium">
     {{ if .date}}
-      {{ (time .date) | time.Format ($block.design.date_format | default "January 2006") }}
+      {{ (time .date) | time.Format $dateFormat }}
     {{else}}
-      {{ i18n "present" | default "Present" }}
+      {{ i18n "present" | default $presentText }}
     {{end}}
     </span>
   </div>
@@ -55,7 +60,7 @@
 
   {{ with .certificate_url }}
   <a href="{{.}}" target="_blank" rel="noopener" class="inline-flex items-center text-primary-600 dark:text-primary-300 hover:underline">
-    {{ i18n "see_certificate" | default "See certificate" }}
+    {{ i18n "see_certificate" | default $certificateText }}
     <svg class="w-3 h-3 ms-2.5 rtl:rotate-[270deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11v4.833A1.166 1.166 0 0 1 13.833 17H2.167A1.167 1.167 0 0 1 1 15.833V4.167A1.166 1.166 0 0 1 2.167 3h4.618m4.447-2H17v5.768M9.111 8.889l7.778-7.778"/>
     </svg>

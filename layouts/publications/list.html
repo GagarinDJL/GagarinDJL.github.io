@@ -9,6 +9,7 @@
 
 {{ $view := .Params.view | default "card" }}
 {{ $block := . }}
+{{ $isZh := eq site.Language.Lang "zh" }}
 {{ $pages := where .Pages "Params.draft" "!=" true }}
 {{ $pages = partial "functions/sort_publications.html" (dict "pages" $pages) }}
 {{ $revisionStatuses := slice "revision submitted" "major revision" "minor revision" "revision" "under revision" }}
@@ -47,9 +48,9 @@
     <div class="flex flex-col space-y-3">
       {{ $counter := 0 }}
       {{ $groups := slice
-        (dict "title" "Published & Accepted" "pages" $publishedPages)
-        (dict "title" "Under Revision" "pages" $revisionPages)
-        (dict "title" "Under Review" "pages" $reviewPages)
+        (dict "title" (cond $isZh "已发表与已录用" "Published & Accepted") "pages" $publishedPages)
+        (dict "title" (cond $isZh "返修中" "Under Revision") "pages" $revisionPages)
+        (dict "title" (cond $isZh "在审" "Under Review") "pages" $reviewPages)
       }}
       {{ range $groups }}
         {{ if gt (len .pages) 0 }}

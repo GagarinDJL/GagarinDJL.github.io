@@ -1,6 +1,7 @@
 {{ $item := .item }}
 {{ $index := .index }}
 {{ $has_attachments := partial "functions/has_attachments" $item }}
+{{ $isZh := eq site.Language.Lang "zh" }}
 
 <div class="pub-list-item view-citation" style="margin-bottom: 1rem; position: relative; padding-left: 1.8rem;">
   {{/* 顺序编号（悬挂在左侧） */}}
@@ -42,7 +43,21 @@
 
   {{/* Status（如果存在则加粗显示在最后） */}}
   {{ with $item.Params.status }}
-    , <strong>{{ . }}</strong>
+    {{ $statusText := . }}
+    {{ if $isZh }}
+      {{ $statusLabels := dict
+        "accepted" "已录用"
+        "revision submitted" "已提交返修"
+        "major revision" "大修中"
+        "minor revision" "小修中"
+        "revision" "返修中"
+        "under revision" "返修中"
+        "under review" "在审"
+        "under double-anonymous review" "双匿名评审中"
+      }}
+      {{ with index $statusLabels (lower .) }}{{ $statusText = . }}{{ end }}
+    {{ end }}
+    , <strong>{{ $statusText }}</strong>
   {{ end }}.
 
   {{/* Cite/DOI 链接 */}}

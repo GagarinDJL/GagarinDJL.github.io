@@ -5,6 +5,7 @@
 {{/* Initialise */}}
 {{ $page := .wcPage }}
 {{ $block := .wcBlock }}
+{{ $isZh := eq site.Language.Lang "zh" }}
 
 {{ $author := $block.content.username | default "admin" }}
 
@@ -115,7 +116,7 @@
           {{/* Preferred Name and Official Records */}}
           {{ with $person.alternateName }}
             <p class="text-base text-gray-800 dark:text-gray-300 italic">
-              Preferred name: <strong>{{ . }}</strong> (publications as <strong>{{ $person_page.Title }}</strong>).
+              {{ if $isZh }}常用名：<strong>{{ . }}</strong>（论文署名为 <strong>{{ $person_page.Title }}</strong>）。{{ else }}Preferred name: <strong>{{ . }}</strong> (publications as <strong>{{ $person_page.Title }}</strong>).{{ end }}
             </p>
           {{ end }}
         </div>

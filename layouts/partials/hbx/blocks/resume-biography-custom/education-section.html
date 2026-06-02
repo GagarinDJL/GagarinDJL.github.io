@@ -1,12 +1,20 @@
 {{/* Education Section with Timeline style */}}
 {{ $person := . }}
+{{ $isZh := eq site.Language.Lang "zh" }}
+{{ $educationHeading := cond $isZh "教育经历" "Education" }}
+{{ $expectedText := cond $isZh "预计" "Expected" }}
+{{ $presentText := cond $isZh "至今" "Present" }}
+{{ $advisorText := cond $isZh "导师" "Advisor" }}
+{{ $advisorsText := cond $isZh "导师" "Advisors" }}
+{{ $viewAllText := cond $isZh "查看全部教育经历" "View All Education" }}
+{{ $dateFormat := cond $isZh "2006年1月" "January 2006" }}
 {{ with $person.education }}
 <div class="mb-16">
   <div class="flex items-center gap-4 mb-8">
     <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center">
       {{ partial "functions/get_icon" (dict "name" "academic-cap" "attributes" "class='w-6 h-6 text-primary-600 dark:text-primary-400'") }}
     </div>
-    <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white tracking-tight">Education</h3>
+    <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white tracking-tight">{{ $educationHeading }}</h3>
   </div>
 
   <ol class="relative w-full border-s border-gray-200 dark:border-gray-700 education-timeline" style="left: 1rem;">
@@ -38,12 +46,12 @@
         {{ if or .date_start .date_end }}
         <time class="education-date block text-base font-medium text-gray-600 dark:text-gray-300 mb-1 leading-tight">
           {{ if .date_start }}
-            {{ dateFormat "January 2006" .date_start }} –
+            {{ dateFormat $dateFormat .date_start }} –
           {{ end }}
           {{ if .date_end }}
-            {{ if .expected }}<span class="expected-badge">Expected</span> {{ end }}{{ .date_end_text | default (dateFormat "January 2006" .date_end) }}
+            {{ if .expected }}<span class="expected-badge">{{ $expectedText }}</span> {{ end }}{{ .date_end_text | default (dateFormat $dateFormat .date_end) }}
           {{ else }}
-            Present
+            {{ $presentText }}
           {{ end }}
         </time>
         {{ end }}
@@ -53,7 +61,7 @@
         {{ with $advisors }}
         {{ $count := len . }}
         <div class="education-advisors text-base text-gray-600 dark:text-gray-400 mt-1 mb-2 leading-relaxed">
-          <span class="font-medium text-gray-700 dark:text-gray-300">{{ if gt $count 1 }}Advisors{{ else }}Advisor{{ end }}: </span>
+          <span class="font-medium text-gray-700 dark:text-gray-300">{{ if gt $count 1 }}{{ $advisorsText }}{{ else }}{{ $advisorText }}{{ end }}: </span>
           {{ range $index, $advisor := . }}
             {{ if gt $index 0 }}, {{ end }}
             {{ if $advisor.url }}
@@ -86,8 +94,8 @@
 
   {{/* View All Education link */}}
   <div class="mt-6 text-center w-full">
-    <a href="/education/" class="inline-flex items-center text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-medium transition-colors duration-200">
-      <span>View All Education</span>
+    <a href="{{ "/education/" | relLangURL }}" class="inline-flex items-center text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-medium transition-colors duration-200">
+      <span>{{ $viewAllText }}</span>
       <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
       </svg>
