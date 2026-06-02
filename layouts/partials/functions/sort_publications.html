@@ -1,0 +1,55 @@
+{{ $pages := .pages }}
+{{ $adminPage := site.GetPage "authors/admin" }}
+{{ $adminName := "" }}
+{{ with $adminPage }}
+  {{ $adminName = .Title }}
+{{ end }}
+
+{{ $publishedFirst := slice }}
+{{ $publishedOthers := slice }}
+{{ $revisionFirst := slice }}
+{{ $revisionOthers := slice }}
+{{ $reviewFirst := slice }}
+{{ $reviewOthers := slice }}
+{{ $revisionStatuses := slice "revision submitted" "major revision" "minor revision" "revision" "under revision" }}
+
+{{ range $pages }}
+  {{ $auth := .Params.authors }}
+  {{ $firstName := "" }}
+  {{ if and $auth (gt (len $auth) 0) }}
+    {{ $firstName = index $auth 0 }}
+  {{ end }}
+  {{ $isFirstAuthor := or (eq $firstName "admin") (eq $firstName $adminName) }}
+  {{ $status := lower (.Params.status | default "") }}
+  {{ $isPublished := or (eq $status "") (eq $status "accepted") }}
+  {{ $isRevision := in $revisionStatuses $status }}
+
+  {{ if $isPublished }}
+    {{ if $isFirstAuthor }}
+      {{ $publishedFirst = $publishedFirst | append . }}
+    {{ else }}
+      {{ $publishedOthers = $publishedOthers | append . }}
+    {{ end }}
+  {{ else if $isRevision }}
+    {{ if $isFirstAuthor }}
+      {{ $revisionFirst = $revisionFirst | append . }}
+    {{ else }}
+      {{ $revisionOthers = $revisionOthers | append . }}
+    {{ end }}
+  {{ else }}
+    {{ if $isFirstAuthor }}
+      {{ $reviewFirst = $reviewFirst | append . }}
+    {{ else }}
+      {{ $reviewOthers = $reviewOthers | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $publishedFirst = sort $publishedFirst "Date" "desc" }}
+{{ $publishedOthers = sort $publishedOthers "Date" "desc" }}
+{{ $revisionFirst = sort $revisionFirst "Date" "desc" }}
+{{ $revisionOthers = sort $revisionOthers "Date" "desc" }}
+{{ $reviewFirst = sort $reviewFirst "Date" "desc" }}
+{{ $reviewOthers = sort $reviewOthers "Date" "desc" }}
+
+{{ return ($publishedFirst | append $publishedOthers | append $revisionFirst | append $revisionOthers | append $reviewFirst | append $reviewOthers) }}

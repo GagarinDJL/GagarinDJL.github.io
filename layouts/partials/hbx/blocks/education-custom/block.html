@@ -47,7 +47,7 @@
             {{ (time .date_start) | time.Format ($block.design.date_format | default "January 2006") }} –
           {{ end }}
           {{ if .date_end}}
-            {{ if .expected }}<span class="inline text-base font-medium text-gray-600 dark:text-gray-400 mr-1">Expected</span> {{ end }}{{ (time .date_end) | time.Format ($block.design.date_format | default "January 2006") }}
+            {{ if .expected }}<span class="inline text-base font-medium text-gray-600 dark:text-gray-400 mr-1">Expected</span> {{ end }}{{ .date_end_text | default ((time .date_end) | time.Format ($block.design.date_format | default "January 2006")) }}
           {{else}}
             {{ i18n "present" | default "Present" }}
           {{end}}

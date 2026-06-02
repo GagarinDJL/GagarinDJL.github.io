@@ -8,8 +8,8 @@ author_notes:
   - ""
   - "Corresponding author"
 publication_types: ["paper-conference"]
-publication: "20th International Conference on Algorithmic Aspects in Information and Management"
-publication_short: "AAIM 2026, accepted"
+publication: "20th International Conference on Algorithmic Aspects in Information and Management (AAIM 2026), accepted"
+publication_short: ""
 date: "2026-05-06T01:00:00Z"
 tags: []
 featured: false

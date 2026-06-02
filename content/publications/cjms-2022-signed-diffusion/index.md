@@ -12,14 +12,14 @@ authors:
 #   - "Equal contribution"
 
 # Dates
-date: "2022-01-01T00:00:00Z"
+date: "2025-04-07T00:00:00Z"
 # publishDate: "2022-01-01T00:00:00Z" # schedule page publish date (optional)
 
 # Publication type from the CSL standard
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Chinese Journal of Management Science"
+publication: "Chinese Journal of Management Science, 33(3), 139-150"
 # publication_short: "CJMS"
 
 # Abstract/Summary (optional) — keep placeholders as comments if unavailable

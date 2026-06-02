@@ -11,7 +11,8 @@
     {{/* 自定义样式（基于 APA，但有修改） */}}
     {{/* 作者 */}}
   {{ $authors := partial "page_metadata_authors" $item }}
-  {{ if $authors }}
+  {{ $authors_text := $authors | plainify | strings.TrimSpace }}
+  {{ if ne $authors_text "" }}
   <span class="article-metadata li-cite-author">
     {{ $authors }}
   </span>,

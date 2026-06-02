@@ -44,7 +44,7 @@
           {{ dateFormat "January 2006" .date_start }} –
         {{ end }}
         {{ if .date_end }}
-          {{ if .expected }}<span class="expected-badge">Expected</span> {{ end }}{{ dateFormat "January 2006" .date_end }}
+          {{ if .expected }}<span class="expected-badge">Expected</span> {{ end }}{{ .date_end_text | default (dateFormat "January 2006" .date_end) }}
         {{ else }}
           Present
         {{ end }}

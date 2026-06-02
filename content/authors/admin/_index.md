@@ -66,7 +66,9 @@ education:
     institution: University of Chinese Academy of Sciences (UCAS)
     institution_url: https://english.ucas.ac.cn/
     date_start: 2020-09-01
-    date_end: '2026-06-30'
+    # Used only for sorting; date_end_text is displayed because the timing is approximate.
+    date_end: '2026-09-01'
+    date_end_text: around late September 2026
     expected: true
     advisors:
       - name: Prof. Jianming Zhu
@@ -410,7 +412,7 @@ awards:
 ---
 
 
-**Jialing Dai** is a Ph.D. candidate in Computer Science at the *University of Chinese Academy of Sciences (UCAS)* and a visiting researcher at the *University of Texas at Dallas (UTD)*.
+**Jialing Dai** is a Ph.D. candidate in Computer Science at the *University of Chinese Academy of Sciences (UCAS)*, expected to graduate around late September 2026, and a visiting researcher at the *University of Texas at Dallas (UTD)*.
 Her research focuses on **influence maximization**, **network diffusion**, and **algorithmic optimization for complex (often non-submodular) problems** in social and information networks, with a focus on group behaviors and opinion dynamics.
 She has published studies on **group polarization**, **intergroup debate**, and **signed networks**, and recently explored **end-to-end reinforcement-learning-based optimization** for large-scale networked systems.
 She also has substantial **teaching and academic service** experience as a teaching assistant, graduate program secretary, and peer reviewer.

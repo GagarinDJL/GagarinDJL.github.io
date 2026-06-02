@@ -91,51 +91,7 @@
 {{ $custom_sort := $block.content.custom_sort | default false }}
 
 {{ if $custom_sort }}
-  {{/* 获取管理员信息 */}}
-  {{ $adminPage := site.GetPage "authors/admin" }}
-  {{ $adminName := "" }}
-  {{ with $adminPage }}
-    {{ $adminName = .Title }}
-  {{ end }}
-  
-  {{/* 分类：已发表一作、已发表非一作、未发表一作、未发表非一作 */}}
-  {{ $publishedFirst := slice }}
-  {{ $publishedOthers := slice }}
-  {{ $unpublishedFirst := slice }}
-  {{ $unpublishedOthers := slice }}
-  
-  {{ range $query }}
-    {{ $auth := .Params.authors }}
-    {{ $firstName := "" }}
-    {{ if and $auth (gt (len $auth) 0) }}
-      {{ $firstName = index $auth 0 }}
-    {{ end }}
-    {{ $isFirstAuthor := or (eq $firstName "admin") (eq $firstName $adminName) }}
-    {{ $isPublished := not .Params.status }}
-    
-    {{ if $isPublished }}
-      {{ if $isFirstAuthor }}
-        {{ $publishedFirst = $publishedFirst | append . }}
-      {{ else }}
-        {{ $publishedOthers = $publishedOthers | append . }}
-      {{ end }}
-    {{ else }}
-      {{ if $isFirstAuthor }}
-        {{ $unpublishedFirst = $unpublishedFirst | append . }}
-      {{ else }}
-        {{ $unpublishedOthers = $unpublishedOthers | append . }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-  
-  {{/* 每组内按时间降序排序 */}}
-  {{ $publishedFirst = sort $publishedFirst "Date" "desc" }}
-  {{ $publishedOthers = sort $publishedOthers "Date" "desc" }}
-  {{ $unpublishedFirst = sort $unpublishedFirst "Date" "desc" }}
-  {{ $unpublishedOthers = sort $unpublishedOthers "Date" "desc" }}
-  
-  {{/* 合并为自定义排序列表 */}}
-  {{ $query = $publishedFirst | append $publishedOthers | append $unpublishedFirst | append $unpublishedOthers }}
+  {{ $query = partial "functions/sort_publications.html" (dict "pages" $query) }}
 {{ else }}
   {{/* 使用默认排序 */}}
   {{ $sort_by := $block.content.sort_by | default "Date" }}
