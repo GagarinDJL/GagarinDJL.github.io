@@ -11,13 +11,13 @@ authors:
   - "Yanming Li"
   - "Chengliang Liu"
 publication_types: ["article-journal"]
-publication: "IEEE Transactions on Robotics"
-publication_short: "T-RO"
+publication: "Journal of Field Robotics"
+publication_short: "JFR"
  # date: "2025-01-01T00:00:00Z"
 # abstract: ""
 tags: []
 featured: false
 # links: []
 draft: false
-status: under review
+status: major revision
 ---

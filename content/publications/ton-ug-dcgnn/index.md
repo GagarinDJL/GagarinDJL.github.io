@@ -12,8 +12,7 @@ publication_short: "ToN"
 # date: 2025-01-01
 # abstract: ""
 featured: true
-status: major revision
+status: revision submitted
 draft: false
 ---
-
 
