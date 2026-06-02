@@ -1,9 +1,10 @@
 ---
-title: 戴佳苓
+title: 戴佳伶
 name_pronunciation: ''
-first_name: 佳苓
+first_name: 佳伶
 last_name: 戴
-alternateName: Lynn / Jialing Dai
+alternateName: Lynn
+publication_name: Jialing Dai
 pronouns: She/Her
 superuser: true
 highlight_name: true
@@ -60,9 +61,9 @@ education:
     date_end: 2026-01-20
     expected: true
     advisors:
-      - name: Weili Wu 教授
+      - name: 伍伟丽教授
         url: https://personal.utdallas.edu/~weiliwu/
-      - name: Ding-Zhu Du 教授
+      - name: 堵丁柱教授
         url: https://personal.utdallas.edu/~dzdu/
     summary_home: |
       合作开展算法化影响力优化与网络扩散研究。
@@ -238,7 +239,7 @@ awards:
       获研究生国家奖学金。
 ---
 
-**戴佳苓**是中国科学院大学（UCAS）计算机科学博士候选人，预计 2026 年 9 月毕业，目前为德克萨斯大学达拉斯分校（UTD）访问研究员。
+**戴佳伶**是中国科学院大学（UCAS）计算机科学博士候选人，预计 2026 年 9 月毕业，目前为德克萨斯大学达拉斯分校（UTD）访问研究员。
 
 她的研究面向复杂数据驱动决策问题，结合**计算建模**、**优化算法**和**学习方法**，将社会、商业和信息系统中的真实问题转化为可分析、可计算和可验证的模型。她的训练背景横跨**数学建模**、**复杂性分析**、**组合优化**和**机器学习实现**。
 
