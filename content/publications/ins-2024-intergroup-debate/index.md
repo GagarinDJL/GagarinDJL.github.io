@@ -1,5 +1,6 @@
 ---
 title: "Competitive net influence maximization on intergroup debate effect"
+weight: 30
 
 # Authors
 authors:

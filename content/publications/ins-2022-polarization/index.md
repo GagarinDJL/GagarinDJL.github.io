@@ -1,5 +1,6 @@
 ---
 title: "Opinion influence maximization problem in online social networks based on group polarization effect"
+weight: 40
 
 # Authors
 authors:

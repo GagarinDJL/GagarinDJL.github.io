@@ -1,5 +1,6 @@
 ---
 title: "CaMT: Class-aware Multi-level Training Distillation for Lightweight Semantic Segmentation in Apple Orchard"
+weight: 100
 authors:
   - "Yefeng Sun"
   - admin

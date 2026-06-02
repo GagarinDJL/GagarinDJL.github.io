@@ -1,5 +1,6 @@
 ---
 title: "Manuscript on multi-robot coordination and cloud-based control"
+weight: 120
 # authors:
 publication_types: ["paper-conference"]
 publication: "IEEE/RSJ International Conference on Intelligent Robots and Systems"

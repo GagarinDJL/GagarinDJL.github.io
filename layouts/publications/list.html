@@ -11,6 +11,20 @@
 {{ $block := . }}
 {{ $pages := where .Pages "Params.draft" "!=" true }}
 {{ $pages = partial "functions/sort_publications.html" (dict "pages" $pages) }}
+{{ $revisionStatuses := slice "revision submitted" "major revision" "minor revision" "revision" "under revision" }}
+{{ $publishedPages := slice }}
+{{ $revisionPages := slice }}
+{{ $reviewPages := slice }}
+{{ range $pages }}
+  {{ $status := lower (.Params.status | default "") }}
+  {{ if or (eq $status "") (eq $status "accepted") }}
+    {{ $publishedPages = $publishedPages | append . }}
+  {{ else if in $revisionStatuses $status }}
+    {{ $revisionPages = $revisionPages | append . }}
+  {{ else }}
+    {{ $reviewPages = $reviewPages | append . }}
+  {{ end }}
+{{ end }}
 {{ $config := dict
   "columns" (.Params.columns | default 2)
   "len" (len $pages)
@@ -29,13 +43,25 @@
 {{ end }}
 
 <div class="flex flex-col items-center">
-  {{ partial "functions/render_view" (dict "fragment" "start" "page" $block "item" . "view" $view "config" $config) }}
-
-  {{ range $index, $item := $pages }}
-    {{ partial "functions/render_view" (dict "page" . "item" . "view" $view "index" $index "config" $config) }}
-  {{ end }}
-
-  {{ partial "functions/render_view" (dict "fragment" "end" "page" $block "item" . "view" $view) }}
+  <div class="mt-16 sm:mt-20 container max-w-3xl w-full">
+    <div class="flex flex-col space-y-3">
+      {{ $counter := 0 }}
+      {{ $groups := slice
+        (dict "title" "Published & Accepted" "pages" $publishedPages)
+        (dict "title" "Under Revision" "pages" $revisionPages)
+        (dict "title" "Under Review" "pages" $reviewPages)
+      }}
+      {{ range $groups }}
+        {{ if gt (len .pages) 0 }}
+          <h2 class="mt-8 first:mt-0 mb-2 text-xl font-semibold text-gray-900 dark:text-white">{{ .title }}</h2>
+          {{ range $item := .pages }}
+            {{ partial "functions/render_view" (dict "page" $block "item" $item "view" $view "index" $counter "config" $config) }}
+            {{ $counter = add $counter 1 }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
 </div>
 
 {{ end }}

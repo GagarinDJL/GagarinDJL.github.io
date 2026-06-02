@@ -1,5 +1,6 @@
 ---
 title: "A Robust Semantic-Enhanced Framework for Multi-Robot SLAM Merging in Orchard"
+weight: 90
 authors:
   - "Yefeng Sun"
   - admin

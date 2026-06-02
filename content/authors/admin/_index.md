@@ -54,21 +54,22 @@ profiles:
     url: 'https://orcid.org/0009-0003-1309-5758'
 
 interests:
-  - Influence Maximization
-  - Network Diffusion
-  - Non-Submodular Optimization
-  - Data-Driven Decision Analytics
-  - Reinforcement Learning
-  - Computational Social Networks
+  - Computational Modeling
+  - Decision Analytics
+  - Complexity Analysis
+  - Combinatorial Optimization
+  - Machine Learning for Graphs
+  - Networked Socio-Technical Systems
+  - AI & Information Integrity
   
 education:
   - area: PhD in Computer Science
     institution: University of Chinese Academy of Sciences (UCAS)
     institution_url: https://english.ucas.ac.cn/
     date_start: 2020-09-01
-    # Used only for sorting; date_end_text is displayed because the timing is approximate.
+    # Used only for sorting; date_end_text controls the displayed expected month.
     date_end: '2026-09-01'
-    date_end_text: around late September 2026
+    date_end_text: September 2026
     expected: true
     advisors:
       - name: Prof. Jianming Zhu
@@ -240,56 +241,49 @@ service:
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
 skills:
-  - name: Research & Methods
+  - name: Modeling & Optimization
     color: '#5a8dee'
     color_border: '#6ba2f5'
     items:
-      - name: Influence Maximization & Network Diffusion
+      - name: Mathematical modeling for complex systems
         icon: hero/beaker
-      - name: Non-submodular & Combinatorial Optimization
+      - name: Complexity analysis and problem reformulation
         icon: hero/cube
-      - name: RL for Networks & Policy Learning
+      - name: Combinatorial and non-submodular optimization
         icon: hero/bolt
 
-  - name: Teaching & Mentoring
+  - name: Machine Learning & Implementation
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
-      - name: Course Coordination & Assessment Design
-        icon: hero/book-open
-      - name: Project-/Case-based Learning
-        icon: hero/presentation-chart-line
-      - name: Student Mentoring & Feedback
-        icon: hero/user-group
+      - name: Python, PyTorch, NetworkX, NumPy/Pandas
+        icon: hero/code-bracket
+      - name: Reinforcement learning and graph-based learning
+        icon: hero/share
+      - name: Reproducible pipelines with Git, Linux, and Jupyter
+        icon: hero/server-stack
 
   - name: Data & Decision Analytics
     color: '#22a06b'
     color_border: '#2ec58a'
     items:
-      - name: Reproducible Pipelines (Git · Linux · Jupyter)
-        icon: hero/server-stack
-      - name: Monte-Carlo Evaluation & Tracking
+      - name: Data mining and visualization
         icon: hero/chart-bar
-      - name: Data Management & Reporting (SQL Server · SPSS)
+      - name: Business, policy, and organizational analytics
         icon: hero/document-chart-bar
+      - name: Monte Carlo simulation and experimental evaluation
+        icon: hero/cpu-chip
 
-  - name: Tools & Platforms
+  - name: Teaching & Communication
     color: '#64748b'
     color_border: '#94a3b8'
     items:
-      - name: Python (PyTorch · NetworkX · NumPy/Pandas)
-        icon: hero/code-bracket
-      - name: MATLAB · Azure · SQL Server · SPSS
-        icon: hero/circle-stack
-      - name: LaTeX · Git · Linux · Matplotlib
-        icon: hero/wrench-screwdriver
-
-  - name: Hobbies
-    color: '#6bbf59'
-    color_border: '#7ed36c'
-    items:
-      - name: Travel & Cultural Exploration
-        icon: hero/paper-airplane
+      - name: Course coordination and assessment design
+        icon: hero/book-open
+      - name: Project- and case-based teaching
+        icon: hero/presentation-chart-line
+      - name: Academic writing and presentations
+        icon: hero/user-group
 
 
 
@@ -412,7 +406,7 @@ awards:
 ---
 
 
-**Jialing Dai** is a Ph.D. candidate in Computer Science at the *University of Chinese Academy of Sciences (UCAS)*, expected to graduate around late September 2026, and a visiting researcher at the *University of Texas at Dallas (UTD)*.
-Her research focuses on **influence maximization**, **network diffusion**, and **algorithmic optimization for complex (often non-submodular) problems** in social and information networks, with a focus on group behaviors and opinion dynamics.
-She has published studies on **group polarization**, **intergroup debate**, and **signed networks**, and recently explored **end-to-end reinforcement-learning-based optimization** for large-scale networked systems.
-She also has substantial **teaching and academic service** experience as a teaching assistant, graduate program secretary, and peer reviewer.
+**Jialing Dai** is a Ph.D. candidate in Computer Science at the *University of Chinese Academy of Sciences (UCAS)*, expected September 2026, and a visiting researcher at the *University of Texas at Dallas (UTD)*.
+Her research develops **computational models**, **optimization algorithms**, and **learning-based methods** for complex data-driven decision problems. Her training spans **mathematical modeling**, **complexity analysis**, **combinatorial optimization**, and **machine-learning implementation**, with applications in networked social, organizational, and information systems.
+Her published and submitted work has studied **information diffusion**, **group behavior**, **signed interactions**, **AI-generated content provenance**, and **resource diffusion**. More broadly, she is interested in problem-driven research that turns complex social, business, and technical settings into mathematically analyzable and computationally solvable decision problems.
+She also has substantial **teaching and academic service** experience as a teaching assistant, graduate program secretary, program committee member, and peer reviewer.

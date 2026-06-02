@@ -37,11 +37,15 @@ sections:
   - block: collection-custom  # 使用自定义版本
     id: papers
     content:
-      title: Publications
+      title: Selected Research Work
       custom_sort: true  # 启用自定义排序
+      count: 6
       filters:
         folders:
           - publications
+      archive:
+        enable: true
+        text: View all publications
     design:
       view: citation
       columns: '1'
@@ -79,7 +83,7 @@ sections:
   - block: resume-skills-custom
     id: skills
     content:
-      title: Skills & Hobbies
+      title: Skills & Teaching
       username: admin
       courses_can_teach: "Data Mining & Analytics · Machine Learning · Network Science / Social Network Analysis · Optimization / Operations Research · Algorithms & Data Structures · Python for Data Science"
     

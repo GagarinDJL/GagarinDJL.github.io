@@ -1,5 +1,6 @@
 ---
 title: "Net Positive Information Diffusion Activity Maximizing in Signed Online Social Networks"
+weight: 70
 
 # Authors
 authors:

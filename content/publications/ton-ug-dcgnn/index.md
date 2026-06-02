@@ -1,5 +1,6 @@
 ---
 title: "Unified Group-Aware Influence Maximization with Generalized Deep Reinforcement Learning"
+weight: 10
 authors:
   - admin
   - "Yisheng Zhou"
@@ -15,4 +16,3 @@ featured: true
 status: revision submitted
 draft: false
 ---
-

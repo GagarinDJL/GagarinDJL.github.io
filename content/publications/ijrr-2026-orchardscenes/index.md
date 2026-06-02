@@ -1,5 +1,6 @@
 ---
 title: "OrchardScenes: A Four-Season Apple Orchard Benchmark for Cross-Season Semantic Perception"
+weight: 110
 authors:
   - "Yefeng Sun"
   - "Liang Gong"

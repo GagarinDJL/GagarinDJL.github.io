@@ -6,17 +6,8 @@
 {{ $block := .wcBlock }}
 {{ $view := $block.design.view | default "card" }}
 
-{{/* 注：已按用户要求注释掉数量限制，显示全部文献
-{{ $items_offset := $block.content.offset | default 0 }}
-{{ $items_count := $block.content.count }}
-{{ if eq $items_count 0 }}
-  {{ $items_count = 65535 }}
-{{ else }}
-  {{ $items_count = $items_count | default 5 }}
-{{ end }}
-*/}}
 {{ $items_offset := 0 }}
-{{ $items_count := 65535 }}
+{{ $items_count := $block.content.count | default 65535 }}
 
 {{/* Query */}}
 {{ $query := site.Pages }}
@@ -83,8 +74,6 @@
   {{ $query = where $query "Date" "<" now }}
 {{ end }}
 
-{{ $count := len $query }}
-
 {{/* ============================================ */}}
 {{/* 自定义排序逻辑：已发表优先 → 一作优先 → 时间优先 */}}
 {{/* ============================================ */}}
@@ -103,15 +92,12 @@
 
 {{/* 过滤掉 draft 文献 */}}
 {{ $query = where $query "Params.draft" "!=" true }}
+{{ $count := len $query }}
 
-{{/* 注：已按用户要求注释掉 Offset 和 Limit 限制，显示全部文献
-下面的代码已被注释掉：
-- Offset and Limit 逻辑
-- if gt $items_offset 0
-- query = first $items_count (after $items_offset $query)
-- else query = first $items_count $query
-若要恢复，请删除此注释块。
-*/}}
+{{ if gt $items_offset 0 }}
+  {{ $query = after $items_offset $query }}
+{{ end }}
+{{ $query = first $items_count $query }}
 
 {{/* Check if any items have author_notes to enable Alpine.js */}}
 {{ range $query }}
@@ -147,7 +133,7 @@
   {{ partial "functions/render_view" (dict "fragment" "start" "page" $block "item" . "view" $view "config" $config) }}
 
   {{ range $index, $item := $query }}
-    {{ partial "functions/render_view" (dict "page" $block "item" . "view" $view "index" $index "config" $config) }}
+    {{ partial "functions/render_view" (dict "page" $block "item" $item "view" $view "index" $index "config" $config) }}
   {{end}}
 
   {{ partial "functions/render_view" (dict "fragment" "end" "page" $block "item" . "view" $view) }}
@@ -180,21 +166,16 @@
 
   {{ $archive_text := $block.content.archive.text | default (i18n $i18n) | default "See all" }}
 
-  {{/*
-  注：下面的 Archive 链接按钮已按用户要求注释掉（保留代码以便将来恢复）。
-  若要恢复，请删除此注释块（即删除本段注释的开始和结束标记），然后保存文件以恢复按钮的输出。
-
   <div class="container mx-auto max-w-screen-lg px-8 xl:px-5 pb-5 lg:pb-8">
     <div class="mt-10 flex justify-center">
       <a
-        class="relative inline-flex items-center gap-1 rounded-md border border-gray-300 bg-white px-3 py-2 pl-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300"
+        class="relative inline-flex items-center gap-1 rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 focus:z-20 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300"
         href="{{ $archive_link }}">
           <span>{{ $archive_text | emojify }}</span>
+          <span aria-hidden="true">&rarr;</span>
         </a>
       </div>
   </div>
-
-  */}}
 
 {{ end }}
 

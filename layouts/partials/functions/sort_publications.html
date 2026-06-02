@@ -5,6 +5,18 @@
   {{ $adminName = .Title }}
 {{ end }}
 
+{{ $weightedPages := slice }}
+{{ $unweightedPages := slice }}
+{{ range $pages }}
+  {{ if isset .Params "weight" }}
+    {{ $weightedPages = $weightedPages | append . }}
+  {{ else }}
+    {{ $unweightedPages = $unweightedPages | append . }}
+  {{ end }}
+{{ end }}
+{{ $weightedPages = sort $weightedPages "Params.weight" "asc" }}
+{{ $pages = $unweightedPages }}
+
 {{ $publishedFirst := slice }}
 {{ $publishedOthers := slice }}
 {{ $revisionFirst := slice }}
@@ -52,4 +64,13 @@
 {{ $reviewFirst = sort $reviewFirst "Date" "desc" }}
 {{ $reviewOthers = sort $reviewOthers "Date" "desc" }}
 
-{{ return ($publishedFirst | append $publishedOthers | append $revisionFirst | append $revisionOthers | append $reviewFirst | append $reviewOthers) }}
+{{ $ordered := slice }}
+{{ range $weightedPages }}{{ $ordered = $ordered | append . }}{{ end }}
+{{ range $publishedFirst }}{{ $ordered = $ordered | append . }}{{ end }}
+{{ range $publishedOthers }}{{ $ordered = $ordered | append . }}{{ end }}
+{{ range $revisionFirst }}{{ $ordered = $ordered | append . }}{{ end }}
+{{ range $revisionOthers }}{{ $ordered = $ordered | append . }}{{ end }}
+{{ range $reviewFirst }}{{ $ordered = $ordered | append . }}{{ end }}
+{{ range $reviewOthers }}{{ $ordered = $ordered | append . }}{{ end }}
+
+{{ return $ordered }}

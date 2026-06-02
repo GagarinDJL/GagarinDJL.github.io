@@ -1,5 +1,6 @@
 ---
 title: "Influence Maximization in Online Social Networks: Models, Algorithms, and Trustworthy Decision-Making"
+weight: 20
 authors:
   - admin
   - "Ke Su"

@@ -1,5 +1,6 @@
 ---
 title: "Modeling Organizational Performance through Competitive Resource Diffusion"
+weight: 60
 authors:
   - "Yisheng Zhou"
   - admin
