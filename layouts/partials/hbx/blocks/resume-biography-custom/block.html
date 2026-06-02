@@ -15,6 +15,7 @@
   {{ errorf "Could not find an author page at `%s`. Please check the value of `author` in your About widget and create an associated author page if one does not already exist. See https://docs.hugoblox.com/page-builder/#about " $person_page_path }}
 {{end}}
 {{ $person := $person_page.Params }}
+{{ $publicationName := $person.publication_name | default $person_page.Title }}
 {{ $avatar := ($person_page.Resources.ByType "image").GetMatch "*avatar*" }}
 
 {{/* Avatar customization parameters */}}
@@ -116,7 +117,7 @@
           {{/* Preferred Name and Official Records */}}
           {{ with $person.alternateName }}
             <p class="text-base text-gray-800 dark:text-gray-300 italic">
-              {{ if $isZh }}常用名：<strong>{{ . }}</strong>（论文署名为 <strong>{{ $person_page.Title }}</strong>）。{{ else }}Preferred name: <strong>{{ . }}</strong> (publications as <strong>{{ $person_page.Title }}</strong>).{{ end }}
+              {{ if $isZh }}常用名：<strong>{{ . }}</strong>（论文署名为 <strong>{{ $publicationName }}</strong>）。{{ else }}Preferred name: <strong>{{ . }}</strong> (publications as <strong>{{ $publicationName }}</strong>).{{ end }}
             </p>
           {{ end }}
         </div>
