@@ -45,7 +45,7 @@ zh:
         url: /zh/#skills
         weight: 80
       - name: CV
-        url: https://gagarindjl.github.io/uploads/CV-Lynn.pdf
+        url: /uploads/CV-Lynn-zh.pdf
         weight: 90
       - name: 联系
         url: /zh/#contact

@@ -14,7 +14,7 @@ sections:
       text: ''
       button:
         text: 下载 CV
-        url: https://gagarindjl.github.io/uploads/CV-Lynn.pdf
+        url: /uploads/CV-Lynn-zh.pdf
       headings:
         about: '关于我'
         education: '教育经历'
