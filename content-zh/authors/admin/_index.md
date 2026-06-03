@@ -13,7 +13,7 @@ organizations:
   - role: 博士候选人
     institution: 中国科学院大学（UCAS）
     url: https://english.ucas.ac.cn/
-  - role: 访问研究员
+  - role: 曾任访问研究员
     institution: 德克萨斯大学达拉斯分校（UTD）
     url: https://www.utdallas.edu/
 
@@ -59,14 +59,14 @@ education:
     institution_url: https://cs.utdallas.edu/
     date_start: 2025-01-19
     date_end: 2026-01-20
-    expected: true
+    expected: false
     advisors:
       - name: 伍伟丽教授
         url: https://personal.utdallas.edu/~weiliwu/
       - name: 堵丁柱教授
         url: https://personal.utdallas.edu/~dzdu/
     summary_home: |
-      合作开展算法化影响力优化与网络扩散研究。
+      已完成算法化影响力优化与网络扩散方向的合作访问研究。
     summary: |
       在计算机科学系访问期间，主要围绕算法化影响力优化、网络扩散模型与数据驱动决策问题开展合作研究。
 
@@ -239,7 +239,7 @@ awards:
       获研究生国家奖学金。
 ---
 
-**戴佳伶**是中国科学院大学（UCAS）计算机科学博士候选人，预计 2026 年 9 月毕业，目前为德克萨斯大学达拉斯分校（UTD）访问研究员。
+**戴佳伶**是中国科学院大学（UCAS）计算机科学博士候选人，预计 2026 年 9 月毕业。她于 2025 年 1 月至 2026 年 1 月在德克萨斯大学达拉斯分校（UTD）开展访问研究。
 
 她的研究面向复杂数据驱动决策问题，结合**计算建模**、**优化算法**和**学习方法**，将社会、商业和信息系统中的真实问题转化为可分析、可计算和可验证的模型。她的训练背景横跨**数学建模**、**复杂性分析**、**组合优化**和**机器学习实现**。
 

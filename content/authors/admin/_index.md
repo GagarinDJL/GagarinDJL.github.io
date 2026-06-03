@@ -31,7 +31,7 @@ organizations:
   - role: Ph.D. Candidate
     institution: University of Chinese Academy of Sciences (UCAS)
     url: https://english.ucas.ac.cn/
-  - role: Visiting Researcher
+  - role: Former Visiting Researcher
     institution: University of Texas at Dallas (UTD)
     url: https://www.utdallas.edu/
 
@@ -88,16 +88,16 @@ education:
     institution_url: https://cs.utdallas.edu/
     date_start: 2025-01-19
     date_end: 2026-01-20
-    expected: true
+    expected: false
     advisors:
       - name: Prof. Weili Wu
         url: https://personal.utdallas.edu/~weiliwu/
       - name: Prof. Ding-Zhu Du
         url: https://personal.utdallas.edu/~dzdu/
     summary_home: |
-      Collaborative research in algorithmic influence optimization and network diffusion.
+      Completed collaborative research in algorithmic influence optimization and network diffusion.
     summary: |
-      Visiting Scholar with the Department of Computer Science focusing on collaborative research in algorithmic influence optimization and network diffusion.
+      Visiting Scholar with the Department of Computer Science, January 2025 to January 2026, focusing on collaborative research in algorithmic influence optimization and network diffusion.
 
   - area: B.Management in Information Systems
     institution: Beijing University of Chemical Technology (BUCT)
@@ -406,7 +406,7 @@ awards:
 ---
 
 
-**Jialing Dai** is a Ph.D. candidate in Computer Science at the *University of Chinese Academy of Sciences (UCAS)*, expected September 2026, and a visiting researcher at the *University of Texas at Dallas (UTD)*.
+**Jialing Dai** is a Ph.D. candidate in Computer Science at the *University of Chinese Academy of Sciences (UCAS)*, expected September 2026. She completed a visiting research appointment at the *University of Texas at Dallas (UTD)* from January 2025 to January 2026.
 Her research develops **computational models**, **optimization algorithms**, and **learning-based methods** for complex data-driven decision problems. Her training spans **mathematical modeling**, **complexity analysis**, **combinatorial optimization**, and **machine-learning implementation**, with applications in networked social, organizational, and information systems.
 Her published and submitted work has studied **information diffusion**, **group behavior**, **signed interactions**, **AI-generated content provenance**, and **resource diffusion**. More broadly, she is interested in problem-driven research that turns complex social, business, and technical settings into mathematically analyzable and computationally solvable decision problems.
 She also has substantial **teaching and academic service** experience as a teaching assistant, graduate program secretary, program committee member, and peer reviewer.
