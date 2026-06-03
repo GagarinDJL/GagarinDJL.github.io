@@ -87,7 +87,7 @@ sections:
       title: 联系方式
       status:
         - icon: hero/map-pin
-          text: 目前在 UT Dallas 访问研究
+          text: 2025.01-2026.01 访问 UT Dallas
         - icon: hero/user-group
           text: 欢迎合作交流
 ---

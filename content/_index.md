@@ -94,7 +94,7 @@ sections:
       title: Contact
       status:
         - icon: hero/map-pin
-          text: Currently Visiting at UT Dallas
+          text: Visited UT Dallas, Jan. 2025-Jan. 2026
         - icon: hero/user-group
           text: Open to Collaboration
 
