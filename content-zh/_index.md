@@ -14,7 +14,7 @@ sections:
       text: ''
       button:
         text: 下载 CV
-        url: /uploads/CV-Lynn-zh.pdf
+        url: /uploads/cv-lynn-zh.pdf
       headings:
         about: '关于我'
         education: '教育经历'
