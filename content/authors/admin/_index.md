@@ -24,16 +24,19 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Ph.D. Candidate
+role: Ph.D. Candidate, Computer Application Technology (Computer Science)
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
   - role: Ph.D. Candidate
     institution: University of Chinese Academy of Sciences (UCAS)
     url: https://english.ucas.ac.cn/
-  - role: Former Visiting Researcher
+  - role: Visiting Scholar, Jan. 2025-Jan. 2026
     institution: University of Texas at Dallas (UTD)
     url: https://www.utdallas.edu/
+
+headline:
+  - "Expected defense: August 2026; expected degree completion: September-October 2026"
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
@@ -62,9 +65,31 @@ interests:
   - Machine Learning for Graphs
   - Networked Socio-Technical Systems
   - AI & Information Integrity
+
+interest_groups:
+  - name: Methods
+    items:
+      - Mathematical modeling
+      - Complexity and approximation analysis
+      - Combinatorial and non-submodular optimization
+      - Sampling algorithms
+      - Graph learning and reinforcement learning
+  - name: Systems
+    items:
+      - Complex networks
+      - Networked socio-technical systems
+      - Organizational and resource diffusion
+      - Competitive and multi-agent information systems
+  - name: Applications
+    items:
+      - Digital platform governance
+      - Business and decision analytics
+      - AI-generated content provenance
+      - Information integrity
+      - Risk and emergency management
   
 education:
-  - area: PhD in Computer Science
+  - area: Ph.D. in Computer Application Technology (Computer Science)
     institution: University of Chinese Academy of Sciences (UCAS)
     institution_url: https://english.ucas.ac.cn/
     date_start: 2020-09-01
@@ -78,8 +103,8 @@ education:
     summary_home: |
       Dissertation on group opinion dynamics and influence optimization.
     summary: |
-      Dissertation: Modeling Group Opinion Dynamics and Designing Influence Optimization Algorithms in Social Networks.
-      Focus on opinion diffusion, influence maximization, and optimization techniques for large-scale social networks.
+      Dissertation on group opinion dynamics and influence optimization in social networks.
+      Focuses on opinion diffusion, influence maximization, and optimization techniques for large-scale networks.
     # button:
     #   text: 'Read Thesis'
     #   url: 'https://example.com/thesis.pdf'
@@ -98,9 +123,9 @@ education:
     summary_home: |
       Completed collaborative research in algorithmic influence optimization and network diffusion.
     summary: |
-      Visiting Scholar with the Department of Computer Science, January 2025 to January 2026, focusing on collaborative research in algorithmic influence optimization and network diffusion.
+      Visiting Scholar in the Department of Computer Science from January 2025 to January 2026, with collaborative research on algorithmic influence optimization and network diffusion.
 
-  - area: B.Management in Information Systems
+  - area: Bachelor of Management in Information Systems
     institution: Beijing University of Chemical Technology (BUCT)
     institution_url: https://english.buct.edu.cn/main.htm
     date_start: 2016-09-01
@@ -109,7 +134,7 @@ education:
       Graduated with GPA 4.0/4.33 (92.68/100) in Information Systems.
     summary: |
       GPA: 4.0/4.33.
-      Grade arithmetic average: 92.68/100.
+      Arithmetic average: 92.68/100.
 
 
 
@@ -318,7 +343,7 @@ awards:
     show_on_homepage: true
     order: 2
     summary: |
-      National Scholarship for Master's Students.
+      National Scholarship for Graduate Students.
   
   - title: Merit Student
     date: '2023-07-01'
@@ -407,7 +432,8 @@ awards:
 ---
 
 
-**Jialing Dai** is a Ph.D. candidate in Computer Science at the *University of Chinese Academy of Sciences (UCAS)*, expected September 2026. She completed a visiting research appointment at the *University of Texas at Dallas (UTD)* from January 2025 to January 2026.
-Her research develops **computational models**, **optimization algorithms**, and **learning-based methods** for complex data-driven decision problems. Her training spans **mathematical modeling**, **complexity analysis**, **combinatorial optimization**, and **machine-learning implementation**, with applications in networked social, organizational, and information systems.
-Her published and submitted work has studied **information diffusion**, **group behavior**, **signed interactions**, **AI-generated content provenance**, and **resource diffusion**. More broadly, she is interested in problem-driven research that turns complex social, business, and technical settings into mathematically analyzable and computationally solvable decision problems.
-She also has substantial **teaching and academic service** experience as a teaching assistant, graduate program secretary, program committee member, and peer reviewer.
+**Jialing Dai** is a Ph.D. candidate in Computer Application Technology (Computer Science) at the *University of Chinese Academy of Sciences (UCAS)*. She was a Visiting Scholar at the *University of Texas at Dallas (UTD)* from January 2025 to January 2026. Her Ph.D. defense is expected in August 2026, with degree completion expected in September-October 2026.
+Her research develops **computational models**, **optimization algorithms**, and **learning-based methods** for data-driven decision problems in complex systems. Her training spans **mathematical modeling**, **complexity analysis**, **combinatorial optimization**, and **machine-learning implementation**, with applications in social, organizational, and information networks.
+Her published and submitted work examines **information diffusion**, **group behavior**, **signed interactions**, **AI-generated content provenance**, and **resource diffusion**. More broadly, she is interested in problem-driven research that turns social, business, and technical settings into mathematically analyzable and computationally tractable decision problems.
+She also has experience in **teaching and academic service**, including work as a teaching assistant, graduate program secretary, program committee member, and peer reviewer.
+She is currently seeking postdoctoral, research fellow, and early-career faculty opportunities in **data-driven decision analytics**, **computational social/business systems**, **AI and information integrity**, and **learning-augmented combinatorial optimization**.

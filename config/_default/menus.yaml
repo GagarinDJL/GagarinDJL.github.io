@@ -11,6 +11,9 @@ main:
   - name: Publications
     url: /#papers
     weight: 20
+  - name: Research Themes
+    url: /research-themes/
+    weight: 25
   - name: Projects
     url: /#projects
     weight: 30

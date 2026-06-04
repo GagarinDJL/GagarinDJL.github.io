@@ -57,16 +57,16 @@ sections:
       subtitle: "Selected case studies"
       projects:
         - title: Safety Violation Analytics for Power-Grid Construction
-          role: Student Project Coordinator
+          role: Student Team Lead
           institution: UCAS × State Grid Henan EPRI
           period: 2022.10–2022.12
-          description: Led a 6-member student team under faculty supervision to build a taxonomy and labeled dataset (~1.5k cases), perform association and clustering analyses, and draft targeted management measures.
+          description: Led a 6-member student team under faculty supervision to build a safety-violation taxonomy and labeled dataset (~1.5k cases), conduct association and clustering analyses, and propose targeted management recommendations.
         
         - title: "Accident-Tree Modeling: Methods and Applications"
           role: Student Co-Lead (under faculty supervision)
           institution: Department of Emergency Management
           period: 2022.05–2023.04
-          description: Developed a hazard root-tracing ("source tree") method based on fault-tree analysis; completed case studies and authored substantial sections of the final report.
+          description: Developed a hazard-source tracing method based on fault-tree analysis, completed case studies, and contributed major sections to the final report.
 
   - block: service-custom
     id: service
@@ -94,9 +94,9 @@ sections:
       title: Contact
       status:
         - icon: hero/map-pin
-          text: Visited UT Dallas, Jan. 2025-Jan. 2026
+          text: Visiting Scholar at UT Dallas, Jan. 2025-Jan. 2026
         - icon: hero/user-group
-          text: Open to Collaboration
+          text: Seeking postdoctoral, research fellow, and early-career faculty opportunities
 
 
 ---
