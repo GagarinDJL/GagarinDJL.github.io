@@ -13,9 +13,8 @@ sections:
     content:
       username: "admin"
       show_full: true
-      description: "My academic journey spans prestigious institutions across China and the United States, focusing on computer science, optimization algorithms, and social network analysis."
+      description: "My academic training spans China and the United States, with a focus on computer science, optimization algorithms, complex networks, and data-driven decision problems."
   
   # Return to Home button
   - block: back-to-home
 ---
-

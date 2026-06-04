@@ -23,7 +23,7 @@ zh:
           text: 戴佳伶
     marketing:
       seo:
-        description: 中国科学院大学计算机科学博士候选人，研究方向包括计算建模、复杂性分析、组合优化、机器学习实现与数据驱动决策。
+        description: 中国科学院大学计算机应用技术在读博士，关注数据驱动决策分析、计算社会/商业系统、AI 信息可信与治理，以及学习增强的组合优化。
   menus:
     main:
       - name: 首页
@@ -32,6 +32,9 @@ zh:
       - name: 论文
         url: /zh/#papers
         weight: 20
+      - name: 研究主题
+        url: /zh/research-themes/
+        weight: 25
       - name: 项目
         url: /zh/#projects
         weight: 30

@@ -47,19 +47,19 @@ sections:
     id: projects
     content:
       title: 应用项目
-      subtitle: "部分项目与案例研究"
+      subtitle: "代表性案例与项目"
       projects:
         - title: 电网建设安全违规数据分析
           role: 学生项目负责人
           institution: 中国科学院大学 × 国网河南电力科学研究院
           period: 2022.10-2022.12
-          description: 在教师指导下带领 6 人学生团队，构建安全违规分类体系与约 1500 条标注数据，开展关联分析与聚类分析，并形成有针对性的管理措施建议。
+          description: 在教师指导下带领 6 人团队，构建安全违规分类体系与约 1500 条标注数据，开展关联分析和聚类分析，并提出针对性管理建议。
 
         - title: "事故树建模：方法与应用"
           role: 学生联合负责人（教师指导）
           institution: 应急管理相关课题
           period: 2022.05-2023.04
-          description: 基于故障树分析发展危险源追溯的“源树”方法，完成案例研究并承担结题报告的重要章节写作。
+          description: 基于故障树分析方法提出危险源追溯的“源树”建模思路，完成案例研究，并参与结题报告核心章节写作。
 
   - block: service-custom
     id: service
@@ -89,5 +89,5 @@ sections:
         - icon: hero/map-pin
           text: 2025.01-2026.01 访问 UT Dallas
         - icon: hero/user-group
-          text: 欢迎合作交流
+          text: 寻求博士后、师资博士后、青年教师/科研岗位与合作机会
 ---

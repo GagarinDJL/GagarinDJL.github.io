@@ -113,6 +113,14 @@
               {{ end }}
             </p>
           {{ end }}
+
+          {{ with $person.headline }}
+            <div class="space-y-1 text-base text-gray-700 dark:text-gray-300">
+              {{ range . }}
+                <p class="font-medium">{{ . | markdownify | emojify }}</p>
+              {{ end }}
+            </div>
+          {{ end }}
           
           {{/* Preferred Name and Official Records */}}
           {{ with $person.alternateName }}
@@ -189,7 +197,7 @@
         {{ partial "hbx/blocks/resume-biography-custom/education-section.html" $person }}
 
         {{/* Interests Section */}}
-        {{ with $person.interests }}
+        {{ if or $person.interest_groups $person.interests }}
         <div>
           <div class="flex items-center gap-4 mb-8">
             <div class="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900/50 rounded-full flex items-center justify-center">
@@ -198,16 +206,31 @@
             {{ $interests_heading := $block.content.headings.interests | default (i18n "interests") }}
             <h3 class="text-xl font-bold text-gray-900 dark:text-white tracking-tight">{{ $interests_heading | markdownify }}</h3>
           </div>
-          <div class="flex flex-wrap gap-5">
-            {{ range . }}
-            <span class="inline-block bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-base font-medium px-4 py-2 rounded-full border border-gray-200 dark:border-gray-700
-                           hover:bg-gray-100 hover:text-black hover:border-gray-300
-                           dark:hover:bg-gray-700 dark:hover:text-white dark:hover:border-gray-600
-                           transition-all duration-200 cursor-default shadow-sm">
-              {{ . | markdownify | emojify }}
-            </span>
+          {{ with $person.interest_groups }}
+            <div class="interest-groups space-y-4">
+              {{ range . }}
+                <div class="interest-group border-l-2 border-primary-200 dark:border-primary-700 pl-4">
+                  <p class="text-base font-semibold text-gray-900 dark:text-gray-100">{{ .name | markdownify | emojify }}</p>
+                  {{ $itemDelimiter := cond $isZh "；" "; " }}
+                  {{ $terminalPunctuation := cond $isZh "。" "." }}
+                  <p class="text-sm sm:text-base leading-relaxed text-gray-700 dark:text-gray-300">{{ delimit .items $itemDelimiter | markdownify | emojify }}{{ $terminalPunctuation }}</p>
+                </div>
+              {{ end }}
+            </div>
+          {{ else }}
+            {{ with $person.interests }}
+              <div class="flex flex-wrap gap-5">
+                {{ range . }}
+                <span class="inline-block bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 text-base font-medium px-4 py-2 rounded-full border border-gray-200 dark:border-gray-700
+                               hover:bg-gray-100 hover:text-black hover:border-gray-300
+                               dark:hover:bg-gray-700 dark:hover:text-white dark:hover:border-gray-600
+                               transition-all duration-200 cursor-default shadow-sm">
+                  {{ . | markdownify | emojify }}
+                </span>
+                {{ end }}
+              </div>
             {{ end }}
-          </div>
+          {{ end }}
         </div>
         {{ end }}
       </div>
@@ -268,6 +291,19 @@
 /* Interests 标签容器 */
 #author-bio .md\:col-span-8 > div:nth-child(4) .flex-wrap {
   gap: 0.6rem !important;
+}
+
+/* 分组研究兴趣 */
+#author-bio .interest-groups {
+  width: 100%;
+}
+
+#author-bio .interest-group p {
+  margin: 0 !important;
+}
+
+#author-bio .interest-group p + p {
+  margin-top: 0.25rem !important;
 }
 
 /* Interests 标签样式 - 已迁移至 Tailwind 类，移除 CSS color/bg 覆盖 */
