@@ -43,8 +43,9 @@ profiles:
     label: E-mail Me
   - icon: academicons/google-scholar
     url: 'https://scholar.google.com/citations?user=1doVXBMAAAAJ'
-  - icon: brands/github
-    url: 'https://github.com/GagarinDJL'
+  # GitHub is hidden from the homepage until a representative research-code repository is ready.
+  # - icon: brands/github
+  #   url: 'https://github.com/GagarinDJL'
   # Twitter and LinkedIn placeholders commented out to avoid showing empty/placeholder profiles
   # - icon: brands/x
   #   url: https://twitter.com/YourTwitter
