@@ -23,9 +23,9 @@ featured: false
 projects: []
 slides: ""
 draft: false
-status: under review
+status: major revision
 ---
 
-**状态：** 在审。
+**状态：** 大修中。
 
 **稿件编号：** ESWA-D-26-21011。
