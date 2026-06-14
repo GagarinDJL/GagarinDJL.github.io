@@ -18,19 +18,20 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: 'University of Chinese Academy of Sciences (UCAS)'
-    description: 'Ph.D. candidate at UCAS focusing on data-driven decision analytics, computational social and business systems, AI and information integrity, and learning-augmented combinatorial optimization.'
+    description: 'Ph.D. candidate at UCAS developing problem-driven computational models, provable optimization methods, learning-based solvers, and data experiments for real-world decision problems.'
     keywords:
-      - Influence Maximization
-      - Network Diffusion
-      - Submodular Optimization
-      - Non-Submodular Optimization
+      - Problem-Driven Computational Modeling
+      - Mathematical Modeling
+      - Combinatorial Optimization
+      - Approximation Algorithms
+      - Sampling Algorithms
+      - Coverage Optimization
       - Reinforcement Learning
+      - Graph Neural Networks
       - Data-Driven Decision Analytics
-      - Computational Social Networks
-      - Opinion Dynamics
-      - Group Behavior
+      - Empirical Validation
+      - AI-Generated Content Provenance
       - Information Systems
-      - Business Analytics
     twitter: ''
   analytics:
     google_analytics: ''

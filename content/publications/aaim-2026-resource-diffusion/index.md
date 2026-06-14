@@ -1,6 +1,6 @@
 ---
 title: "Modeling Organizational Performance through Competitive Resource Diffusion"
-weight: 60
+weight: 70
 authors:
   - "Yisheng Zhou"
   - admin
@@ -11,7 +11,10 @@ publication_types: ["paper-conference"]
 publication: "20th International Conference on Algorithmic Aspects in Information and Management (AAIM 2026), accepted"
 publication_short: ""
 date: "2026-05-06T00:00:00Z"
-tags: []
+tags:
+  - resource diffusion
+  - organizational modeling
+  - collaborative research
 featured: false
 links:
   - type: source
