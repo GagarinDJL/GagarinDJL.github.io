@@ -13,8 +13,8 @@ sections:
       username: "admin"
       text: ''
       button:
-        text: 下载 CV
-        url: /uploads/cv-lynn-zh.pdf
+        text: 下载简历
+        url: /uploads/%E6%88%B4%E4%BD%B3%E4%BC%B6_CV_homepage.pdf
       headings:
         about: '关于我'
         education: '教育经历'
@@ -49,17 +49,17 @@ sections:
       title: 应用项目
       subtitle: "代表性案例与项目"
       projects:
-        - title: 电网建设安全违规数据分析
+        - title: 电网施工安全违规数据分析：风险识别、案例标注与管理决策
           role: 学生项目负责人
           institution: 中国科学院大学 × 国网河南电力科学研究院
           period: 2022.10-2022.12
-          description: 在教师指导下带领 6 人团队，构建安全违规分类体系与约 1500 条标注数据，开展关联分析和聚类分析，并提出针对性管理建议。
+          description: 在教师指导下带领 6 人团队，构建安全违规分类体系与 1,498 条标注案例数据，开展关联分析和聚类分析，并将数据模式转化为面向施工安全治理的管理建议。
 
-        - title: "事故树建模：方法与应用"
+        - title: "事故树建模与风险源追溯：方法构建与案例应用"
           role: 学生联合负责人（教师指导）
           institution: 应急管理相关课题
           period: 2022.05-2023.04
-          description: 基于故障树分析方法提出危险源追溯的“源树”建模思路，完成案例研究，并参与结题报告核心章节写作。
+          description: 基于故障树分析方法提出危险源追溯的“源树”建模思路，完成多案例研究，并参与结题报告核心章节写作。
 
   - block: service-custom
     id: service
@@ -78,7 +78,7 @@ sections:
     content:
       title: 技能与教学
       username: admin
-      courses_can_teach: "数据挖掘与分析 · 机器学习 · 网络科学 / 社会网络分析 · 优化 / 运筹学 · 算法与数据结构 · Python 数据科学"
+      courses_can_teach: "数据结构与算法 · Python 数据分析 · 数据挖掘与机器学习 · 运筹学与优化方法 · 管理决策建模 · 社会网络分析 · 信息系统与数据治理 · AI 可信与智能决策"
 
   - block: contact-custom
     id: contact
@@ -87,7 +87,7 @@ sections:
       title: 联系方式
       status:
         - icon: hero/map-pin
-          text: 2025.01-2026.01 访问 UT Dallas
+          text: 2025.01-2026.01 曾赴美国得克萨斯大学访问研究
         - icon: hero/user-group
-          text: 寻求博士后、师资博士后、青年教师/科研岗位与合作机会
+          text: 申请教学科研岗、师资博士后、博士后及青年科研岗位
 ---
