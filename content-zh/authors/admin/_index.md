@@ -3,22 +3,23 @@ title: 戴佳伶
 name_pronunciation: ''
 first_name: 佳伶
 last_name: 戴
-alternateName: Lynn
+alternateName: ''
 publication_name: Jialing Dai
-pronouns: She/Her
+pronouns: ''
 superuser: true
 highlight_name: true
-role: 计算机应用技术在读博士
+role: 计算机应用技术博士候选人
 organizations:
-  - role: 在读博士
+  - role: 博士候选人
     institution: 中国科学院大学（UCAS）
     url: https://english.ucas.ac.cn/
-  - role: 访问学者，2025.01-2026.01
-    institution: 德克萨斯大学达拉斯分校（UTD）
+  - role: 曾任访问学者，2025.01-2026.01
+    institution: 美国得克萨斯大学（University of Texas at Dallas）
     url: https://www.utdallas.edu/
 
 headline:
-  - "预计 2026 年 8 月博士论文答辩，2026 年 9-10 月取得博士学位"
+  - "预计 2026 年 8 月中旬答辩，2026 年 9 月底/10 月初取得博士学位"
+  - "申请教学科研岗、师资博士后、博士后及青年科研岗位"
 
 profiles:
   - icon: at-symbol
@@ -33,36 +34,36 @@ profiles:
     url: 'https://orcid.org/0009-0003-1309-5758'
 
 interests:
-  - 复杂系统计算建模
-  - 数据驱动决策分析
-  - 复杂性分析
-  - 组合优化
-  - 图机器学习
-  - 网络化社会技术系统
-  - AI 与信息可信
+  - 现实问题发现与形式化建模
+  - 问题驱动的计算建模
+  - 可证明优化与算法设计
+  - 数据驱动智能决策
+  - 复杂性与近似分析
+  - 采样、贪心与覆盖算法
+  - 图学习与深度强化学习
+  - 数据实验与可复现验证
 
 interest_groups:
-  - name: 方法基础
+  - name: 问题发现与形式化
     items:
-      - 数学建模
+      - 从真实现象中识别可计算结构
+      - 数学建模与计算建模
+      - 目标函数与约束构造
+      - 数据假设与实验验证设计
+  - name: 可证明优化与算法
+    items:
       - 复杂性与近似分析
-      - 组合优化
       - 非次模/非单调优化
-      - 采样算法
-      - 图学习与强化学习
-  - name: 系统对象
+      - 采样算法设计
+      - 贪心与最大覆盖问题重构
+      - 可扩展算法实现
+  - name: 学习增强与应用拓展
     items:
-      - 复杂网络
-      - 网络化社会技术系统
-      - 组织与资源扩散
-      - 竞争性信息系统
-  - name: 应用场景
-    items:
-      - 数字平台治理
-      - 商业决策分析
-      - AI 生成内容溯源
-      - 信息可信与风险治理
-      - 应急管理
+      - 图神经网络
+      - 深度强化学习
+      - 仿真与真实数据实验
+      - AIGC 内容溯源与可信决策拓展
+      - 管理、组织、信息与智能决策系统
 
 education:
   - area: 博士研究生（计算机应用技术）
@@ -70,19 +71,19 @@ education:
     institution_url: https://english.ucas.ac.cn/
     date_start: 2020-09-01
     date_end: '2026-09-01'
-    date_end_text: 2026年9月
+    date_end_text: 2026年9月底/10月初
     expected: true
     advisors:
       - name: 朱建明教授
         url: https://people.ucas.ac.cn/~jianming?language=en
     summary_home: |
-      博士论文围绕群体观点动力学与影响力优化算法展开。
+      博士论文围绕群体观点演化与影响力相关决策问题的形式化建模、复杂性分析和优化算法设计展开。
     summary: |
-      博士论文围绕社交网络中的群体观点动力学建模与影响力优化算法设计展开。
-      研究重点包括观点传播、影响力最大化，以及大规模网络中的优化建模与算法分析。
+      博士论文将群体观点演化与影响力相关决策问题转化为形式化模型、可分析目标和可扩展优化算法。
+      研究重点包括模型构造、复杂性与近似分析、算法设计和数据实验验证。
 
   - area: 计算机科学访问学者
-    institution: 德克萨斯大学达拉斯分校（UT Dallas）
+    institution: 美国得克萨斯大学（University of Texas at Dallas）
     institution_url: https://cs.utdallas.edu/
     date_start: 2025-01-19
     date_end: 2026-01-20
@@ -93,9 +94,9 @@ education:
       - name: 堵丁柱教授
         url: https://personal.utdallas.edu/~dzdu/
     summary_home: |
-      已完成算法化影响力优化与网络扩散方向的合作访问研究。
+      已完成计算建模、算法优化与数据实验验证方向的合作访问研究。
     summary: |
-      访问德克萨斯大学达拉斯分校计算机科学系期间，围绕算法化影响力优化、网络扩散模型与数据驱动决策问题开展合作研究。
+      访问美国得克萨斯大学计算机科学系期间，围绕形式化建模、算法优化、学习增强求解和数据实验验证开展合作研究。
 
   - area: 管理学学士（信息管理与信息系统）
     institution: 北京化工大学（BUCT）
@@ -117,7 +118,7 @@ service:
         date_end: 2026-06-21
         show_on_homepage: true
         summary: |
-          担任 [AAIM 2026](https://theory.utdallas.edu/AAIM2026/index.html) 程序委员会委员。会议于 2026 年 6 月 19-21 日在德克萨斯大学达拉斯分校举行。
+          担任 [AAIM 2026](https://theory.utdallas.edu/AAIM2026/index.html) 程序委员会委员。会议于 2026 年 6 月 19-21 日在美国得克萨斯大学举行。
 
       - position: 期刊与会议审稿人
         institution: IEEE/ACM ToN、IEEE T-CSS、WWW Journal
@@ -198,11 +199,11 @@ skills:
     color: '#5a8dee'
     color_border: '#6ba2f5'
     items:
-      - name: 复杂系统数学建模
+      - name: 现实问题数学建模
         icon: hero/beaker
       - name: 复杂性分析与问题重构
         icon: hero/cube
-      - name: 组合优化与非子模优化
+      - name: 组合优化与非次模优化
         icon: hero/bolt
 
   - name: 机器学习与工程实现
@@ -211,7 +212,7 @@ skills:
     items:
       - name: Python、PyTorch、NetworkX、NumPy/Pandas
         icon: hero/code-bracket
-      - name: 强化学习与图学习
+      - name: 深度强化学习与图神经网络
         icon: hero/share
       - name: 基于 Git、Linux 与 Jupyter 的可复现实验流程
         icon: hero/server-stack
@@ -238,7 +239,7 @@ skills:
       - name: 学术写作与报告展示
         icon: hero/user-group
 
-courses_can_teach: "数据挖掘与分析 · 机器学习 · 网络科学 / 社会网络分析 · 优化 / 运筹学 · 算法与数据结构 · Python 数据科学"
+courses_can_teach: "数据结构与算法 · Python 数据分析 · 数据挖掘与机器学习 · 运筹学与优化方法 · 管理决策建模 · 社会网络分析 · 信息系统与数据治理 · AI 可信与智能决策"
 
 languages:
   - name: 中文
@@ -266,12 +267,10 @@ awards:
       获研究生国家奖学金。
 ---
 
-**戴佳伶**是中国科学院大学（UCAS）计算机应用技术在读博士，预计 2026 年 8 月进行博士论文答辩，并于 2026 年 9-10 月取得博士学位。她曾于 2025 年 1 月至 2026 年 1 月作为访问学者赴德克萨斯大学达拉斯分校（UTD）开展合作研究。
+**戴佳伶**是中国科学院大学（UCAS）计算机应用技术博士候选人，预计 2026 年 8 月中旬完成博士论文答辩，并于 2026 年 9 月底/10 月初取得博士学位。她曾于 2025 年 1 月至 2026 年 1 月赴美国得克萨斯大学（University of Texas at Dallas）开展访问研究。
 
-她的研究面向复杂系统中的数据驱动决策问题，结合**计算建模**、**优化算法**和**学习方法**，将社会、商业和信息系统中的真实问题转化为可分析、可计算和可验证的模型。她的训练背景涵盖**数学建模**、**复杂性分析**、**组合优化**和**机器学习实现**。
+她的研究从现实问题发现出发，识别其中的可计算结构，并将其抽象为“**形式化建模 - 理论分析 - 算法设计 - 数据实验验证**”的模型与算法问题。已有成果涉及**群体极化**、**跨群争论**、**带符号交互**、**AIGC 内容溯源**和**资源扩散**等问题，这些问题作为研究落点服务于更通用的建模与优化方法。
 
-她已发表和投稿中的工作涉及**信息扩散**、**群体行为**、**符号网络交互**、**AI 生成内容溯源**和**资源扩散**等方向。更广泛地说，她关注问题驱动的交叉研究，尤其希望将真实的社会、商业和技术场景转化为可计算的决策问题。
+目前已在 Information Sciences、《中国管理科学》等期刊及国际会议发表/录用论文，并有 IEEE/ACM Transactions on Networking 大修稿已提交、Expert Systems with Applications 论文处于大修阶段。相关工作覆盖模型构造、复杂性与近似分析、采样/覆盖算法、图神经网络、深度强化学习和真实数据验证。
 
-她也有较丰富的**教学与学术服务**经历，包括助教、研究生项目秘书、程序委员会委员和期刊审稿人等。
-
-目前主要申请**博士后**、**师资博士后**和**青年教师/科研岗位**，关注**数据驱动决策分析**、**计算社会/商业系统**、**AI 信息可信与治理**、**学习增强的组合优化**等交叉方向。
+她正在申请**教学科研岗**、**师资博士后**、**博士后**及**青年科研岗位**，重点关注管理科学与工程、计算机应用技术、数据科学与智能决策、信息管理与信息系统、AI 可信与 AI+管理交叉方向。

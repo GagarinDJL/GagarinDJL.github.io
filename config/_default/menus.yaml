@@ -30,7 +30,9 @@ main:
     url: /#skills
     weight: 80
   - name: CV
-    url: https://gagarindjl.github.io/uploads/CV-Lynn.pdf
+    url: /uploads/CV-Jialing-Dai-English_homepage.pdf
+    params:
+      raw_url: /uploads/CV-Jialing-Dai-English_homepage.pdf
     weight: 90
   - name: Contact
     url: /#contact

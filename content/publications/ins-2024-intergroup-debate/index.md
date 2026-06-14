@@ -1,6 +1,6 @@
 ---
 title: "Competitive net influence maximization on intergroup debate effect"
-weight: 30
+weight: 10
 
 # Authors
 authors:
@@ -25,9 +25,13 @@ publication_short: ""
 
 # Abstract/Summary (optional)
 abstract: "Intergroup debate effect describes that how divergences between groups mobilize members to act in the interest of the group, thus intensifying conflicts. In online social networks, such debates can cause an explosion of information discussions and amplify the influence. Therefore, the Intergroup Debate Independent Cascade (IDIC) Model is proposed. The Controversial Net Influence Maximization (CNIM) problem is introduced to select individuals who post information to maximize the net influence. Since the objective function is non-submodular, the Sandwich framework decomposes the objective function into submodular upper and lower bounds, thus providing data-dependent approximate solution. Moreover, these bounds extended to the broader problem of net influence maximization under the Heterogeneous Competitive Independent Cascade (HCIC) model, where the probability depends on the type of information. To solve this broader problem, we propose the Heterogeneous Competitive Influence Sampling based Greedy (HCISG) Algorithm based on the reverse sampling and further refine it to obtain the Improved HCISG algorithm, in addition to introducing a pruning strategy for the bounds. Conclusively, evaluations on simulated and realistic datasets demonstrate the efficiency of the Improved HCISG Algorithm. We find that more cohesive groups bring about greater information explosions in intergroup debates, which resonates with group conflicts as described by social identity theory."
-# summary: ""
+summary: "Formalized intergroup debate as a hypergraph-based influence optimization problem, used Sandwich-style bounds without claiming to originate the framework, and designed sampling algorithms for data-dependent approximation and scalable empirical evaluation."
 
-tags: []
+tags:
+  - problem-driven modeling
+  - hypergraph modeling
+  - sampling algorithms
+  - data-dependent approximation
 # featured: false
 
 # Standard identifiers for auto-linking

@@ -12,7 +12,7 @@
 {{ $isZh := eq site.Language.Lang "zh" }}
 {{ $pages := where .Pages "Params.draft" "!=" true }}
 {{ $pages = partial "functions/sort_publications.html" (dict "pages" $pages) }}
-{{ $revisionStatuses := slice "revision submitted" "major revision" "minor revision" "revision" "under revision" }}
+{{ $revisionStatuses := slice "revision submitted" "major revision submitted" "major revision" "minor revision" "revision" "under revision" }}
 {{ $publishedPages := slice }}
 {{ $revisionPages := slice }}
 {{ $reviewPages := slice }}

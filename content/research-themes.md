@@ -1,19 +1,23 @@
 ---
 title: Research Themes
 date: 2026-06-04
-summary: Research directions at the intersection of optimization, computational modeling, and AI-driven decision analytics.
+summary: Problem-driven computational modeling, provable optimization, learning-based solution methods, and empirical validation.
 ---
 
-Jialing Dai's research is problem-driven. It connects mathematical modeling, algorithm design, complexity analysis, and learning-based methods with decision problems in social, business, and information systems. The following themes describe the directions she is developing beyond any single application domain.
+Jialing Dai's research starts from finding computable structure in real problems and turning it into modelable, analyzable, optimizable, and empirically testable algorithmic questions. The methodological anchor is computational modeling and optimization; the application scope remains open across social, business, organizational, information, and AI-enabled decision systems.
 
-## Learning-Augmented Optimization for Networked Decision Systems
+## Problem Discovery and Formal Modeling
 
-This theme studies how learning-based signals can support combinatorial optimization in large-scale networked decision systems. It focuses on influence optimization, non-submodular objectives, approximation-aware algorithm design, sampling methods, and reinforcement or graph-learning components for searching, evaluating, and adapting decisions under complex diffusion dynamics.
+This theme focuses on moving from observed phenomena to formal computational problems. Her work has abstracted group polarization, intergroup debate, signed interactions, AIGC provenance, and resource diffusion into explicit models, objectives, constraints, and data assumptions that can be analyzed and tested.
 
-## Computational Modeling of Social, Business, and Organizational Systems
+## Provable Optimization and Algorithm Design
 
-This theme translates social, business, and organizational processes into computational models that can be analyzed and tested. Representative settings include group behavior, opinion dynamics, competitive information diffusion, resource diffusion, organizational performance, and platform-mediated interactions. The goal is to preserve the structure of real decision problems while keeping the models suitable for algorithmic analysis and empirical validation.
+This theme studies difficult optimization objectives after modeling. Representative work covers non-submodular and non-monotone objectives, hardness and approximation analysis, sampling algorithm design, path-level reformulation, maximum-coverage greedy optimization, and data-dependent approximation.
 
-## AI and Information Integrity: Provenance, Risk, and Platform Governance
+## Learning-Enhanced Solvers and Data Experiments
 
-This theme focuses on trustworthy information systems in the age of generative AI. Topics include AI-generated content provenance, scenario-robust checkpoint design, information integrity, platform risk, and governance mechanisms for social and business environments. The emphasis is on connecting formal models and optimization algorithms with practical questions in digital platforms and information ecosystems.
+This theme connects algorithmic structure with scalable implementation and empirical validation. Current work uses graph neural networks, deep reinforcement learning, simulation, and real-world datasets to evaluate whether the proposed models and algorithms preserve the structure of the original problem.
+
+## Trustworthy and AI-Enabled Decision Extensions
+
+This theme extends the same modeling and optimization pipeline to emerging decision problems, including AI-generated content provenance, trustworthy decision-making, information integrity, and resource allocation. These are application directions rather than fixed boundaries for the research agenda.

@@ -19,7 +19,7 @@ sections:
       # Show a call-to-action button under your biography? (optional)
       button:
         text: Download CV
-        url: uploads/CV-Lynn.pdf
+        url: /uploads/CV-Jialing-Dai-English_homepage.pdf
       headings:
         about: 'About Me'
         education: 'Education'
@@ -56,17 +56,17 @@ sections:
       title: Applied Projects
       subtitle: "Selected case studies"
       projects:
-        - title: Safety Violation Analytics for Power-Grid Construction
-          role: Student Team Lead
+        - title: Risk and Safety Analytics for Power-Grid Construction
+          role: Project Lead
           institution: UCAS × State Grid Henan EPRI
           period: 2022.10–2022.12
-          description: Led a 6-member student team under faculty supervision to build a safety-violation taxonomy and labeled dataset (~1.5k cases), conduct association and clustering analyses, and propose targeted management recommendations.
+          description: Led a 6-member team to build a safety-violation taxonomy and 1,498-case labeled dataset, conduct association and clustering analyses, and translate data patterns into targeted management recommendations.
         
-        - title: "Accident-Tree Modeling: Methods and Applications"
-          role: Student Co-Lead (under faculty supervision)
+        - title: "Hazard-Source Tracing with Fault-Tree Modeling"
+          role: Research Co-Lead
           institution: Department of Emergency Management
           period: 2022.05–2023.04
-          description: Developed a hazard-source tracing method based on fault-tree analysis, completed case studies, and contributed major sections to the final report.
+          description: Developed a hazard-source tracing method based on fault-tree analysis, completed multi-case studies, and contributed major sections to the final report.
 
   - block: service-custom
     id: service
@@ -85,7 +85,7 @@ sections:
     content:
       title: Skills & Teaching
       username: admin
-      courses_can_teach: "Data Mining & Analytics · Machine Learning · Network Science / Social Network Analysis · Optimization / Operations Research · Algorithms & Data Structures · Python for Data Science"
+      courses_can_teach: "Data Structures & Algorithms · Data Mining & Machine Learning · Computational Modeling · Optimization / Operations Research · Decision Modeling for Management · Python for Data Science"
     
   - block: contact-custom
     id: contact
@@ -94,9 +94,9 @@ sections:
       title: Contact
       status:
         - icon: hero/map-pin
-          text: Visiting Scholar at UT Dallas, Jan. 2025-Jan. 2026
+          text: Former visiting researcher at UT Dallas, Jan. 2025-Jan. 2026
         - icon: hero/user-group
-          text: Seeking postdoctoral, research fellow, and early-career faculty opportunities
+          text: Seeking postdoctoral and research fellow opportunities
 
 
 ---

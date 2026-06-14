@@ -142,7 +142,9 @@
           {{ $scheme := (urls.Parse $link).Scheme }}
           {{ $target := "" }}
           {{ if not $scheme }}
-            {{ $link = (.url | default .link) | relLangURL }}
+            {{ if not (hasPrefix $link "/uploads/") }}
+              {{ $link = $link | relLangURL }}
+            {{ end }}
             {{ if eq (path.Ext $link) ".pdf" }}{{ $target = "target=\"_blank\" rel=\"noopener\"" }}{{ end }}
           {{ else if in (slice "http" "https") $scheme }}
             {{ $target = "target=\"_blank\" rel=\"noopener\"" }}

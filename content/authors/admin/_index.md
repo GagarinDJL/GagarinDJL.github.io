@@ -24,19 +24,20 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Ph.D. Candidate, Computer Application Technology (Computer Science)
+role: Ph.D. Candidate in Computer Science
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - role: Ph.D. Candidate
+  - role: Ph.D. Candidate, Computer Application Technology
     institution: University of Chinese Academy of Sciences (UCAS)
     url: https://english.ucas.ac.cn/
-  - role: Visiting Scholar, Jan. 2025-Jan. 2026
+  - role: Former Visiting Researcher, Jan. 2025-Jan. 2026
     institution: University of Texas at Dallas (UTD)
     url: https://www.utdallas.edu/
 
 headline:
-  - "Expected defense: August 2026; expected degree completion: September-October 2026"
+  - "Expected Ph.D. defense: August 2026; degree expected: late September / early October 2026"
+  - "Seeking postdoctoral and research fellow opportunities in problem-driven computational modeling, optimization, and data-driven algorithmic research"
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
@@ -58,35 +59,35 @@ profiles:
     url: 'https://orcid.org/0009-0003-1309-5758'
 
 interests:
-  - Computational Modeling
-  - Decision Analytics
-  - Complexity Analysis
-  - Combinatorial Optimization
-  - Machine Learning for Graphs
-  - Networked Socio-Technical Systems
-  - AI & Information Integrity
+  - Problem Discovery and Formal Modeling
+  - Problem-Driven Computational Modeling
+  - Provable Optimization and Algorithm Design
+  - Complexity and Approximation Analysis
+  - Sampling, Greedy, and Coverage Algorithms
+  - Graph Learning and Deep Reinforcement Learning
+  - Empirical Validation on Real-World Systems
 
 interest_groups:
-  - name: Methods
+  - name: Problem Formulation
     items:
-      - Mathematical modeling
+      - Problem discovery from real phenomena
+      - Mathematical and computational modeling
+      - Objective and constraint construction
+      - Data assumptions and empirical grounding
+  - name: Optimization and Algorithms
+    items:
       - Complexity and approximation analysis
-      - Combinatorial and non-submodular optimization
-      - Sampling algorithms
-      - Graph learning and reinforcement learning
-  - name: Systems
+      - Non-submodular and non-monotone objectives
+      - Sampling algorithm design
+      - Greedy and maximum-coverage reformulation
+      - Scalable implementation
+  - name: Learning and Validation
     items:
-      - Complex networks
-      - Networked socio-technical systems
-      - Organizational and resource diffusion
-      - Competitive and multi-agent information systems
-  - name: Applications
-    items:
-      - Digital platform governance
-      - Business and decision analytics
-      - AI-generated content provenance
-      - Information integrity
-      - Risk and emergency management
+      - Graph neural networks
+      - Deep reinforcement learning
+      - Simulation and real-world data experiments
+      - AIGC provenance and trustworthy decision extensions
+      - Social, business, organizational, and information systems
   
 education:
   - area: Ph.D. in Computer Application Technology (Computer Science)
@@ -95,16 +96,16 @@ education:
     date_start: 2020-09-01
     # Used only for sorting; date_end_text controls the displayed expected month.
     date_end: '2026-09-01'
-    date_end_text: September 2026
+    date_end_text: late September / early October 2026
     expected: true
     advisors:
       - name: Prof. Jianming Zhu
         url: https://people.ucas.ac.cn/~jianming?language=en
     summary_home: |
-      Dissertation on group opinion dynamics and influence optimization.
+      Dissertation on problem-driven modeling and optimization for group opinion dynamics and influence-related decision problems.
     summary: |
-      Dissertation on group opinion dynamics and influence optimization in social networks.
-      Focuses on opinion diffusion, influence maximization, and optimization techniques for large-scale networks.
+      Dissertation on turning group opinion dynamics and influence-related decision problems into formal models, analyzable objectives, and scalable optimization algorithms.
+      Focuses on model construction, complexity and approximation analysis, algorithm design, and data-based validation.
     # button:
     #   text: 'Read Thesis'
     #   url: 'https://example.com/thesis.pdf'
@@ -121,9 +122,9 @@ education:
       - name: Prof. Ding-Zhu Du
         url: https://personal.utdallas.edu/~dzdu/
     summary_home: |
-      Completed collaborative research in algorithmic influence optimization and network diffusion.
+      Completed collaborative research on computational modeling, optimization, and data-driven validation for decision problems.
     summary: |
-      Visiting Scholar in the Department of Computer Science from January 2025 to January 2026, with collaborative research on algorithmic influence optimization and network diffusion.
+      Visiting Scholar in the Department of Computer Science from January 2025 to January 2026, with collaborative research on formal modeling, algorithmic optimization, learning-based solution methods, and empirical validation.
 
   - area: Bachelor of Management in Information Systems
     institution: Beijing University of Chemical Technology (BUCT)
@@ -187,14 +188,14 @@ service:
         institution: Peer Academic Development Center, Beijing University of Chemical Technology (BUCT)
         date_start: 2018-09-01
         date_end: 2020-06-30
-        show_on_homepage: true
+        show_on_homepage: false
         summary: |
           Delivered peer-instruction sessions and academic workshops to undergraduate students.
       - position: Graduate Program Secretary
         institution: School of Engineering Sciences, University of Chinese Academy of Sciences (UCAS)
         date_start: 2021-09-01
         date_end: 2023-06-30
-        show_on_homepage: true
+        show_on_homepage: false
         summary: |
           Organized proposal, mid-term, and thesis defenses for the Master of Engineering Management program, and coordinated graduate admissions interviews.
       - position: Library Assistant
@@ -205,64 +206,15 @@ service:
         summary: |
           Assisted students by providing information services, supported shelving and circulation work, and contributed to the library's "Love Reading" cultural initiative and annual calendar production.
   
-  - category: Leadership
+  - category: University Service
     items:
-      - position: President of the Graduate Student Union
-        institution: School of Engineering Sciences, University of Chinese Academy of Sciences (UCAS)
-        date_start: 2021-09-01
-        date_end: 2022-06-30
-        show_on_homepage: true
-        summary: |
-          Led student activities and meetings, organized campus events such as the Stray Cats & Dogs Photography Exhibition, and managed student information and campus engagement programs.
-      - position: Class President
-        institution: School of Engineering Sciences, University of Chinese Academy of Sciences (UCAS)
-        date_start: 2021-09-01
-        date_end: 2022-06-30
-        show_on_homepage: false
-        summary: |
-          Coordinated class meetings, assisted with student affairs and health data management, and supported institutional communication during campus elections.
-      - position: Psychological Counselor Representative
-        institution: Class 9003, University of Chinese Academy of Sciences (UCAS)
-        date_start: 2020-09-01
-        date_end: 2021-07-31
-        show_on_homepage: false
-        summary: |
-          Completed official counselor training and provided peer psychological support within the graduate cohort.
-      - position: Minister of Organization Department
-        institution: Student Union, College of Economic and Management, Beijing University of Chemical Technology (BUCT)
-        date_start: 2017-09-01
-        date_end: 2018-06-30
-        show_on_homepage: false
-        summary: |
-          Organized student events and assisted in planning cultural and recreational activities.
-      - position: Head of Volunteer Association
-        institution: School of Economics and Management, Beijing University of Chemical Technology (BUCT)
-        date_start: 2017-09-01
-        date_end: 2018-06-30
-        show_on_homepage: false
-        summary: |
-          Directed volunteer service initiatives and coordinated community engagement programs.
-      - position: Class President
-        institution: Information Management and Information Systems 1602, Beijing University of Chemical Technology (BUCT)
-        date_start: 2018-09-01
-        date_end: 2020-06-30
-        show_on_homepage: false
-        summary: |
-          Organized class activities and coordinated student affairs.
-      - position: Debate Team Member
-        institution: Beijing University of Chemical Technology (BUCT)
+      - position: Selected University Service
+        institution: UCAS / BUCT
         date_start: 2016-09-01
-        date_end: 2020-06-30
+        date_end: 2023-06-30
         show_on_homepage: false
         summary: |
-          Participated in debate competitions.
-      - position: Member, Student News Center
-        institution: Beijing University of Chemical Technology (BUCT)
-        date_start: 2016-09-01
-        date_end: 2017-06-30
-        show_on_homepage: false
-        summary: |
-          Contributed to campus media and student communications.
+          Coordinated graduate program activities, academic events, peer mentoring, and student-facing academic support at UCAS and BUCT.
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
@@ -271,7 +223,7 @@ skills:
     color: '#5a8dee'
     color_border: '#6ba2f5'
     items:
-      - name: Mathematical modeling for complex systems
+      - name: Mathematical modeling for real-world problems
         icon: hero/beaker
       - name: Complexity analysis and problem reformulation
         icon: hero/cube
@@ -284,7 +236,7 @@ skills:
     items:
       - name: Python, PyTorch, NetworkX, NumPy/Pandas
         icon: hero/code-bracket
-      - name: Reinforcement learning and graph-based learning
+      - name: Deep reinforcement learning and graph neural networks
         icon: hero/share
       - name: Reproducible pipelines with Git, Linux, and Jupyter
         icon: hero/server-stack
@@ -349,7 +301,7 @@ awards:
     date: '2023-07-01'
     awarder: University of Chinese Academy of Sciences (UCAS)
     icon: hero/academic-cap
-    show_on_homepage: true
+    show_on_homepage: false
     homepage_title: Merit Student (×3)
     order: 6
     summary: |
@@ -368,7 +320,7 @@ awards:
     date: '2022-07-05'
     awarder: University of Chinese Academy of Sciences (UCAS)
     icon: hero/star
-    show_on_homepage: true
+    show_on_homepage: false
     order: 7
     homepage_title: Excellent Student Leader (×2)
     summary: |
@@ -432,8 +384,10 @@ awards:
 ---
 
 
-**Jialing Dai** is a Ph.D. candidate in Computer Application Technology (Computer Science) at the *University of Chinese Academy of Sciences (UCAS)*. She was a Visiting Scholar at the *University of Texas at Dallas (UTD)* from January 2025 to January 2026. Her Ph.D. defense is expected in August 2026, with degree completion expected in September-October 2026.
-Her research develops **computational models**, **optimization algorithms**, and **learning-based methods** for data-driven decision problems in complex systems. Her training spans **mathematical modeling**, **complexity analysis**, **combinatorial optimization**, and **machine-learning implementation**, with applications in social, organizational, and information networks.
-Her published and submitted work examines **information diffusion**, **group behavior**, **signed interactions**, **AI-generated content provenance**, and **resource diffusion**. More broadly, she is interested in problem-driven research that turns social, business, and technical settings into mathematically analyzable and computationally tractable decision problems.
-She also has experience in **teaching and academic service**, including work as a teaching assistant, graduate program secretary, program committee member, and peer reviewer.
-She is currently seeking postdoctoral, research fellow, and early-career faculty opportunities in **data-driven decision analytics**, **computational social/business systems**, **AI and information integrity**, and **learning-augmented combinatorial optimization**.
+**Jialing Dai** is a Ph.D. candidate in Computer Application Technology (Computer Science) at the *University of Chinese Academy of Sciences (UCAS)*. She was a Visiting Researcher at the *University of Texas at Dallas (UTD)* from January 2025 to January 2026. Her Ph.D. defense is expected in August 2026, with the degree expected in late September or early October 2026.
+
+She develops **computational models**, **optimization algorithms**, and **learning-based solution methods** by first identifying computable structure in real-world phenomena. Her work turns observed decision problems into formal models, analyzable objectives, scalable algorithms, and empirically testable research questions.
+
+Her previous research has formalized problems in group polarization, intergroup debate, signed interactions, AI-generated content provenance, and resource diffusion. Across these projects, she combines model construction, complexity and approximation analysis, sampling or coverage-based algorithm design, graph learning, deep reinforcement learning, and data-based validation.
+
+She is seeking postdoctoral and research fellow opportunities where this problem-driven modeling and algorithmic training can support computational research across social, organizational, business, information, and AI-enabled decision systems.
