@@ -9,6 +9,8 @@
 
 本文是本项目的 Hugo Blox 自定义手册，不是全局 Codex 指令；Codex 的项目入口规则见 `AGENTS.md`。
 
+按任务读取相关部分即可：内容更新通常不需要本指南；修改 Block、首页结构、CSS、icon 或 collection 行为时再参考对应章节。
+
 ## 自定义的核心原则
 
 ### 1. 统一使用Block模式
@@ -52,7 +54,7 @@ find ~/Library/Caches/hugo_cache/modules/filecache/modules/pkg/mod \
 
 ```bash
 # 复制主题Block模板到项目
-cd ~/Documents/PycharmProjects/personal-site
+cd "$(git rev-parse --show-toplevel)"
 THEME_BLOX_DIR=$(find ~/Library/Caches/hugo_cache/modules/filecache/modules/pkg/mod \
   -path '*/github.com/!hugo!blox/hugo-blox-builder/modules/blox-tailwind@*/blox' \
   -type d \
@@ -356,24 +358,3 @@ _index.md (内容数据) → block.html (样式容器) → 渲染结果
 ```
 
 ---
-
-## 人工参考：ChatGPT提示词模板
-
-以下模板仅供人工在外部对话中快速描述任务，Codex 处理本项目时应优先读取 `AGENTS.md` 和本指南的规则。
-
-### 创建新Block时：
-
-```
-我需要在Hugo Blox主题中创建自定义Block。
-
-项目信息：
-- 主题：Hugo Blox Builder (Tailwind版本)
-- Block位置：layouts/partials/hbx/blocks/xxx-custom/block.html
-
-CSS规则：
-1. 优先使用Tailwind类（90%）
-2. 复杂样式用<style>标签（伪元素、:has()、counter、动画）
-3. Block内嵌CSS写在文件末尾
-
-请从[模板名]复制并重命名，使用Tailwind优先。
-```
