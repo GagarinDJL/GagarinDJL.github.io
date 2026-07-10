@@ -121,12 +121,12 @@ service:
           担任 [AAIM 2026](https://theory.utdallas.edu/AAIM2026/index.html) 程序委员会委员。会议于 2026 年 6 月 19-21 日在美国得克萨斯大学举行。
 
       - position: 期刊与会议审稿人
-        institution: IEEE/ACM ToN、IEEE T-CSS、WWW Journal
+        institution: IEEE Transactions on Networking（T-ON）、IEEE T-CSS、WWW Journal
         date_start: 2023-01-01
         date_end: ''
         show_on_homepage: true
         summary: |
-          为 IEEE/ACM Transactions on Networking、IEEE Transactions on Computational Social Systems 和 World Wide Web Journal 等期刊审稿。
+          为 IEEE Transactions on Networking、IEEE Transactions on Computational Social Systems 和 World Wide Web Journal 等期刊审稿。
       - position: 助教
         institution: 中国科学院大学
         date_start: 2021-09-01
@@ -271,6 +271,6 @@ awards:
 
 她的研究从现实问题发现出发，识别其中的可计算结构，并将其抽象为“**形式化建模 - 理论分析 - 算法设计 - 数据实验验证**”的模型与算法问题。已有成果涉及**群体极化**、**跨群争论**、**带符号交互**、**AIGC 内容溯源**和**资源扩散**等问题，这些问题作为研究落点服务于更通用的建模与优化方法。
 
-目前已在 Information Sciences、《中国管理科学》等期刊及国际会议发表/录用论文，并有 IEEE/ACM Transactions on Networking 大修稿已提交、Expert Systems with Applications 论文处于大修阶段。相关工作覆盖模型构造、复杂性与近似分析、采样/覆盖算法、图神经网络、深度强化学习和真实数据验证。
+目前已在 Information Sciences、《中国管理科学》等期刊及国际会议发表/录用论文，IEEE Transactions on Networking 论文已接收，Expert Systems with Applications 论文大修已提交。相关工作覆盖模型构造、复杂性与近似分析、采样/覆盖算法、图神经网络、深度强化学习和真实数据验证。
 
 她正在申请**教学科研岗**、**师资博士后**、**博士后**及**青年科研岗位**，重点关注管理科学与工程、计算机应用技术、数据科学与智能决策、信息管理与信息系统、AI 可信与 AI+管理交叉方向。
