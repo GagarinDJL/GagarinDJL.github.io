@@ -8,14 +8,14 @@ authors:
   - "Jianming Zhu"
   - "Weili Wu"
 publication_types: ["article-journal"]
-publication: "IEEE/ACM Transactions on Networking"
-publication_short: "ToN"
+publication: "IEEE Transactions on Networking, accepted"
+publication_short: "T-ON"
 summary: "Abstracts multiple group-aware propagation mechanisms into a unified model representation, studies the resulting optimization problem, and develops a GNN and deep reinforcement learning solver for scalable decision making."
 # date: 2025-01-01
 # abstract: ""
 featured: true
-status: major revision submitted
+status: accepted
 draft: false
 ---
 
-**Status:** major revision submitted.
+**Status:** accepted.

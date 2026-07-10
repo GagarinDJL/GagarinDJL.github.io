@@ -171,12 +171,12 @@ service:
           Program Committee Member for the [20th International Conference on Algorithmic Aspects in Information and Management (AAIM 2026)](https://theory.utdallas.edu/AAIM2026/index.html), held at the University of Texas at Dallas, June 19–21, 2026.
 
       - position: Peer Reviewer
-        institution: IEEE/ACM ToN, IEEE T-CSS, WWW Journal
+        institution: IEEE Transactions on Networking (T-ON), IEEE T-CSS, WWW Journal
         date_start: 2023-01-01
         date_end: ''
         show_on_homepage: true
         summary: |
-          Reviewed submissions for IEEE/ACM Transactions on Networking (ToN), IEEE Transactions on Computational Social Systems (T-CSS), and the World Wide Web Journal (WWW).
+          Reviewed submissions for IEEE Transactions on Networking (T-ON), IEEE Transactions on Computational Social Systems (T-CSS), and the World Wide Web Journal (WWW).
       - position: Teaching Assistant
         institution: University of Chinese Academy of Sciences (UCAS)
         date_start: 2021-09-01
@@ -389,5 +389,7 @@ awards:
 She develops **computational models**, **optimization algorithms**, and **learning-based solution methods** by first identifying computable structure in real-world phenomena. Her work turns observed decision problems into formal models, analyzable objectives, scalable algorithms, and empirically testable research questions.
 
 Her previous research has formalized problems in group polarization, intergroup debate, signed interactions, AI-generated content provenance, and resource diffusion. Across these projects, she combines model construction, complexity and approximation analysis, sampling or coverage-based algorithm design, graph learning, deep reinforcement learning, and data-based validation.
+
+Her work has been published or accepted in *Information Sciences*, *IEEE Transactions on Networking*, *Chinese Journal of Management Science*, and international conferences; a major revision has been submitted to *Expert Systems with Applications*.
 
 She is seeking postdoctoral and research fellow opportunities where this problem-driven modeling and algorithmic training can support computational research across social, organizational, business, information, and AI-enabled decision systems.

@@ -28,8 +28,7 @@ featured: false
 projects: []
 slides: ""
 draft: false
-status: major revision
+status: major revision submitted
 ---
 
-**状态：** 大修中。
-
+**状态：** 大修已提交。
