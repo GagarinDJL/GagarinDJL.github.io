@@ -56,6 +56,12 @@ sections:
       title: Applied Projects
       subtitle: "Selected case studies"
       projects:
+        - title: "2025 International Young Partners Program"
+          role: Proposal Lead & Project Coordinator
+          institution: China Science and Technology Development Foundation × UMass Boston
+          period: 2025.12–2026.05
+          description: Led proposal development and end-to-end delivery of a five-day academic exchange in China with Dr. Hongmin (William) Du of UMass Boston, including agenda design, seminars and research discussions, and project closeout. The exchange covered large language models, cybersecurity information disclosure, and data-driven risk analytics.
+
         - title: Risk and Safety Analytics for Power-Grid Construction
           role: Project Lead
           institution: UCAS × State Grid Henan EPRI

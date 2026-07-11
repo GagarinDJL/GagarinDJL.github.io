@@ -49,6 +49,12 @@ sections:
       title: 应用项目
       subtitle: "代表性案例与项目"
       projects:
+        - title: "中国科技发展基金会“2025 国际青年伙伴计划”"
+          role: 申报与执行负责人
+          institution: 中国科技发展基金会 × UMass Boston
+          period: 2025.12–2026.05
+          description: 主导项目申报与全流程执行，组织 UMass Boston Hongmin（William）Du 博士来华开展为期 5 天的学术交流，完成学术议程设计、报告与研讨组织及项目结项；交流主题涵盖大语言模型、网络安全信息披露与数据驱动风险分析。
+
         - title: 电网施工安全违规数据分析：风险识别、案例标注与管理决策
           role: 学生项目负责人
           institution: 中国科学院大学 × 国网河南电力科学研究院
