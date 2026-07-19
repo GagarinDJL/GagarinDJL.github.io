@@ -2,8 +2,8 @@
 title: "Manuscript on multi-robot coordination and cloud-based control"
 weight: 120
 publication_types: ["paper-conference"]
-publication: "IEEE/RSJ International Conference on Intelligent Robots and Systems"
-publication_short: "IROS 2026"
+publication: "会议投稿"
+publication_short: ""
 tags: []
 featured: false
 links: []
