@@ -27,7 +27,7 @@ featured: false
 projects: []
 slides: ""
 draft: false
-status: major revision
+status: major revision submitted
 ---
 
-**Status:** major revision.
+**Status:** major revision submitted.
