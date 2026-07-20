@@ -63,16 +63,16 @@ sections:
           description: Led proposal development and end-to-end delivery of a five-day academic exchange in China with Dr. Hongmin (William) Du of UMass Boston, including agenda design, seminars and research discussions, and project closeout. The exchange covered large language models, cybersecurity information disclosure, and data-driven risk analytics.
 
         - title: Risk and Safety Analytics for Power-Grid Construction
-          role: Project Lead
+          role: Student Team Lead
           institution: UCAS × State Grid Henan EPRI
           period: 2022.10–2022.12
-          description: Led a 6-member team to build a safety-violation taxonomy and 1,498-case labeled dataset, conduct association and clustering analyses, and translate data patterns into targeted management recommendations.
+          description: Led a 6-member student team, under faculty supervision, to build a safety-violation taxonomy and 1,498-case labeled dataset, conduct association and clustering analyses, and translate data patterns into targeted management recommendations.
         
         - title: "Hazard-Source Tracing with Fault-Tree Modeling"
-          role: Research Co-Lead
+          role: Student Research Team Co-Lead
           institution: Department of Emergency Management
           period: 2022.05–2023.04
-          description: Developed a hazard-source tracing method based on fault-tree analysis, completed multi-case studies, and contributed major sections to the final report.
+          description: Co-led the student research team under faculty supervision, developed a hazard-source tracing method based on fault-tree analysis, completed multi-case studies, and contributed major sections to the final report.
 
   - block: service-custom
     id: service
