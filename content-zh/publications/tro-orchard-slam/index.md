@@ -1,5 +1,5 @@
 ---
-title: "A Robust Semantic-Enhanced Framework for Multi-Robot SLAM Merging in Orchard"
+title: "PROMO-Orchard: A Robust Semantic-Enhanced Framework for Dual-Robot SLAM Merging in Orchard"
 weight: 90
 authors:
   - "Yefeng Sun"
@@ -7,19 +7,30 @@ authors:
   - "Liang Gong"
   - "Bishu Gao"
   - "Jinghan Cai"
-  - "Gengjie Lin"
-  - "Jiayu Chen"
   - "Yanming Li"
   - "Chengliang Liu"
+author_notes:
+  - ""
+  - ""
+  - "通讯作者"
+  - ""
+  - ""
+  - ""
+  - ""
 publication_types: ["article-journal"]
 publication: "Journal of Field Robotics"
 publication_short: "JFR"
+hugoblox:
+  ids:
+    doi: 10.1002/rob.70323
 tags: []
 featured: false
 projects: []
 slides: ""
 draft: false
-status: major revision submitted
+status: in production
 ---
 
-**状态：** 已提交大修稿。
+**文章类型：** Research Article。
+
+**状态：** 出版制作中（In Production）。
