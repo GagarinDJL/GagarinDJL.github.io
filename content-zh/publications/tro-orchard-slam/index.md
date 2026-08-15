@@ -1,5 +1,5 @@
 ---
-title: "PROMO-Orchard: A Robust Semantic-Enhanced Framework for Dual-Robot SLAM Merging in Orchard"
+title: "PROMO‐Orchard: A Robust Semantic‐Enhanced Framework for Dual‐Robot Simultaneous Localization and Mapping Merging in Orchard"
 weight: 90
 authors:
   - "Yefeng Sun"
@@ -17,6 +17,7 @@ author_notes:
   - ""
   - ""
   - ""
+date: "2026-08-14T00:00:00Z"
 publication_types: ["article-journal"]
 publication: "Journal of Field Robotics"
 publication_short: "JFR"
@@ -28,9 +29,8 @@ featured: false
 projects: []
 slides: ""
 draft: false
-status: in production
 ---
 
 **文章类型：** Research Article。
 
-**状态：** 出版制作中（In Production）。
+**状态：** 已于 2026 年 8 月 14 日在线发表（Published Online）。
