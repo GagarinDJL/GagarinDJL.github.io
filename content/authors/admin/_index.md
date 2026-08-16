@@ -36,7 +36,7 @@ organizations:
     url: https://www.utdallas.edu/
 
 headline:
-  - "Expected Ph.D. defense: August 2026; degree expected: late September / early October 2026"
+  - "Ph.D. dissertation successfully defended on 13 August 2026; degree expected: late September 2026"
   - "Seeking postdoctoral and research fellow opportunities in problem-driven computational modeling, optimization, and data-driven algorithmic research"
 
 # Social network links
@@ -384,7 +384,7 @@ awards:
 ---
 
 
-**Jialing Dai** is a Ph.D. candidate in Computer Application Technology (Computer Science) at the *University of Chinese Academy of Sciences (UCAS)*. She was a Visiting Researcher at the *University of Texas at Dallas (UTD)* from January 2025 to January 2026. Her Ph.D. defense is expected in August 2026, with the degree expected in late September or early October 2026.
+**Jialing Dai** is a Ph.D. candidate in Computer Application Technology (Computer Science) at the *University of Chinese Academy of Sciences (UCAS)*. She was a Visiting Researcher at the *University of Texas at Dallas (UTD)* from January 2025 to January 2026. She successfully defended her Ph.D. dissertation on 13 August 2026, with the degree expected in late September 2026.
 
 She develops **computational models**, **optimization algorithms**, and **learning-based solution methods** by first identifying computable structure in real-world phenomena. Her work turns observed decision problems into formal models, analyzable objectives, scalable algorithms, and empirically testable research questions.
 
