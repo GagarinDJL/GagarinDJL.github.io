@@ -71,7 +71,7 @@ education:
     institution_url: https://english.ucas.ac.cn/
     date_start: 2020-09-01
     date_end: '2026-09-01'
-    date_end_text: 2026年9月底/10月初
+    date_end_text: 2026年9月底
     expected: true
     advisors:
       - name: 朱建明教授
@@ -86,7 +86,7 @@ education:
     institution: 美国得克萨斯大学（University of Texas at Dallas）
     institution_url: https://cs.utdallas.edu/
     date_start: 2025-01-19
-    date_end: 2026-01-20
+    date_end: 2026-01-26
     expected: false
     advisors:
       - name: 伍伟丽教授
@@ -271,6 +271,6 @@ awards:
 
 她的研究从现实问题发现出发，识别其中的可计算结构，并将其抽象为“**形式化建模 - 理论分析 - 算法设计 - 数据实验验证**”的模型与算法问题。已有成果涉及**群体极化**、**跨群争论**、**带符号交互**、**AIGC 内容溯源**和**资源扩散**等问题，这些问题作为研究落点服务于更通用的建模与优化方法。
 
-目前的论文成果包括 Information Sciences、IEEE Transactions on Networking、《中国管理科学》及国际会议论文；一篇 Journal of Field Robotics Research Article 已在线发表，Expert Systems with Applications 论文大修已提交。相关工作覆盖模型构造、复杂性与近似分析、采样/覆盖算法、图神经网络、深度强化学习和真实数据验证。
+目前的论文成果包括 Information Sciences、IEEE Transactions on Networking、《中国管理科学》及国际会议论文；Journal of Field Robotics 和 Expert Systems with Applications 论文均已在线发表。相关工作覆盖模型构造、复杂性与近似分析、采样/覆盖算法、图神经网络、深度强化学习和真实数据验证。
 
 她正在申请**教学科研岗**、**师资博士后**、**博士后**及**青年科研岗位**，重点关注管理科学与工程、计算机应用技术、数据科学与智能决策、信息管理与信息系统、AI 可信与 AI+管理交叉方向。

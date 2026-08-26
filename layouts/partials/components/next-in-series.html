@@ -49,8 +49,13 @@
   {{ $unpublishedFirst = sort $unpublishedFirst "Date" "desc" }}
   {{ $unpublishedOthers = sort $unpublishedOthers "Date" "desc" }}
   
-  {{/* 合并为自定义排序列表 */}}
-  {{ $sortedPubs := $publishedFirst | append $publishedOthers | append $unpublishedFirst | append $unpublishedOthers }}
+  {{/* 合并为自定义排序列表；逐项追加以兼容任一空分组 */}}
+  {{ $sortedPubs := slice }}
+  {{ range $group := (slice $publishedFirst $publishedOthers $unpublishedFirst $unpublishedOthers) }}
+    {{ range $group }}
+      {{ $sortedPubs = $sortedPubs | append . }}
+    {{ end }}
+  {{ end }}
   
   {{/* 找到当前页面在排序列表中的位置 */}}
   {{ $currentIndex := -1 }}

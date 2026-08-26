@@ -96,7 +96,7 @@ education:
     date_start: 2020-09-01
     # Used only for sorting; date_end_text controls the displayed expected month.
     date_end: '2026-09-01'
-    date_end_text: late September / early October 2026
+    date_end_text: late September 2026
     expected: true
     advisors:
       - name: Prof. Jianming Zhu
@@ -114,7 +114,7 @@ education:
     institution: University of Texas at Dallas (UT Dallas)
     institution_url: https://cs.utdallas.edu/
     date_start: 2025-01-19
-    date_end: 2026-01-20
+    date_end: 2026-01-26
     expected: false
     advisors:
       - name: Prof. Weili Wu
@@ -390,6 +390,6 @@ She develops **computational models**, **optimization algorithms**, and **learni
 
 Her previous research has formalized problems in group polarization, intergroup debate, signed interactions, AI-generated content provenance, and resource diffusion. Across these projects, she combines model construction, complexity and approximation analysis, sampling or coverage-based algorithm design, graph learning, deep reinforcement learning, and data-based validation.
 
-Her work appears in *Information Sciences*, *IEEE Transactions on Networking*, *Chinese Journal of Management Science*, and international conferences; a research article in *Journal of Field Robotics* has been published online, and a major revision has been submitted to *Expert Systems with Applications*.
+Her work appears in *Information Sciences*, *IEEE Transactions on Networking*, *Chinese Journal of Management Science*, and international conferences; research articles in *Journal of Field Robotics* and *Expert Systems with Applications* have been published online.
 
 She is seeking postdoctoral and research fellow opportunities where this problem-driven modeling and algorithmic training can support computational research across social, organizational, business, information, and AI-enabled decision systems.

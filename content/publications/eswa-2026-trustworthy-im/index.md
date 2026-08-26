@@ -18,6 +18,10 @@ author_notes:
 publication_types: ["article-journal"]
 publication: "Expert Systems With Applications"
 publication_short: "ESWA"
+date: "2026-08-20T00:00:00Z"
+hugoblox:
+  ids:
+    doi: 10.1016/j.eswa.2026.134131
 summary: "Systematizes influence maximization models and algorithms, and frames trustworthy decision-making questions from the perspective of model assumptions, algorithmic reliability, and validation needs."
 tags:
   - model taxonomy
@@ -28,7 +32,6 @@ featured: false
 projects: []
 slides: ""
 draft: false
-status: major revision submitted
 ---
 
-**Status:** major revision submitted.
+**Status:** Published online. DOI: 10.1016/j.eswa.2026.134131.
