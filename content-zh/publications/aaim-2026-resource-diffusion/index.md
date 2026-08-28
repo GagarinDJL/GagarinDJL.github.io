@@ -16,9 +16,6 @@ tags:
   - 组织建模
   - 合作研究
 featured: false
-links:
-  - type: source
-    url: "https://theory.utdallas.edu/AAIM2026/accepted-papers.html"
 projects: []
 slides: ""
 draft: false

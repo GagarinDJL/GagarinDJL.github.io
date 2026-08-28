@@ -19,9 +19,6 @@ tags:
   - 可信 AI
   - 组合优化
 featured: false
-links:
-  - type: source
-    url: "https://theory.utdallas.edu/AAIM2026/accepted-papers.html"
 projects: []
 slides: ""
 draft: false

@@ -11,7 +11,6 @@ projects: []
 slides: ""
 draft: false
 status: under double-anonymous review
-reading_time: false
 ---
 
 **状态：** 双匿名评审中。

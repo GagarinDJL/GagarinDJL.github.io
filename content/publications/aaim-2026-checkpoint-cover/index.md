@@ -19,9 +19,6 @@ tags:
   - trustworthy AI
   - combinatorial optimization
 featured: false
-links:
-  - type: source
-    url: "https://theory.utdallas.edu/AAIM2026/accepted-papers.html"
 projects: []
 slides: ""
 draft: false

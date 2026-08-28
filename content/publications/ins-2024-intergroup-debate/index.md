@@ -39,8 +39,11 @@ hugoblox:
   ids:
     doi: 10.1016/j.ins.2024.121139
 
-# Custom links — removed duplicate DOI button (auto-generated from ids.doi)
-# links: []
+links:
+  - type: custom
+    label: "Full Text"
+    url: "https://www.sciencedirect.com/science/article/pii/S0020025524010533"
+    icon: hero/document-text
 
 # Featured image (optional)
 # image:

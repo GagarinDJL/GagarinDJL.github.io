@@ -19,6 +19,11 @@ tags:
 hugoblox:
   ids:
     doi: 10.1016/j.ins.2022.07.086
+links:
+  - type: custom
+    label: "出版商全文"
+    url: "https://www.sciencedirect.com/science/article/pii/S0020025522007757"
+    icon: hero/document-text
 projects: []
 slides: ""
 draft: false
