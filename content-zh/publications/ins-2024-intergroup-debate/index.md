@@ -1,6 +1,6 @@
 ---
 title: "Competitive net influence maximization on intergroup debate effect"
-weight: 10
+weight: 20
 authors:
   - admin
   - "Jianming Zhu"

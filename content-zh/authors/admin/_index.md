@@ -18,7 +18,7 @@ organizations:
     url: https://www.utdallas.edu/
 
 headline:
-  - "博士论文答辩已于 2026 年 8 月 13 日完成，博士学位预计于 2026 年 9 月底取得"
+  - "博士论文答辩已于 2026 年 8 月 13 日完成，博士学位预计于 2026 年 10 月取得"
   - "申请教学科研岗、师资博士后、博士后及青年科研岗位"
 
 profiles:
@@ -71,7 +71,7 @@ education:
     institution_url: https://english.ucas.ac.cn/
     date_start: 2020-09-01
     date_end: '2026-09-01'
-    date_end_text: 2026年9月底
+    date_end_text: 2026年10月
     expected: true
     advisors:
       - name: 朱建明教授
@@ -267,10 +267,10 @@ awards:
       获研究生国家奖学金。
 ---
 
-**戴佳伶**是中国科学院大学（UCAS）计算机应用技术博士候选人，已于 2026 年 8 月 13 日完成博士论文答辩，博士学位预计于 2026 年 9 月底取得。她曾于 2025 年 1 月至 2026 年 1 月赴美国得克萨斯大学（University of Texas at Dallas）开展访问研究。
+**戴佳伶**是中国科学院大学（UCAS）计算机应用技术博士候选人，已于 2026 年 8 月 13 日完成博士论文答辩，博士学位预计于 2026 年 10 月取得。她曾于 2025 年 1 月至 2026 年 1 月赴美国得克萨斯大学（University of Texas at Dallas）开展访问研究。
 
 她的研究从现实问题发现出发，识别其中的可计算结构，并将其抽象为“**形式化建模 - 理论分析 - 算法设计 - 数据实验验证**”的模型与算法问题。已有成果涉及**群体极化**、**跨群争论**、**带符号交互**、**AIGC 内容溯源**和**资源扩散**等问题，这些问题作为研究落点服务于更通用的建模与优化方法。
 
-目前的论文成果发表于 *IEEE Transactions on Networking*（T-ON）、*Information Sciences*、*Expert Systems with Applications*、《中国管理科学》、*Artificial Intelligence in Agriculture* 及相关国际会议。相关工作覆盖模型构造、复杂性与近似分析、采样/覆盖算法、图神经网络、深度强化学习和真实数据验证。
+目前的论文成果发表于 *IEEE Transactions on Networking*（T-ON）、*Information Sciences* 和 *Expert Systems with Applications*；另有一篇论文正在 ICLR 2027 审稿。《中国管理科学》、*Artificial Intelligence in Agriculture* 及相关国际会议亦发表了她的研究成果。相关工作覆盖模型构造、复杂性与近似分析、采样/覆盖算法、图神经网络、深度强化学习和真实数据验证。
 
 她正在申请**教学科研岗**、**师资博士后**、**博士后**及**青年科研岗位**，重点关注管理科学与工程、计算机应用技术、数据科学与智能决策、信息管理与信息系统、AI 可信与 AI+管理交叉方向。

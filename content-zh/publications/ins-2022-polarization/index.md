@@ -1,6 +1,6 @@
 ---
 title: "Opinion influence maximization problem in online social networks based on group polarization effect"
-weight: 20
+weight: 30
 authors:
   - admin
   - "Jianming Zhu"

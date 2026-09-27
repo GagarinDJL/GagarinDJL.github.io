@@ -1,6 +1,6 @@
 ---
 title: "Scenario-Robust Checkpoint Cover for AI-Generated Content Provenance"
-weight: 50
+weight: 80
 authors:
   - "Ke Su"
   - admin

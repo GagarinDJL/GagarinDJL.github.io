@@ -36,7 +36,7 @@ organizations:
     url: https://www.utdallas.edu/
 
 headline:
-  - "Ph.D. dissertation successfully defended on 13 August 2026; degree expected: late September 2026"
+  - "Ph.D. dissertation successfully defended on 13 August 2026; degree expected in October 2026"
   - "Seeking postdoctoral and research fellow opportunities in problem-driven computational modeling, optimization, and data-driven algorithmic research"
 
 # Social network links
@@ -96,7 +96,7 @@ education:
     date_start: 2020-09-01
     # Used only for sorting; date_end_text controls the displayed expected month.
     date_end: '2026-09-01'
-    date_end_text: late September 2026
+    date_end_text: October 2026
     expected: true
     advisors:
       - name: Prof. Jianming Zhu
@@ -384,12 +384,12 @@ awards:
 ---
 
 
-**Jialing Dai** is a Ph.D. candidate in Computer Application Technology (Computer Science) at the *University of Chinese Academy of Sciences (UCAS)*. She was a Visiting Researcher at the *University of Texas at Dallas (UTD)* from January 2025 to January 2026. She successfully defended her Ph.D. dissertation on 13 August 2026, with the degree expected in late September 2026.
+**Jialing Dai** is a Ph.D. candidate in Computer Application Technology (Computer Science) at the *University of Chinese Academy of Sciences (UCAS)*. She was a Visiting Researcher at the *University of Texas at Dallas (UTD)* from January 2025 to January 2026. She successfully defended her Ph.D. dissertation on 13 August 2026, with the degree expected in October 2026.
 
 She develops **computational models**, **optimization algorithms**, and **learning-based solution methods** by first identifying computable structure in real-world phenomena. Her work turns observed decision problems into formal models, analyzable objectives, scalable algorithms, and empirically testable research questions.
 
 Her previous research has formalized problems in group polarization, intergroup debate, signed interactions, AI-generated content provenance, and resource diffusion. Across these projects, she combines model construction, complexity and approximation analysis, sampling or coverage-based algorithm design, graph learning, deep reinforcement learning, and data-based validation.
 
-Her work appears in *IEEE Transactions on Networking (T-ON)*, *Information Sciences*, *Expert Systems with Applications*, *Chinese Journal of Management Science*, *Artificial Intelligence in Agriculture*, and international conferences.
+Her published work appears in *IEEE Transactions on Networking (T-ON)*, *Information Sciences*, and *Expert Systems with Applications*; a paper is under review at ICLR 2027; other publications include the *Chinese Journal of Management Science*, *Artificial Intelligence in Agriculture*, and international conferences.
 
 She is seeking postdoctoral and research fellow opportunities where this problem-driven modeling and algorithmic training can support computational research across social, organizational, business, information, and AI-enabled decision systems.

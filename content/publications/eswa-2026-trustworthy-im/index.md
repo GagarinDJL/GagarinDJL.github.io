@@ -1,6 +1,6 @@
 ---
 title: "Influence Maximization in Online Social Networks: Models, Algorithms, and Trustworthy Decision-Making"
-weight: 60
+weight: 40
 authors:
   - admin
   - "Peikun Ni"

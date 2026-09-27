@@ -1,6 +1,6 @@
 ---
 title: "S$^2$BEV: Lightweight, Robust, and Precise SLAM-Oriented Segmentation Bird Eye’s View Mapping Approach"
-weight: 80
+weight: 100
 authors:
   - "Yefeng Sun"
   - "Liang Gong"
