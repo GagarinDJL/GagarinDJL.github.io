@@ -11,6 +11,8 @@ authors:
 publication_types: ["paper-conference"]
 publication: "国际学习表征会议（ICLR），2027"
 date: "2027-01-01T00:00:00Z"
+publishDate: "2026-09-27T00:00:00Z"
+lastmod: "2026-09-27T00:00:00Z"
 status: under review
 featured: false
 links:
