@@ -32,7 +32,7 @@ date: "2025-05-19T00:00:00Z"
 publication_types: ['paper-conference']
 
 # Publication name and optional abbreviated publication name.
-publication: "IEEE International Conference on Robotics and Automation"
+publication: "IEEE International Conference on Robotics and Automation (CCF B, ICORE A*)"
 publication_short: "ICRA"
 
 abstract: >-

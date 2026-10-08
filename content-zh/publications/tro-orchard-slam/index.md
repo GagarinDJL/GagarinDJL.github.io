@@ -19,7 +19,7 @@ author_notes:
   - ""
 date: "2026-08-14T00:00:00Z"
 publication_types: ["article-journal"]
-publication: "Journal of Field Robotics"
+publication: "Journal of Field Robotics（中国自动化学会 A 类）, 43(7), 4880–4903"
 publication_short: "JFR"
 hugoblox:
   ids:

@@ -9,7 +9,7 @@ authors:
   - "Weili Wu"
   - "Jianming Zhu"
 publication_types: ["paper-conference"]
-publication: "International Conference on Learning Representations (ICLR), 2027"
+publication: "International Conference on Learning Representations (ICLR, CCF A, ICORE A*)"
 date: "2027-01-01T00:00:00Z"
 publishDate: "2026-09-27T00:00:00Z"
 lastmod: "2026-09-27T00:00:00Z"

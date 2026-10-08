@@ -20,7 +20,7 @@ author_notes:
   - ""
   - ""
 publication_types: ["article-journal"]
-publication: "Artificial Intelligence in Agriculture"
+publication: "Artificial Intelligence in Agriculture（中科院一区 TOP，JCR Q1，IF=16.1）"
 publication_short: "AIIA"
 date: "2026-08-20T00:00:00Z"
 hugoblox:

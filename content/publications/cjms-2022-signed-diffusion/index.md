@@ -20,7 +20,7 @@ date: "2025-04-07T00:00:00Z"
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Chinese Journal of Management Science, 33(3), 139-150"
+publication: "Chinese Journal of Management Science (CSSCI, CSCD, PKU Core Journals), 33(3), 139–150"
 publication_short: ""
 
 # Abstract/Summary (optional) — keep placeholders as comments if unavailable

@@ -16,7 +16,7 @@ author_notes:
   - ""
   - ""
 publication_types: ["article-journal"]
-publication: "Expert Systems With Applications"
+publication: "Expert Systems With Applications (CAS Zone 1 (Top), JCR Q1, IF 9.4)"
 publication_short: "ESWA"
 date: "2026-08-20T00:00:00Z"
 hugoblox:

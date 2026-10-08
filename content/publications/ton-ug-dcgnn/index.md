@@ -8,7 +8,7 @@ authors:
   - "Jianming Zhu"
   - "Weili Wu"
 publication_types: ["article-journal"]
-publication: "IEEE Transactions on Networking"
+publication: "IEEE Transactions on Networking (CCF A, JCR Q1)"
 publication_short: "T-ON"
 date: "2026-01-01T00:00:00Z"
 abstract: >-

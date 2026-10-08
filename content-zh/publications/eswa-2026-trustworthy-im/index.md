@@ -16,7 +16,7 @@ author_notes:
   - ""
   - ""
 publication_types: ["article-journal"]
-publication: "Expert Systems With Applications（中科院一区Top，JCR Q1）"
+publication: "Expert Systems With Applications（中科院一区 TOP，JCR Q1，IF=9.4）"
 publication_short: "ESWA"
 date: "2026-08-20T00:00:00Z"
 hugoblox:

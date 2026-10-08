@@ -39,7 +39,7 @@ sections:
     content:
       title: Selected Research Work
       custom_sort: true  # 启用自定义排序
-      count: 6
+      count: 7
       filters:
         folders:
           - publications

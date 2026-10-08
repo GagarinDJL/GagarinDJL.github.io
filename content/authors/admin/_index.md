@@ -390,6 +390,6 @@ She develops **computational models**, **optimization algorithms**, and **learni
 
 Her previous research has formalized problems in group polarization, intergroup debate, signed interactions, AI-generated content provenance, and resource diffusion. Across these projects, she combines model construction, complexity and approximation analysis, sampling or coverage-based algorithm design, graph learning, deep reinforcement learning, and data-based validation.
 
-Her published work appears in *IEEE Transactions on Networking (T-ON)*, *Information Sciences*, and *Expert Systems with Applications*; a paper is under review at ICLR 2027; other publications include the *Chinese Journal of Management Science*, *Artificial Intelligence in Agriculture*, and international conferences.
+Her published work appears in *IEEE Transactions on Networking (T-ON)*, *Information Sciences*, and *Expert Systems with Applications*; first-author manuscripts are under review at *Operations Research* and ICLR 2027; other publications include the *Chinese Journal of Management Science*, *Artificial Intelligence in Agriculture*, and international conferences.
 
 She is seeking postdoctoral and research fellow opportunities where this problem-driven modeling and algorithmic training can support computational research across social, organizational, business, information, and AI-enabled decision systems.

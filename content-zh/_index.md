@@ -32,7 +32,7 @@ sections:
     content:
       title: 代表性研究工作
       custom_sort: true
-      count: 6
+      count: 7
       filters:
         folders:
           - publications
