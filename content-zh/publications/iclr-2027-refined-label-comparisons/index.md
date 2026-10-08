@@ -17,7 +17,7 @@ status: under review
 featured: false
 links:
   - type: custom
-    label: "OpenReview 讨论页"
+    label: "OpenReview"
     url: "https://openreview.net/forum?id=tYTwlu5dLF"
     icon: hero/link
 projects: []
