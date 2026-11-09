@@ -13,7 +13,7 @@ publication: "20th International Conference on Algorithmic Aspects in Informatio
 publication_short: "AAIM 2026"
 hide_date: true
 date: "2026-05-06T01:00:00Z"
-summary: "Formulates scenario-robust checkpoint cover for AI-generated content provenance, turning provenance tracing into a robust coverage problem under multiple possible scenarios."
+summary: "How should checkpoints be chosen to trace AI-generated content across several possible scenarios? The paper formulates the choice of a common set of checkpoints as a robust coverage problem."
 tags:
   - AIGC provenance
   - robust coverage

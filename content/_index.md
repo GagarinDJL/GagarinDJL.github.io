@@ -73,6 +73,7 @@ sections:
     content:
       username: admin
       title: Contact
+      text: I welcome ideas for collaboration on computational modeling, optimization algorithms, or intelligent decision-making.
       status:
         - icon: hero/map-pin
           text: Central University of Finance and Economics

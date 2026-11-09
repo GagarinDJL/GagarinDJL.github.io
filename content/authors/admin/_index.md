@@ -31,9 +31,6 @@ organizations:
   - role: Assistant Professor
     institution: Central University of Finance and Economics
     url: https://en.cufe.edu.cn/
-  - role: Former Visiting Researcher, Jan. 2025-Jan. 2026
-    institution: University of Texas at Dallas (UTD)
-    url: https://www.utdallas.edu/
 
 additional_emails:
   - daijialing20@mails.ucas.ac.cn
@@ -92,12 +89,11 @@ education:
       - name: Prof. Jianming Zhu
         url: https://people.ucas.ac.cn/~jianming?language=en
     summary_home: |
-      Entered the integrated graduate program in September 2020 and the doctoral stage in March 2023. Graduated and received the Ph.D. on October 16, 2026.
-      Dissertation on problem-driven modeling and optimization for group opinion dynamics and influence-related decision problems.
+      Dai began a combined master’s and doctoral program in September 2020 and entered the doctoral phase in March 2023. She graduated with her Ph.D. on October 16, 2026.
+      Her dissertation examined how group interactions shape the spread of opinions and how to choose seed nodes in a network.
     summary: |
-      Entered the integrated graduate program in September 2020 and the doctoral stage in March 2023. Graduated and received the Ph.D. on October 16, 2026.
-      Dissertation on turning group opinion dynamics and influence-related decision problems into formal models, analyzable objectives, and scalable optimization algorithms.
-      Focuses on model construction, complexity and approximation analysis, algorithm design, and data-based validation.
+      Dai began a combined master’s and doctoral program in September 2020 and entered the doctoral phase in March 2023. She graduated with her Ph.D. on October 16, 2026.
+      Her dissertation modeled how opinions spread when people interact in groups. She studied the computational complexity of choosing seed nodes and evaluated approximation algorithms both theoretically and experimentally.
     # button:
     #   text: 'Read Thesis'
     #   url: 'https://example.com/thesis.pdf'
@@ -114,9 +110,9 @@ education:
       - name: Prof. Ding-Zhu Du
         url: https://personal.utdallas.edu/~dzdu/
     summary_home: |
-      Completed collaborative research on computational modeling, optimization, and data-driven validation for decision problems.
+      She worked with colleagues in computer science to model decision problems and to design and test optimization algorithms.
     summary: |
-      Visiting Scholar in the Department of Computer Science from January 2025 to January 2026, with collaborative research on formal modeling, algorithmic optimization, learning-based solution methods, and empirical validation.
+      During her visit to the Department of Computer Science, she and her collaborators developed mathematical models for decision problems. They used optimization algorithms and machine learning to solve them and tested the methods on data.
 
   - area: Bachelor of Management in Information Systems
     institution: Beijing University of Chemical Technology (BUCT)
@@ -154,7 +150,7 @@ service:
         show_on_site: true
         show_on_homepage: true
         summary: |
-          Program Committee Member for the [20th International Conference on Algorithmic Aspects in Information and Management (AAIM 2026)](https://theory.utdallas.edu/AAIM2026/index.html), June 19–21, 2026.
+          She served on the program committee for [AAIM 2026](https://theory.utdallas.edu/AAIM2026/index.html), held June 19–21, 2026.
 
       - position: Journal and Conference Reviewer
         institution: IEEE ToN, IEEE TCSS, World Wide Web, ESWA, EAAI
@@ -172,7 +168,7 @@ service:
         show_on_site: true
         show_on_homepage: true
         summary: |
-          Led a funded exchange with the University of Massachusetts Boston. Dr. Hongmin (William) Du visited the University of Chinese Academy of Sciences for five days for seminars and discussions on large language models, cybersecurity information disclosure, and data-driven risk analysis.
+          Dai organized a five-day visit to the University of Chinese Academy of Sciences for Dr. Hongmin (William) Du of the University of Massachusetts Boston. The talks and discussions covered large language models, cybersecurity disclosures, and the use of data in risk analysis.
 
       - position: Teaching Assistant
         institution: University of Chinese Academy of Sciences (UCAS)
@@ -418,10 +414,8 @@ awards:
       Merit Student honor at BUCT.
 ---
 
-**Jialing Dai** is an Assistant Professor at the Central University of Finance and Economics. She received her Ph.D. in Computer Applied Technology from the University of Chinese Academy of Sciences in October 2026. She was a visiting researcher at the University of Texas at Dallas from January 2025 to January 2026.
+**Jialing Dai** is an Assistant Professor at the Central University of Finance and Economics. She received her Ph.D. in Computer Applied Technology from the University of Chinese Academy of Sciences in October 2026. During her doctorate, she spent a year as a visiting scholar at the University of Texas at Dallas, from January 2025 to January 2026.
 
-She studies approximation algorithms for combinatorial optimization and how agents learn decision policies from data. She is also interested in how stochastic gradients affect the training of deep networks.
+Dai studies approximation algorithms for combinatorial problems and uses reinforcement learning to solve sequential decision problems. Her interests also include stochastic optimization for training deep neural networks.
 
-In two papers in *Information Sciences*, she and her collaborators modeled group polarization and intergroup debate. In *IEEE Transactions on Networking*, they combined graph neural networks with deep reinforcement learning to select the nodes where diffusion begins. Her first-author manuscript on orthant-submodular maximization is under review at the *SIAM Journal on Computing* (SICOMP).
-
-I welcome ideas for collaboration on computational modeling, optimization algorithms, or intelligent decision-making.
+In two papers in *Information Sciences*, she and her collaborators examined how group discussions polarize opinions and how debate between groups shapes the spread of information. Their work in *IEEE Transactions on Networking* uses graph neural networks and deep reinforcement learning to select seed nodes in networks with interacting groups. Her first-author paper on orthant-submodular maximization is under review at the *SIAM Journal on Computing* (SICOMP).

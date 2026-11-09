@@ -2,7 +2,7 @@
 title: 'Academic Service and Exchange'
 date: 2025-10-29
 type: landing
-summary: Jialing Dai served on the AAIM 2026 program committee, reviews manuscripts for academic journals, and led a funded exchange with the University of Massachusetts Boston.
+summary: Jialing Dai reviews for several journals and served on the AAIM 2026 program committee. She also organized an exchange with the University of Massachusetts Boston through the International Young Partners Program.
 
 design:
   spacing: '5rem'

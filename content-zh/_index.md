@@ -66,6 +66,7 @@ sections:
     content:
       username: admin
       title: 联系方式
+      text: 欢迎对计算建模、优化算法或智能决策感兴趣的同行与我联系，一起探讨研究问题、开展合作。
       status:
         - icon: hero/map-pin
           text: 中央财经大学

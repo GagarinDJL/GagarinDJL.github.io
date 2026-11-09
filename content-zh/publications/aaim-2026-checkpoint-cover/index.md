@@ -13,7 +13,7 @@ publication: "20th International Conference on Algorithmic Aspects in Informatio
 publication_short: "AAIM 2026"
 hide_date: true
 date: "2026-05-06T01:00:00Z"
-summary: "面向 AIGC 内容溯源提出 scenario-robust checkpoint cover 问题，将来源追踪中的检查点选择抽象为多场景鲁棒覆盖建模问题。"
+summary: "这项研究把 AI 生成内容的溯源建模为鲁棒覆盖问题，考察如何选取一组检查点，兼顾不同溯源场景的覆盖需求。"
 tags:
   - AIGC 内容溯源
   - 鲁棒覆盖

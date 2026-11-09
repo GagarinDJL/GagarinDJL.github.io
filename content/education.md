@@ -2,7 +2,7 @@
 title: 'Education'
 date: 2025-10-29
 type: landing
-summary: Jialing Dai earned her Ph.D. at the University of Chinese Academy of Sciences, visited the University of Texas at Dallas, and completed her undergraduate studies at Beijing University of Chemical Technology.
+summary: Jialing Dai earned her bachelor’s degree at Beijing University of Chemical Technology and her Ph.D. at the University of Chinese Academy of Sciences. During her doctorate, she was a visiting scholar at the University of Texas at Dallas.
 
 design:
   spacing: '5rem'
