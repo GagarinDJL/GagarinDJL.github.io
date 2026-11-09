@@ -99,11 +99,19 @@
             <p class="text-lg text-gray-600 dark:text-gray-400">({{ . }})</p>
           {{- end -}}
           
-          {{ with $person.role }}
-            <p class="text-2xl font-semibold text-primary-600 dark:text-primary-400">{{ . | markdownify | emojify }}</p>
+          {{ $role := $person.role }}
+          {{ if and $role $person.organizations }}
+            {{ $org := index $person.organizations 0 }}
+            {{ $title := cond $isZh (printf "%s%s" $org.institution $role) (printf "%s, %s" $role $org.institution) }}
+            <p class="text-2xl font-semibold text-primary-600 dark:text-primary-400">
+              {{ with $org.url }}<a href="{{ . }}">{{ $title }}</a>{{ else }}{{ $title }}{{ end }}
+            </p>
+          {{ else if $role }}
+            <p class="text-2xl font-semibold text-primary-600 dark:text-primary-400">{{ $role | markdownify | emojify }}</p>
           {{ end }}
           
           {{ range $i, $org := $person.organizations }}
+            {{ if and $role (eq $i 0) }}{{ continue }}{{ end }}
             <p class="text-lg text-gray-700 dark:text-gray-300">
               {{ if ne $i 0 }}{{ with $org.role }}<span class="block font-semibold">{{ . }}</span>{{ end }}{{ end }}
               {{ with $org.institution }}

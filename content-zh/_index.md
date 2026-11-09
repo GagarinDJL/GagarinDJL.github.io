@@ -93,7 +93,5 @@ sections:
       title: 联系方式
       status:
         - icon: hero/map-pin
-          text: 2025.01-2026.01 曾赴美国得克萨斯大学访问研究
-        - icon: hero/user-group
-          text: 申请教学科研岗、师资博士后、博士后及青年科研岗位
+          text: 中央财经大学
 ---

@@ -24,27 +24,27 @@ superuser: true
 highlight_name: true
 
 # Role/position/tagline
-role: Ph.D. Candidate in Computer Science
+role: Assistant Professor
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - role: Ph.D. Candidate, Computer Application Technology
-    institution: University of Chinese Academy of Sciences (UCAS)
-    url: https://english.ucas.ac.cn/
+  - role: Assistant Professor
+    institution: Central University of Finance and Economics
+    url: https://en.cufe.edu.cn/
   - role: Former Visiting Researcher, Jan. 2025-Jan. 2026
     institution: University of Texas at Dallas (UTD)
     url: https://www.utdallas.edu/
 
-headline:
-  - "Ph.D. dissertation successfully defended on 13 August 2026; degree expected in October 2026"
-  - "Seeking postdoctoral and research fellow opportunities in problem-driven computational modeling, optimization, and data-driven algorithmic research"
+additional_emails:
+  - daijialing20@mails.ucas.ac.cn
+  - gagarindjl@gmail.com
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'mailto:daijialing20@mails.ucas.ac.cn'
-    label: E-mail Me
+    url: 'mailto:jldai@cufe.edu.cn'
+    label: Email me at CUFE
   - icon: academicons/google-scholar
     url: 'https://scholar.google.com/citations?user=1doVXBMAAAAJ'
   # GitHub is hidden from the homepage until a representative research-code repository is ready.
@@ -90,20 +90,19 @@ interest_groups:
       - Social, business, organizational, and information systems
   
 education:
-  - area: Ph.D. in Computer Application Technology (Computer Science)
+  - area: Ph.D. in Computer Applied Technology (integrated graduate program)
     institution: University of Chinese Academy of Sciences (UCAS)
     institution_url: https://english.ucas.ac.cn/
     date_start: 2020-09-01
-    # Used only for sorting; date_end_text controls the displayed expected month.
-    date_end: '2026-09-01'
-    date_end_text: October 2026
-    expected: true
+    date_end: '2026-10-16'
     advisors:
       - name: Prof. Jianming Zhu
         url: https://people.ucas.ac.cn/~jianming?language=en
     summary_home: |
+      Entered the integrated graduate program in September 2020 and the doctoral stage in March 2023. Graduated and received the Ph.D. on October 16, 2026.
       Dissertation on problem-driven modeling and optimization for group opinion dynamics and influence-related decision problems.
     summary: |
+      Entered the integrated graduate program in September 2020 and the doctoral stage in March 2023. Graduated and received the Ph.D. on October 16, 2026.
       Dissertation on turning group opinion dynamics and influence-related decision problems into formal models, analyzable objectives, and scalable optimization algorithms.
       Focuses on model construction, complexity and approximation analysis, algorithm design, and data-based validation.
     # button:
@@ -384,7 +383,7 @@ awards:
 ---
 
 
-**Jialing Dai** is a Ph.D. candidate in Computer Application Technology (Computer Science) at the *University of Chinese Academy of Sciences (UCAS)*. She was a Visiting Researcher at the *University of Texas at Dallas (UTD)* from January 2025 to January 2026. She successfully defended her Ph.D. dissertation on 13 August 2026, with the degree expected in October 2026.
+**Jialing Dai** is an Assistant Professor at the Central University of Finance and Economics. She received her Ph.D. in Computer Applied Technology from the University of Chinese Academy of Sciences in October 2026. She was a visiting researcher at the University of Texas at Dallas from January 2025 to January 2026.
 
 She develops **computational models**, **optimization algorithms**, and **learning-based solution methods** by first identifying computable structure in real-world phenomena. Her work turns observed decision problems into formal models, analyzable objectives, scalable algorithms, and empirically testable research questions.
 
@@ -392,4 +391,4 @@ Her previous research has formalized problems in group polarization, intergroup 
 
 Her published work appears in *IEEE Transactions on Networking (T-ON)*, *Information Sciences*, and *Expert Systems with Applications*; first-author manuscripts are under review at *Operations Research* and ICLR 2027; other publications include the *Chinese Journal of Management Science*, *Artificial Intelligence in Agriculture*, and international conferences.
 
-She is seeking postdoctoral and research fellow opportunities where this problem-driven modeling and algorithmic training can support computational research across social, organizational, business, information, and AI-enabled decision systems.
+I welcome ideas for collaboration on computational modeling, optimization algorithms, or intelligent decision-making.

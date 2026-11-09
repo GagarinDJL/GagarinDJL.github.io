@@ -8,23 +8,23 @@ publication_name: Jialing Dai
 pronouns: ''
 superuser: true
 highlight_name: true
-role: 计算机应用技术博士候选人
+role: 助理教授
 organizations:
-  - role: 博士候选人
-    institution: 中国科学院大学（UCAS）
-    url: https://english.ucas.ac.cn/
+  - role: 助理教授
+    institution: 中央财经大学
+    url: https://www.cufe.edu.cn/
   - role: 曾任访问学者，2025.01-2026.01
-    institution: 美国得克萨斯大学（University of Texas at Dallas）
+    institution: 美国得克萨斯大学达拉斯分校（University of Texas at Dallas）
     url: https://www.utdallas.edu/
 
-headline:
-  - "博士论文答辩已于 2026 年 8 月 13 日完成，博士学位预计于 2026 年 10 月取得"
-  - "申请教学科研岗、师资博士后、博士后及青年科研岗位"
+additional_emails:
+  - daijialing20@mails.ucas.ac.cn
+  - gagarindjl@gmail.com
 
 profiles:
   - icon: at-symbol
-    url: 'mailto:daijialing20@mails.ucas.ac.cn'
-    label: 发送邮件
+    url: 'mailto:jldai@cufe.edu.cn'
+    label: 发送邮件至央财邮箱
   - icon: academicons/google-scholar
     url: 'https://scholar.google.com/citations?user=1doVXBMAAAAJ'
   # 主页暂时隐藏 GitHub，等有代表性研究代码仓库后再恢复。
@@ -66,24 +66,24 @@ interest_groups:
       - 管理、组织、信息与智能决策系统
 
 education:
-  - area: 博士研究生（计算机应用技术）
+  - area: 工学博士（计算机应用技术，硕博连读）
     institution: 中国科学院大学（UCAS）
     institution_url: https://english.ucas.ac.cn/
     date_start: 2020-09-01
-    date_end: '2026-09-01'
-    date_end_text: 2026年10月
-    expected: true
+    date_end: '2026-10-16'
     advisors:
       - name: 朱建明教授
         url: https://people.ucas.ac.cn/~jianming?language=en
     summary_home: |
+      2020 年 9 月开始硕博连读，2023 年 3 月进入博士阶段，2026 年 10 月 16 日毕业并获工学博士学位。
       博士论文围绕群体观点演化与影响力相关决策问题的形式化建模、复杂性分析和优化算法设计展开。
     summary: |
+      2020 年 9 月开始硕博连读，2023 年 3 月进入博士阶段，2026 年 10 月 16 日毕业并获工学博士学位。
       博士论文将群体观点演化与影响力相关决策问题转化为形式化模型、可分析目标和可扩展优化算法。
       研究重点包括模型构造、复杂性与近似分析、算法设计和数据实验验证。
 
   - area: 计算机科学访问学者
-    institution: 美国得克萨斯大学（University of Texas at Dallas）
+    institution: 美国得克萨斯大学达拉斯分校（University of Texas at Dallas）
     institution_url: https://cs.utdallas.edu/
     date_start: 2025-01-19
     date_end: 2026-01-26
@@ -96,7 +96,7 @@ education:
     summary_home: |
       已完成计算建模、算法优化与数据实验验证方向的合作访问研究。
     summary: |
-      访问美国得克萨斯大学计算机科学系期间，围绕形式化建模、算法优化、学习增强求解和数据实验验证开展合作研究。
+      访问美国得克萨斯大学达拉斯分校计算机科学系期间，围绕形式化建模、算法优化、学习增强求解和数据实验验证开展合作研究。
 
   - area: 管理学学士（信息管理与信息系统）
     institution: 北京化工大学（BUCT）
@@ -267,10 +267,10 @@ awards:
       获研究生国家奖学金。
 ---
 
-**戴佳伶**是中国科学院大学（UCAS）计算机应用技术博士候选人，已于 2026 年 8 月 13 日完成博士论文答辩，博士学位预计于 2026 年 10 月取得。她曾于 2025 年 1 月至 2026 年 1 月赴美国得克萨斯大学（University of Texas at Dallas）开展访问研究。
+**戴佳伶**现任中央财经大学助理教授，2026 年 10 月于中国科学院大学获工学博士学位，专业为计算机应用技术。她曾于 2025 年 1 月至 2026 年 1 月赴美国得克萨斯大学达拉斯分校（University of Texas at Dallas）开展访问研究。
 
 她的研究从现实问题发现出发，识别其中的可计算结构，并将其抽象为“**形式化建模 - 理论分析 - 算法设计 - 数据实验验证**”的模型与算法问题。已有成果涉及**群体极化**、**跨群争论**、**带符号交互**、**AIGC 内容溯源**和**资源扩散**等问题，这些问题作为研究落点服务于更通用的建模与优化方法。
 
 目前的论文成果发表于 *IEEE Transactions on Networking*（T-ON）、*Information Sciences* 和 *Expert Systems with Applications*；另有第一作者稿件正在 *Operations Research* 和 ICLR 2027 审稿。《中国管理科学》、*Artificial Intelligence in Agriculture* 及相关国际会议亦发表了她的研究成果。相关工作覆盖模型构造、复杂性与近似分析、采样/覆盖算法、图神经网络、深度强化学习和真实数据验证。
 
-她正在申请**教学科研岗**、**师资博士后**、**博士后**及**青年科研岗位**，重点关注管理科学与工程、计算机应用技术、数据科学与智能决策、信息管理与信息系统、AI 可信与 AI+管理交叉方向。
+欢迎对计算建模、优化算法或智能决策感兴趣的同行与我联系，一起探讨研究问题、开展合作。
