@@ -23,7 +23,7 @@ sections:
       headings:
         about: 'About Me'
         education: 'Education'
-        interests: 'Interests'
+        interests: 'Research Interests'
     design:
       # Apply a gradient background
       css_class: hbx-bg-gradient
@@ -37,10 +37,10 @@ sections:
   - block: collection-custom  # 使用自定义版本
     id: papers
     content:
-      title: Selected Research Work
+      title: Selected Publications
       custom_sort: true  # 启用自定义排序
-      count: 7
       filters:
+        featured_only: true
         folders:
           - publications
       archive:
@@ -50,54 +50,30 @@ sections:
       view: citation
       columns: '1'
 
-  - block: projects-home
-    id: projects
+  - block: page-summary-custom
+    id: research-themes
     content:
-      title: Applied Projects
-      subtitle: "Selected case studies"
-      projects:
-        - title: "2025 International Young Partners Program"
-          role: Proposal Lead & Project Coordinator
-          institution: China Science and Technology Development Foundation × UMass Boston
-          period: 2025.12–2026.05
-          description: Led proposal development and end-to-end delivery of a five-day academic exchange in China with Dr. Hongmin (William) Du of UMass Boston, including agenda design, seminars and research discussions, and project closeout. The exchange covered large language models, cybersecurity information disclosure, and data-driven risk analytics.
-
-        - title: Risk and Safety Analytics for Power-Grid Construction
-          role: Student Team Lead
-          institution: UCAS × State Grid Henan EPRI
-          period: 2022.10–2022.12
-          description: Led a 6-member student team, under faculty supervision, to build a safety-violation taxonomy and 1,498-case labeled dataset, conduct association and clustering analyses, and translate data patterns into targeted management recommendations.
-        
-        - title: "Hazard-Source Tracing with Fault-Tree Modeling"
-          role: Student Research Team Co-Lead
-          institution: Department of Emergency Management
-          period: 2022.05–2023.04
-          description: Co-led the student research team under faculty supervision, developed a hazard-source tracing method based on fault-tree analysis, completed multi-case studies, and contributed major sections to the final report.
+      page: /research-themes
+      link_text: Explore research themes
 
   - block: service-custom
     id: service
     content:
       username: admin
-      title: Service
+      title: Academic Service and Exchange
         
   - block: awards-home
     id: awards
     content:
       username: admin
-      title: Awards & Honors
+      title: Selected Honors
 
-  - block: resume-skills-custom
-    id: skills
-    content:
-      title: Skills & Teaching
-      username: admin
-      courses_can_teach: "Data Structures & Algorithms · Data Mining & Machine Learning · Computational Modeling · Optimization / Operations Research · Decision Modeling for Management · Python for Data Science"
-    
   - block: contact-custom
     id: contact
     content:
       username: admin
       title: Contact
+      text: I welcome ideas for collaboration on computational modeling, optimization algorithms, or intelligent decision-making.
       status:
         - icon: hero/map-pin
           text: Central University of Finance and Economics

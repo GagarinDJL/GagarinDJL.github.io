@@ -1,0 +1,11 @@
+{{- $status := lower (.Params.status | default "published") -}}
+{{- $statusKey := printf "paper_%s" (replace $status " " "_") -}}
+<span class="publication-details">
+  <strong>{{ i18n $statusKey | default (.Params.status | default "Published") }}</strong>
+  {{- with .Params.venue_metrics }}
+    {{- $venue := cond (in $.Params.publication_types "paper-conference") "conference" "journal" }}
+    {{- $label := cond (in (slice "published" "accepted") $status) (printf "%s_rating" $venue) (printf "target_%s_rating" $venue) }}
+    · {{ i18n $label }}
+    {{ range $index, $metric := . }}{{ if $index }} · {{ end }}<a href="{{ $metric.url }}" class="underline">{{ $metric.label }}</a>{{ end }}
+  {{- end }}
+</span>

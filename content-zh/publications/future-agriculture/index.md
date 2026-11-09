@@ -1,6 +1,8 @@
 ---
 title: "A Robot-Edge-Cloud Orchestration Framework for Heterogeneous Multi-Robot Systems in Greenhouse Production"
+summary: 研究面向温室生产的异构多机器人系统，提出机器人、边缘与云端的协同框架。
 weight: 130
+hide_date: true
 authors:
   - "Yefeng Sun"
   - "Wei Zhang"
@@ -10,8 +12,8 @@ authors:
   - "Gengjie Lin"
   - "Chengliang Liu"
 publication_types: ["article-journal"]
-publication: "IEEE Robotics and Automation Letters（RA-L），2026"
-publication_short: ""
+publication: "IEEE Robotics and Automation Letters"
+publication_short: "RA-L"
 tags: []
 featured: false
 links: []
@@ -21,4 +23,4 @@ draft: false
 status: under review
 ---
 
-**状态：** Under Review。
+{{< publication-details >}}

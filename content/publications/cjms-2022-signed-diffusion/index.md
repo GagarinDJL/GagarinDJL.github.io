@@ -13,20 +13,28 @@ authors:
 #   - "Equal contribution"
 
 # Dates
-date: "2025-04-07T00:00:00Z"
+date: "2025-03-25T00:00:00Z"
 # publishDate: "2022-01-01T00:00:00Z" # schedule page publish date (optional)
 
 # Publication type from the CSL standard
 publication_types: ["article-journal"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Chinese Journal of Management Science (CSSCI, CSCD, PKU Core Journals), 33(3), 139–150"
+publication: "Chinese Journal of Management Science"
 publication_short: ""
+citation_details: "33(3), 139–150"
+venue_metrics:
+  - label: "FMS T1 (2025)"
+    url: "https://www.fms-journal.net/journals_cn?num=20&page=1"
+  - label: "CSSCI source journal (2025–2026)"
+    url: "https://rwskc.zust.edu.cn/__local/3/CB/3F/ADA3D8675FEDE867F8F7B11E39E_8198B043_2A396.pdf?e=.pdf"
+  - label: "CSCD Core (2025–2026)"
+    url: "https://sciencechina.cn/scichina2/style/sourcelist25_26.pdf"
 
 # Abstract/Summary (optional) — keep placeholders as comments if unavailable
 abstract: >-
   Online social networks have been integrated into people’s lives, and the Internet has become an ideal platform for disseminating information. Internet Word of Mouth Marketing (IWOM) is becoming increasingly attractive to companies. However, the dissemination of some promotional information can generate a large number of negative comments, damaging reputation and long-term profits. Therefore, it is of great significance to study information dissemination strategies so that beneficial information can be better promoted. The node selection strategy is investigated to maximize the amount of net positive information diffusion among individuals in signed online social networks. Given a signed online social network G, each edge e has an edge symbol x and a propagation probability p. C is the intensity of information interaction between individuals. The information propagation model is defined as the Signed Independent Cascade (SIC) model in signed networks. The problem of net positive information maximizing is to select a seed set containing k nodes from the node-set V and its assignment function F so that the amount of positive information minus the amount of negative information is maximum at the end of the spread. The problem is shown to be NP-hard and its objective function computation is #P-hard. Second, it is demonstrated that the problem is neither submodular nor supermodular due to the combined effect of information. Then, according to the propagation characteristics, the propagation path and its approximate calculation method are proposed. The problem is further constructed to solve a positive monotone submodular function. Third, an efficient maximum coverage greedy algorithm is designed to maximize the amount of net positive information. Finally, experiments conducted on real networks to verify that the proposed algorithm is superior to other methods and show that information diffusion is not equal to the dissemination effect.
-summary: "Reformulated signed-network influence as a net-positive diffusion activity objective, used path-level modeling to expose computable structure, and transformed the problem toward maximum-coverage greedy optimization validated on real networks."
+summary: "In a signed social network, a message can generate both positive and negative interactions. The authors use diffusion paths to estimate the difference, design a greedy maximum coverage algorithm to choose seed nodes, and compare it with other methods on real networks."
 
 tags:
   - objective reformulation
@@ -34,7 +42,7 @@ tags:
   - maximum coverage
   - greedy optimization
 
-featured: false
+featured: true
 
 # Standard identifiers for auto-linking
 hugoblox:
@@ -71,10 +79,4 @@ projects: []
 slides: ""
 ---
 
-<!-- > [!NOTE]
-> Click the *Cite* button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-
-> [!NOTE]
-> Create your slides in Markdown - click the *Slides* button to check out the example.
-
-Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/). -->
+{{< publication-details >}}

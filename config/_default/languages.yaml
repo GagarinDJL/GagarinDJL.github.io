@@ -24,35 +24,34 @@ zh:
     marketing:
       seo:
         org_name: 中央财经大学
-        description: 戴佳伶，中央财经大学助理教授，研究现实问题发现、形式化建模、复杂性分析、优化算法设计与数据实验验证。
+        description: 戴佳伶，中央财经大学助理教授，研究兴趣涵盖组合优化、机器学习优化、强化学习与网络科学。
+        keywords:
+          - 组合优化与算法理论
+          - 机器学习优化
+          - 强化学习与智能体决策
+          - 网络科学与社会计算
   menus:
     main:
       - name: 首页
         url: /zh/
         weight: 10
       - name: 论文
-        url: /zh/#papers
+        url: /zh/publications/
         weight: 20
       - name: 研究主题
         url: /zh/research-themes/
         weight: 25
-      - name: 项目
-        url: /zh/#projects
-        weight: 30
-      - name: 服务
-        url: /zh/#service
+      - name: 学术服务与交流
+        url: /zh/service/
         weight: 40
-      - name: 荣誉
-        url: /zh/#awards
+      - name: 主要荣誉
+        url: /zh/awards/
         weight: 60
-      - name: 技能
-        url: /zh/#skills
+      - name: 联系方式
+        url: /zh/#contact
         weight: 80
       - name: 简历
         url: /uploads/%E6%88%B4%E4%BD%B3%E4%BC%B6_CV_homepage.pdf
         params:
           raw_url: /uploads/%E6%88%B4%E4%BD%B3%E4%BC%B6_CV_homepage.pdf
         weight: 90
-      - name: 联系
-        url: /zh/#contact
-        weight: 100

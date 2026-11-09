@@ -31,9 +31,6 @@ organizations:
   - role: Assistant Professor
     institution: Central University of Finance and Economics
     url: https://en.cufe.edu.cn/
-  - role: Former Visiting Researcher, Jan. 2025-Jan. 2026
-    institution: University of Texas at Dallas (UTD)
-    url: https://www.utdallas.edu/
 
 additional_emails:
   - daijialing20@mails.ucas.ac.cn
@@ -59,36 +56,29 @@ profiles:
     url: 'https://orcid.org/0009-0003-1309-5758'
 
 interests:
-  - Problem Discovery and Formal Modeling
-  - Problem-Driven Computational Modeling
-  - Provable Optimization and Algorithm Design
-  - Complexity and Approximation Analysis
-  - Sampling, Greedy, and Coverage Algorithms
-  - Graph Learning and Deep Reinforcement Learning
-  - Empirical Validation on Real-World Systems
+  - Combinatorial Optimization and Algorithm Theory
+  - Optimization for Machine Learning
+  - Reinforcement Learning and Agent Decision-Making
+  - Network Science and Social Computing
 
 interest_groups:
-  - name: Problem Formulation
+  - name: 'Combinatorial Optimization and Algorithm Theory:'
     items:
-      - Problem discovery from real phenomena
-      - Mathematical and computational modeling
-      - Objective and constraint construction
-      - Data assumptions and empirical grounding
-  - name: Optimization and Algorithms
+      - Submodular and non-submodular optimization
+      - approximation and randomized algorithms
+  - name: 'Optimization for Machine Learning:'
     items:
-      - Complexity and approximation analysis
-      - Non-submodular and non-monotone objectives
-      - Sampling algorithm design
-      - Greedy and maximum-coverage reformulation
-      - Scalable implementation
-  - name: Learning and Validation
+      - Stochastic and nonconvex optimization
+      - deep learning optimizers
+  - name: 'Reinforcement Learning and Agent Decision-Making:'
     items:
-      - Graph neural networks
-      - Deep reinforcement learning
-      - Simulation and real-world data experiments
-      - AIGC provenance and trustworthy decision extensions
-      - Social, business, organizational, and information systems
-  
+      - Graph neural networks and deep reinforcement learning
+  - name: 'Network Science and Social Computing:'
+    items:
+      - Collective behavior and opinion dynamics
+      - rumor containment
+      - information provenance
+
 education:
   - area: Ph.D. in Computer Applied Technology (integrated graduate program)
     institution: University of Chinese Academy of Sciences (UCAS)
@@ -99,12 +89,11 @@ education:
       - name: Prof. Jianming Zhu
         url: https://people.ucas.ac.cn/~jianming?language=en
     summary_home: |
-      Entered the integrated graduate program in September 2020 and the doctoral stage in March 2023. Graduated and received the Ph.D. on October 16, 2026.
-      Dissertation on problem-driven modeling and optimization for group opinion dynamics and influence-related decision problems.
+      Dai began a combined master’s and doctoral program in September 2020 and entered the doctoral phase in March 2023. She graduated with her Ph.D. on October 16, 2026.
+      Her dissertation examined how group interactions shape the spread of opinions and how to choose seed nodes in a network.
     summary: |
-      Entered the integrated graduate program in September 2020 and the doctoral stage in March 2023. Graduated and received the Ph.D. on October 16, 2026.
-      Dissertation on turning group opinion dynamics and influence-related decision problems into formal models, analyzable objectives, and scalable optimization algorithms.
-      Focuses on model construction, complexity and approximation analysis, algorithm design, and data-based validation.
+      Dai began a combined master’s and doctoral program in September 2020 and entered the doctoral phase in March 2023. She graduated with her Ph.D. on October 16, 2026.
+      Her dissertation modeled how opinions spread when people interact in groups. She studied the computational complexity of choosing seed nodes and evaluated approximation algorithms both theoretically and experimentally.
     # button:
     #   text: 'Read Thesis'
     #   url: 'https://example.com/thesis.pdf'
@@ -121,23 +110,16 @@ education:
       - name: Prof. Ding-Zhu Du
         url: https://personal.utdallas.edu/~dzdu/
     summary_home: |
-      Completed collaborative research on computational modeling, optimization, and data-driven validation for decision problems.
+      She worked with colleagues in computer science to model decision problems and to design and test optimization algorithms.
     summary: |
-      Visiting Scholar in the Department of Computer Science from January 2025 to January 2026, with collaborative research on formal modeling, algorithmic optimization, learning-based solution methods, and empirical validation.
+      During her visit to the Department of Computer Science, she and her collaborators developed mathematical models for decision problems. They used optimization algorithms and machine learning to solve them and tested the methods on data.
 
   - area: Bachelor of Management in Information Systems
     institution: Beijing University of Chemical Technology (BUCT)
     institution_url: https://english.buct.edu.cn/main.htm
     date_start: 2016-09-01
     date_end: 2020-06-30
-    summary_home: |
-      Graduated with GPA 4.0/4.33 (92.68/100) in Information Systems.
-    summary: |
-      GPA: 4.0/4.33.
-      Arithmetic average: 92.68/100.
-
-
-
+    summary: ''
 
 # work:
 #   - position: Senior AI Research Scientist
@@ -159,34 +141,48 @@ education:
 
 # Service
 service:
-  - category: Academic Service
+  - category: Academic Service and Exchange
     items:
       - position: Program Committee Member
         institution: AAIM 2026 – 20th International Conference on Algorithmic Aspects in Information and Management
         date_start: 2026-06-19
         date_end: 2026-06-21
+        show_on_site: true
         show_on_homepage: true
         summary: |
-          Program Committee Member for the [20th International Conference on Algorithmic Aspects in Information and Management (AAIM 2026)](https://theory.utdallas.edu/AAIM2026/index.html), held at the University of Texas at Dallas, June 19–21, 2026.
+          She served on the program committee for [AAIM 2026](https://theory.utdallas.edu/AAIM2026/index.html), held June 19–21, 2026.
 
-      - position: Peer Reviewer
-        institution: IEEE Transactions on Networking (T-ON), IEEE T-CSS, WWW Journal
+      - position: Journal and Conference Reviewer
+        institution: IEEE ToN, IEEE TCSS, World Wide Web, ESWA, EAAI
         date_start: 2023-01-01
         date_end: ''
+        show_on_site: true
         show_on_homepage: true
         summary: |
-          Reviewed submissions for IEEE Transactions on Networking (T-ON), IEEE Transactions on Computational Social Systems (T-CSS), and the World Wide Web Journal (WWW).
+          Reviewed manuscripts for IEEE Transactions on Networking, IEEE Transactions on Computational Social Systems, World Wide Web, Expert Systems with Applications, and Engineering Applications of Artificial Intelligence.
+
+      - position: "2025 International Young Partners Program"
+        role: Proposal and project lead
+        institution: Foundation for the Development of Science and Technology in China
+        period: 2025.12–2026.05
+        show_on_site: true
+        show_on_homepage: true
+        summary: |
+          Dai organized a five-day visit to the University of Chinese Academy of Sciences for Dr. Hongmin (William) Du of the University of Massachusetts Boston. The talks and discussions covered large language models, cybersecurity disclosures, and the use of data in risk analysis.
+
       - position: Teaching Assistant
         institution: University of Chinese Academy of Sciences (UCAS)
         date_start: 2021-09-01
         date_end: 2023-06-30
-        show_on_homepage: true
+        show_on_site: false
+        show_on_homepage: false
         summary: |
           Assisted in instruction, grading, and student mentoring for three courses: Mathematical Methods and Applications in Management, Financial and Cost Management, and Human Factors Engineering.
       - position: Peer Instructor
         institution: Peer Academic Development Center, Beijing University of Chemical Technology (BUCT)
         date_start: 2018-09-01
         date_end: 2020-06-30
+        show_on_site: false
         show_on_homepage: false
         summary: |
           Delivered peer-instruction sessions and academic workshops to undergraduate students.
@@ -194,6 +190,7 @@ service:
         institution: School of Engineering Sciences, University of Chinese Academy of Sciences (UCAS)
         date_start: 2021-09-01
         date_end: 2023-06-30
+        show_on_site: false
         show_on_homepage: false
         summary: |
           Organized proposal, mid-term, and thesis defenses for the Master of Engineering Management program, and coordinated graduate admissions interviews.
@@ -201,6 +198,7 @@ service:
         institution: Yuquan Road Library, University of Chinese Academy of Sciences (UCAS)
         date_start: 2021-09-01
         date_end: 2023-06-30
+        show_on_site: false
         show_on_homepage: false
         summary: |
           Assisted students by providing information services, supported shelving and circulation work, and contributed to the library's "Love Reading" cultural initiative and annual calendar production.
@@ -211,9 +209,30 @@ service:
         institution: UCAS / BUCT
         date_start: 2016-09-01
         date_end: 2023-06-30
+        show_on_site: false
         show_on_homepage: false
         summary: |
           Coordinated graduate program activities, academic events, peer mentoring, and student-facing academic support at UCAS and BUCT.
+
+  - category: Research Projects
+    items:
+      - position: "Risk and Safety Analytics for Power-Grid Construction"
+        role: Student Team Lead
+        institution: UCAS × State Grid Henan EPRI
+        period: 2022.10–2022.12
+        show_on_site: false
+        show_on_homepage: false
+        summary: |
+          Led a 6-member student team, under faculty supervision, to build a safety-violation taxonomy and 1,498-case labeled dataset, conduct association and clustering analyses, and translate data patterns into targeted management recommendations.
+
+      - position: "Hazard-Source Tracing with Fault-Tree Modeling"
+        role: Student Research Team Co-Lead
+        institution: Department of Emergency Management
+        period: 2022.05–2023.04
+        show_on_site: false
+        show_on_homepage: false
+        summary: |
+          Co-led the student research team under faculty supervision, developed a hazard-source tracing method based on fault-tree analysis, completed multi-case studies, and contributed major sections to the final report.
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`
@@ -264,6 +283,8 @@ skills:
 
 
 
+courses_can_teach: "Data Structures & Algorithms · Data Mining & Machine Learning · Computational Modeling · Optimization / Operations Research · Decision Modeling for Management · Python for Data Science"
+
 languages:
   - name: English
     percent: 80
@@ -273,24 +294,26 @@ languages:
 # Awards.
 #   Add/remove as many awards below as you like.
 #   Only `title`, `awarder`, and `date` are required.
-#   Set `show_on_homepage: true` to display on homepage.
+#   Set `show_on_site` for public pages and `show_on_homepage` for the homepage selection.
 #   Set `order` to control display order (lower numbers appear first).
 #   Set `homepage_title` for a custom shorter title on homepage (optional).
 #   Begin multi-line `summary` with YAML's `|` or `|2-` multi-line prefix and indent 2 spaces below.
 awards:
   - title: National Young Talent Support Project (Doctoral Fellowship, First Cohort)
-    homepage_title: National Young Talent Support Project
+    homepage_title: CAST Doctoral Fellowship
     date: '2024-12-01'
     awarder: China Association for Science and Technology (CAST)
     icon: hero/sparkles
+    show_on_site: true
     show_on_homepage: true
     order: 1
     summary: |
-       Selected as a member of the inaugural cohort of the CAST Young Talent Support Project for doctoral students, a national-level fellowship recognizing outstanding Ph.D. candidates in China.
+      Selected for the inaugural doctoral cohort of the China Association for Science and Technology’s Young Talent Support Project.
   - title: National Scholarship (Graduate)
     date: '2022-12-01'
     awarder: Ministry of Education (China)
     icon: hero/academic-cap
+    show_on_site: true
     show_on_homepage: true
     order: 2
     summary: |
@@ -300,6 +323,7 @@ awards:
     date: '2023-07-01'
     awarder: University of Chinese Academy of Sciences (UCAS)
     icon: hero/academic-cap
+    show_on_site: false
     show_on_homepage: false
     homepage_title: Merit Student (×3)
     order: 6
@@ -310,6 +334,7 @@ awards:
     date: '2022-07-05'
     awarder: University of Chinese Academy of Sciences (UCAS)
     icon: hero/academic-cap
+    show_on_site: false
     show_on_homepage: false
     # order: 100
     summary: |
@@ -319,6 +344,7 @@ awards:
     date: '2022-07-05'
     awarder: University of Chinese Academy of Sciences (UCAS)
     icon: hero/star
+    show_on_site: false
     show_on_homepage: false
     order: 7
     homepage_title: Excellent Student Leader (×2)
@@ -330,6 +356,7 @@ awards:
     date: '2021-12-25'
     awarder: International Symposium on Emergency Management (ISEM 2021)
     icon: hero/document-text
+    show_on_site: true
     show_on_homepage: true
     order: 8
     summary: |
@@ -339,7 +366,8 @@ awards:
     date: '2020-07-01'
     awarder: Beijing Municipal Education Commission
     icon: hero/trophy
-    show_on_homepage: true
+    show_on_site: false
+    show_on_homepage: false
     order: 5
     summary: |
       Outstanding Graduate honor from Beijing Municipal Education Commission.
@@ -348,7 +376,8 @@ awards:
     date: '2019-12-12'
     awarder: Ministry of Education (China)
     icon: hero/academic-cap
-    show_on_homepage: true
+    show_on_site: false
+    show_on_homepage: false
     order: 3
     homepage_title: National Scholarship (Undergraduate ×2)
     summary: |
@@ -358,6 +387,7 @@ awards:
     date: '2018-11-20'
     awarder: Ministry of Education (China)
     icon: hero/academic-cap
+    show_on_site: false
     show_on_homepage: false
     # order: 101
     summary: |
@@ -367,6 +397,7 @@ awards:
     date: '2018-11-01'
     awarder: Beijing University of Chemical Technology (BUCT)
     icon: hero/star
+    show_on_site: false
     show_on_homepage: false
     # order: 8
     summary: |
@@ -376,19 +407,15 @@ awards:
     date: '2017-12-01'
     awarder: Beijing University of Chemical Technology (BUCT)
     icon: hero/academic-cap
+    show_on_site: false
     show_on_homepage: false
     # order: 102
     summary: |
       Merit Student honor at BUCT.
 ---
 
+**Jialing Dai** is an Assistant Professor at the Central University of Finance and Economics. She received her Ph.D. in Computer Applied Technology from the University of Chinese Academy of Sciences in October 2026. During her doctorate, she spent a year as a visiting scholar at the University of Texas at Dallas, from January 2025 to January 2026.
 
-**Jialing Dai** is an Assistant Professor at the Central University of Finance and Economics. She received her Ph.D. in Computer Applied Technology from the University of Chinese Academy of Sciences in October 2026. She was a visiting researcher at the University of Texas at Dallas from January 2025 to January 2026.
+Dai studies approximation algorithms for combinatorial problems and uses reinforcement learning to solve sequential decision problems. Her interests also include stochastic optimization for training deep neural networks.
 
-She develops **computational models**, **optimization algorithms**, and **learning-based solution methods** by first identifying computable structure in real-world phenomena. Her work turns observed decision problems into formal models, analyzable objectives, scalable algorithms, and empirically testable research questions.
-
-Her previous research has formalized problems in group polarization, intergroup debate, signed interactions, AI-generated content provenance, and resource diffusion. Across these projects, she combines model construction, complexity and approximation analysis, sampling or coverage-based algorithm design, graph learning, deep reinforcement learning, and data-based validation.
-
-Her published work appears in *IEEE Transactions on Networking (T-ON)*, *Information Sciences*, and *Expert Systems with Applications*; first-author manuscripts are under review at *Operations Research* and ICLR 2027; other publications include the *Chinese Journal of Management Science*, *Artificial Intelligence in Agriculture*, and international conferences.
-
-I welcome ideas for collaboration on computational modeling, optimization algorithms, or intelligent decision-making.
+In two papers in *Information Sciences*, she and her collaborators examined how group discussions polarize opinions and how debate between groups shapes the spread of information. Their work in *IEEE Transactions on Networking* uses graph neural networks and deep reinforcement learning to select seed nodes in networks with interacting groups. Her first-author paper on orthant-submodular maximization is under review at the *SIAM Journal on Computing* (SICOMP).

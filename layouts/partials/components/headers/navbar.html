@@ -208,6 +208,13 @@
   </nav>
 </header>
 
+<script>
+  document.getElementById('nav-menu').addEventListener('click', (event) => {
+    const toggle = document.getElementById('nav-toggle');
+    if (toggle.checked && event.target.closest('a[href]')) toggle.click();
+  });
+</script>
+
 {{ if $show_search }}
   {{- partial "components/search-modal.html" . -}}
 {{ end }}

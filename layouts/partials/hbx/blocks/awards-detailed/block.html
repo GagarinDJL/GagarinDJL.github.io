@@ -17,8 +17,9 @@
 {{ if not $person_page }}
 {{ errorf "Could not find an author page at `%s`. Please check the value of `author` in your Skill block and create an associated author page if one does not already exist. See https://docs.hugoblox.com/page-builder/#about " $person_page_path }}
 {{end}}
-{{ $awards := $person_page.Params.awards }}
+{{ $awards := partial "functions/visible_items" (dict "items" $person_page.Params.awards "homepage" $page.IsHome) }}
 
+{{ if $awards }}
 <div class="flex flex-col items-center max-w-3xl mx-auto gap-3 justify-center">
 
   <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
@@ -28,8 +29,7 @@
   {{ with $block.content.text }}<p>{{ . | markdownify | emojify }}</p>{{ end }}
 
 <div class="w-full flex flex-col gap-6">
-{{ if $awards }}
-{{ range $idx, $key := sort $awards ".date_start" "desc" }}
+{{ range sort $awards "date" "desc" }}
 <div class="w-full p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
   {{- $icon := .icon }}
   <div class="flex items-center gap-3 mb-3">
@@ -68,6 +68,6 @@
   {{ end }}
 </div>
   {{end}}
-  {{end}}
 </div>
 </div>
+{{ end }}

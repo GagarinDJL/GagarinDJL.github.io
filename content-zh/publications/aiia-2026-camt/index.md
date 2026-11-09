@@ -20,8 +20,12 @@ author_notes:
   - ""
   - ""
 publication_types: ["article-journal"]
-publication: "Artificial Intelligence in Agriculture（中科院一区 TOP，JCR Q1，IF=16.1）"
+publication: "Artificial Intelligence in Agriculture"
 publication_short: "AIIA"
+citation_details: "16(3), 2058–2075"
+venue_metrics:
+  - label: "2025 年期刊影响因子 16.1，JCR 农业综合第 1/95 名（Q1）"
+    url: "https://www.keaipublishing.com/en/news/journals-indexed-by-wos-core-collection/"
 date: "2026-08-20T00:00:00Z"
 hugoblox:
   ids:
@@ -39,3 +43,5 @@ projects: []
 slides: ""
 draft: false
 ---
+
+{{< publication-details >}}

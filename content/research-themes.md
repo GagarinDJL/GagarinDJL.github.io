@@ -1,23 +1,26 @@
 ---
 title: Research Themes
 date: 2026-06-04
-summary: Problem-driven computational modeling, provable optimization, learning-based solution methods, and empirical validation.
+lastmod: 2026-11-10
+summary: Dai studies how closely an algorithm can approximate the best possible solution. She is also interested in what makes training a deep network stable. In social networks, her work connects the choice of seed nodes with the way groups discuss and share information.
 ---
 
-Jialing Dai's research starts from finding computable structure in real problems and turning it into modelable, analyzable, optimizable, and empirically testable algorithmic questions. The methodological anchor is computational modeling and optimization; the application scope remains open across social, business, organizational, information, and AI-enabled decision systems.
+Jialing Dai builds mathematical models of decision problems, derives guarantees for the algorithms that solve them, and tests both the models and the algorithms against data.
 
-## Problem Discovery and Formal Modeling
+## Combinatorial Optimization and Algorithm Theory
 
-This theme focuses on moving from observed phenomena to formal computational problems. Her work has abstracted group polarization, intergroup debate, signed interactions, AIGC provenance, and resource diffusion into explicit models, objectives, constraints, and data assumptions that can be analyzed and tested.
+Dai studies approximation algorithms for discrete problems, including those in which each element can take one of several labels. In one application, only a few participants can be chosen to introduce a message into a debate between groups. The aim is to maximize net influence, a non-submodular objective. She and her collaborators used submodular upper and lower bounds to obtain a data-dependent approximation guarantee. They also developed sampling algorithms for settings where different messages compete. [Study of intergroup debate]({{< relref "publications/ins-2024-intergroup-debate" >}})
 
-## Provable Optimization and Algorithm Design
+## Optimization for Machine Learning
 
-This theme studies difficult optimization objectives after modeling. Representative work covers non-submodular and non-monotone objectives, hardness and approximation analysis, sampling algorithm design, path-level reformulation, maximum-coverage greedy optimization, and data-dependent approximation.
+Optimizers for deep networks typically estimate a gradient from a small batch of examples at each step. Dai is interested in how noise in those estimates affects the stability of training and the rate at which different optimizers converge on nonconvex objectives.
 
-## Learning-Enhanced Solvers and Data Experiments
+## Reinforcement Learning and Agent Decision-Making
 
-This theme connects algorithmic structure with scalable implementation and empirical validation. Current work uses graph neural networks, deep reinforcement learning, simulation, and real-world datasets to evaluate whether the proposed models and algorithms preserve the structure of the original problem.
+Once a few seed nodes are in place, which additional node will help a message reach the most people? Dai and her collaborators used graph neural networks to represent how nodes are connected and deep reinforcement learning to choose each new seed in light of earlier choices. They tested the learned policy against sampling methods and heuristics based on network structure, using both synthetic and real networks. [Study of group-aware seed selection]({{< relref "publications/ton-ug-dcgnn" >}})
 
-## Trustworthy and AI-Enabled Decision Extensions
+## Network Science and Social Computing
 
-This theme extends the same modeling and optimization pipeline to emerging decision problems, including AI-generated content provenance, trustworthy decision-making, information integrity, and resource allocation. These are application directions rather than fixed boundaries for the research agenda.
+People sometimes leave a group discussion with more extreme views than they held going in. Dai and her collaborators studied this form of polarization in real-world data and modeled how changing preferences affect the spread of opinions. [Study of group polarization]({{< relref "publications/ins-2022-polarization" >}})
+
+She is also interested in containing rumors and tracing information to its source. For AI-generated content, she and her collaborators formulated a coverage problem to determine where to place checkpoints so that the same set works across several possible scenarios. [Study of content provenance]({{< relref "publications/aaim-2026-checkpoint-cover" >}})

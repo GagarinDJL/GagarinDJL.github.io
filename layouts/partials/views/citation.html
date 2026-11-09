@@ -1,65 +1,24 @@
 {{ $item := .item }}
 {{ $index := .index }}
 {{ $has_attachments := partial "functions/has_attachments" $item }}
-{{ $isZh := eq site.Language.Lang "zh" }}
 
 <div class="pub-list-item view-citation" style="margin-bottom: 1rem; position: relative; padding-left: 1.8rem;">
   {{/* 顺序编号（悬挂在左侧） */}}
   <span class="pub-number" style="position: absolute; left: 0; top: 0; font-weight: 600;">[{{ add $index 1 }}]</span>
 
-  {{/* 文献内容区域（两端对齐，最后一行左对齐） */}}
-  <div style="text-align: justify; text-align-last: left;">
-    {{/* 自定义样式（基于 APA，但有修改） */}}
-    {{/* 作者 */}}
+  <div class="text-left md:text-justify">
   {{ $authors := partial "page_metadata_authors" $item }}
-  {{ $authors_text := $authors | plainify | strings.TrimSpace }}
-  {{ if ne $authors_text "" }}
-  <span class="article-metadata li-cite-author">
-    {{ $authors }}
-  </span>,
+  {{ if ($authors | plainify | strings.TrimSpace) }}
+    <span class="article-metadata li-cite-author">{{ $authors | strings.TrimSpace | safeHTML }}</span>,
   {{ end }}
-
-  {{/* 标题（加引号） */}}
   <a href="{{ $item.RelPermalink }}" class="underline">"{{ $item.Title }}"</a>
+  {{- $short := $item.Params.publication_short }}
+  {{- with $item.Params.publication }}, <em>{{ . | markdownify }}{{ with $short }} ({{ . | markdownify }}){{ end }}</em>
+  {{- else with $short }}, <em>{{ . | markdownify }}</em>{{ end }}
+  {{- with $item.Params.citation_details }}, {{ . }}{{ end }}
+  {{- if and (not $item.Params.hide_date) (not $item.Date.IsZero) }}, {{ $item.Date.Format "2006" }}{{ end }}
 
-  {{/* 期刊/会议名称（斜体）：显示为"期刊全称(简写)"；若缺少其中一项则退回到存在的项 */}}
-  {{ $pub := $item.Params.publication }}
-  {{ $short := $item.Params.publication_short }}
-  {{ if or $pub $short }}
-    ,{{ if and $pub $short }}
-    <em>{{ $pub | markdownify }} ({{ $short | markdownify }})</em>
-    {{ else if $pub }}
-    <em>{{ $pub | markdownify }}</em>
-    {{ else if $short }}
-    <em>{{ $short | markdownify }}</em>
-    {{ end }}
-  {{ end }}
-
-  {{/* 日期（仅在有效日期时显示） */}}
-  {{ $year := $item.Date.Format "2006" }}
-  {{ if and $year (ne $year "0001") }}
-    , {{ $year }}
-  {{ end }}
-
-  {{/* Status（如果存在则加粗显示在最后） */}}
-  {{ with $item.Params.status }}
-    {{ $statusText := . }}
-    {{ if $isZh }}
-      {{ $statusLabels := dict
-        "accepted" "已录用"
-        "revision submitted" "已提交返修"
-        "major revision submitted" "大修已提交"
-        "major revision" "大修中"
-        "minor revision" "小修中"
-        "revision" "返修中"
-        "under revision" "返修中"
-        "under review" "在审"
-        "under double-anonymous review" "双匿名评审中"
-      }}
-      {{ with index $statusLabels (lower .) }}{{ $statusText = . }}{{ end }}
-    {{ end }}
-    , <strong>{{ $statusText }}</strong>
-  {{ end }}.
+  · {{ partial "publication-details.html" $item }}
 
   {{/* Cite/DOI 链接 */}}
   {{ if $has_attachments }}

@@ -1,5 +1,6 @@
 ---
 title: "Modeling Organizational Performance through Competitive Resource Diffusion"
+summary: A model of organizational performance based on how competing resources diffuse through a network.
 weight: 90
 authors:
   - "Yisheng Zhou"
@@ -8,8 +9,9 @@ authors:
   - "Ke Su"
   - "Weili Wu"
 publication_types: ["paper-conference"]
-publication: "20th International Conference on Algorithmic Aspects in Information and Management (AAIM; Springer LNCS, EI Compendex series)"
-publication_short: ""
+publication: "20th International Conference on Algorithmic Aspects in Information and Management"
+publication_short: "AAIM 2026"
+hide_date: true
 date: "2026-05-06T00:00:00Z"
 tags:
   - resource diffusion
@@ -22,4 +24,4 @@ draft: false
 status: accepted
 ---
 
-**Status:** accepted.
+{{< publication-details >}}
