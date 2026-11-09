@@ -100,9 +100,7 @@ sections:
       title: Contact
       status:
         - icon: hero/map-pin
-          text: Former visiting researcher at UT Dallas, Jan. 2025-Jan. 2026
-        - icon: hero/user-group
-          text: Seeking postdoctoral and research fellow opportunities
+          text: Central University of Finance and Economics
 
 
 ---
