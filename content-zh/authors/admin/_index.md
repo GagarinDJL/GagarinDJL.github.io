@@ -106,7 +106,7 @@ education:
     summary: ''
 
 service:
-  - category: 学术服务
+  - category: 学术服务与交流
     items:
       - position: 程序委员会委员
         institution: AAIM 2026 - 第 20 届算法管理信息学国际会议
@@ -125,6 +125,16 @@ service:
         show_on_homepage: true
         summary: |
           为 IEEE Transactions on Networking、IEEE Transactions on Computational Social Systems、World Wide Web、Expert Systems with Applications 和 Engineering Applications of Artificial Intelligence 审稿。
+
+      - position: "中国科技发展基金会“2025 国际青年伙伴计划”"
+        role: 项目申报与执行负责人
+        institution: 中国科技发展基金会
+        period: 2025.12–2026.05
+        show_on_site: true
+        show_on_homepage: true
+        summary: |
+          在项目资助下，组织马萨诸塞大学波士顿分校 Hongmin（William）Du 博士访问中国科学院大学五天，围绕大语言模型、网络安全信息披露及数据驱动的风险分析开展学术报告与研讨。
+
       - position: 助教
         institution: 中国科学院大学
         date_start: 2021-09-01
@@ -200,6 +210,26 @@ service:
         show_on_homepage: false
         summary: |
           负责志愿服务项目组织与社区活动协调。
+
+  - category: 研究项目
+    items:
+      - position: "电网施工安全违规数据分析：风险识别、案例标注与管理决策"
+        role: 学生项目负责人
+        institution: 中国科学院大学 × 国网河南电力科学研究院
+        period: 2022.10–2022.12
+        show_on_site: false
+        show_on_homepage: false
+        summary: |
+          在教师指导下带领 6 人团队，构建安全违规分类体系与 1,498 条标注案例数据，开展关联分析和聚类分析，并将数据模式转化为面向施工安全治理的管理建议。
+
+      - position: "事故树建模与风险源追溯：方法构建与案例应用"
+        role: 学生联合负责人（教师指导）
+        institution: 应急管理相关课题
+        period: 2022.05–2023.04
+        show_on_site: false
+        show_on_homepage: false
+        summary: |
+          基于故障树分析方法提出危险源追溯的“源树”建模思路，完成多案例研究，并参与结题报告核心章节写作。
 
 skills:
   - name: 建模与优化

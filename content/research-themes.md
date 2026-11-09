@@ -1,7 +1,7 @@
 ---
 title: Research Themes
 date: 2026-06-04
-summary: Problem-driven computational modeling, provable optimization, learning-based solution methods, and empirical validation.
+summary: How do group discussions and debates between groups shape the spread of information? Jialing Dai studies how to select seed nodes in these settings using approximation algorithms and machine learning. She also studies provenance checkpoints for AI-generated content and resource allocation in organizational networks.
 ---
 
 Jialing Dai studies how interactions among people and groups shape diffusion in networks. She develops models of these interactions, analyzes the optimization problems they produce, and evaluates algorithms on simulated and observed networks. Related research extends these methods to content provenance and resource allocation.

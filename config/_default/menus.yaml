@@ -9,25 +9,22 @@ main:
     weight: 10
 
   - name: Publications
-    url: /#papers
+    url: /publications/
     weight: 20
   - name: Research Themes
     url: /research-themes/
     weight: 25
-  - name: Academic Exchange
-    url: /#projects
-    weight: 30
-  - name: Service
-    url: /#service
+  - name: Academic Service and Exchange
+    url: /service/
     weight: 40
   - name: Selected Honors
-    url: /#awards
+    url: /awards/
     weight: 60
+  - name: Contact
+    url: /#contact
+    weight: 80
   - name: CV
     url: /uploads/CV-Jialing-Dai-English_homepage.pdf
     params:
       raw_url: /uploads/CV-Jialing-Dai-English_homepage.pdf
     weight: 90
-  - name: Contact
-    url: /#contact
-    weight: 100

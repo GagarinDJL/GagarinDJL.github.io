@@ -152,7 +152,7 @@ education:
 
 # Service
 service:
-  - category: Academic Service
+  - category: Academic Service and Exchange
     items:
       - position: Program Committee Member
         institution: AAIM 2026 – 20th International Conference on Algorithmic Aspects in Information and Management
@@ -171,6 +171,16 @@ service:
         show_on_homepage: true
         summary: |
           Reviewed manuscripts for IEEE Transactions on Networking, IEEE Transactions on Computational Social Systems, World Wide Web, Expert Systems with Applications, and Engineering Applications of Artificial Intelligence.
+
+      - position: "2025 International Young Partners Program"
+        role: Proposal and project lead
+        institution: Foundation for the Development of Science and Technology in China
+        period: 2025.12–2026.05
+        show_on_site: true
+        show_on_homepage: true
+        summary: |
+          Led a funded exchange with the University of Massachusetts Boston. Dr. Hongmin (William) Du visited the University of Chinese Academy of Sciences for five days for seminars and discussions on large language models, cybersecurity information disclosure, and data-driven risk analysis.
+
       - position: Teaching Assistant
         institution: University of Chinese Academy of Sciences (UCAS)
         date_start: 2021-09-01
@@ -214,6 +224,26 @@ service:
         show_on_homepage: false
         summary: |
           Coordinated graduate program activities, academic events, peer mentoring, and student-facing academic support at UCAS and BUCT.
+
+  - category: Research Projects
+    items:
+      - position: "Risk and Safety Analytics for Power-Grid Construction"
+        role: Student Team Lead
+        institution: UCAS × State Grid Henan EPRI
+        period: 2022.10–2022.12
+        show_on_site: false
+        show_on_homepage: false
+        summary: |
+          Led a 6-member student team, under faculty supervision, to build a safety-violation taxonomy and 1,498-case labeled dataset, conduct association and clustering analyses, and translate data patterns into targeted management recommendations.
+
+      - position: "Hazard-Source Tracing with Fault-Tree Modeling"
+        role: Student Research Team Co-Lead
+        institution: Department of Emergency Management
+        period: 2022.05–2023.04
+        show_on_site: false
+        show_on_homepage: false
+        summary: |
+          Co-led the student research team under faculty supervision, developed a hazard-source tracing method based on fault-tree analysis, completed multi-case studies, and contributed major sections to the final report.
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`

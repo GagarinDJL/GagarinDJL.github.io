@@ -1,0 +1,7 @@
+{{ $content := .wcBlock.content }}
+{{ with .wcPage.Site.GetPage $content.page }}
+  {{ $text := printf "%s\n\n[%s](%s)" (.Summary | plainify) ($content.link_text | default .LinkTitle) .RelPermalink }}
+  {{ partial "hbx/blocks/markdown/block.html" (dict "wcPage" $.wcPage "wcBlock" (dict "content" (dict "title" .Title "text" $text))) }}
+{{ else }}
+  {{ errorf "Missing page %q for the summary on %s" $content.page .wcPage.RelPermalink }}
+{{ end }}

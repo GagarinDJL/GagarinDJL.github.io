@@ -5,7 +5,7 @@
 {{ $page := .wcPage }}
 {{ $isZh := eq site.Language.Lang "zh" }}
 {{ $presentText := cond $isZh "至今" "Present" }}
-{{ $viewAllText := cond $isZh "查看全部服务经历" "View All Service" }}
+{{ $viewAllText := cond $isZh "查看学术服务与交流详情" "View service and exchange details" }}
 
 {{ $author := $block.content.username | default "admin" }}
 {{ $person_page_path := (printf "/authors/%s" $author) }}
@@ -40,18 +40,22 @@
       {{ range .items }}
         <div class="service-item mb-6 pl-6 relative border-l-2 border-gray-300 dark:border-gray-600 py-1 transition-colors duration-300 hover:border-blue-400">
           <div class="service-title text-[1.1rem] font-semibold text-gray-900 dark:text-gray-100 mb-1">{{ .position }}</div>
-          <div class="service-org text-[0.95rem] text-gray-600 dark:text-gray-300 mb-1">{{ .institution }}</div>
-          {{ if .date_start }}
+          <div class="service-org text-[0.95rem] text-gray-600 dark:text-gray-300 mb-1">{{ with .role }}{{ . }} · {{ end }}{{ .institution }}</div>
+          {{ if or .period .date_start }}
             <div class="service-date text-sm text-gray-400 dark:text-gray-500 italic mb-2">
-              {{ $start := time.AsTime .date_start }}
-              {{ $end := "" }}
-              {{ if .date_end }}
-                {{ $end = time.AsTime .date_end }}
-              {{ end }}
-              {{ if and $end (eq ($start.Format "2006") ($end.Format "2006")) }}
-                {{ $start.Format "2006" }}
+              {{ with .period }}
+                {{ . }}
               {{ else }}
-                {{ $start.Format "2006" }}–{{ if $end }}{{ $end.Format "2006" }}{{ else }}{{ $presentText }}{{ end }}
+                {{ $start := time.AsTime .date_start }}
+                {{ $end := "" }}
+                {{ if .date_end }}
+                  {{ $end = time.AsTime .date_end }}
+                {{ end }}
+                {{ if and $end (eq ($start.Format "2006") ($end.Format "2006")) }}
+                  {{ $start.Format "2006" }}
+                {{ else }}
+                  {{ $start.Format "2006" }}–{{ if $end }}{{ $end.Format "2006" }}{{ else }}{{ $presentText }}{{ end }}
+                {{ end }}
               {{ end }}
             </div>
           {{ end }}
