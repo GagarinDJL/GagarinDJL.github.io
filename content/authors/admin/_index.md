@@ -59,36 +59,29 @@ profiles:
     url: 'https://orcid.org/0009-0003-1309-5758'
 
 interests:
-  - Problem Discovery and Formal Modeling
-  - Problem-Driven Computational Modeling
-  - Provable Optimization and Algorithm Design
-  - Complexity and Approximation Analysis
-  - Sampling, Greedy, and Coverage Algorithms
-  - Graph Learning and Deep Reinforcement Learning
-  - Empirical Validation on Real-World Systems
+  - Combinatorial Optimization and Algorithm Theory
+  - Optimization for Machine Learning
+  - Reinforcement Learning and Agent Decision-Making
+  - Network Science and Social Computing
 
 interest_groups:
-  - name: Problem Formulation
+  - name: 'Combinatorial Optimization and Algorithm Theory:'
     items:
-      - Problem discovery from real phenomena
-      - Mathematical and computational modeling
-      - Objective and constraint construction
-      - Data assumptions and empirical grounding
-  - name: Optimization and Algorithms
+      - Submodular and non-submodular optimization
+      - approximation and randomized algorithms
+  - name: 'Optimization for Machine Learning:'
     items:
-      - Complexity and approximation analysis
-      - Non-submodular and non-monotone objectives
-      - Sampling algorithm design
-      - Greedy and maximum-coverage reformulation
-      - Scalable implementation
-  - name: Learning and Validation
+      - Stochastic and nonconvex optimization
+      - deep learning optimizers
+  - name: 'Reinforcement Learning and Agent Decision-Making:'
     items:
-      - Graph neural networks
-      - Deep reinforcement learning
-      - Simulation and real-world data experiments
-      - AIGC provenance and trustworthy decision extensions
-      - Social, business, organizational, and information systems
-  
+      - Graph neural networks and deep reinforcement learning
+  - name: 'Network Science and Social Computing:'
+    items:
+      - Collective behavior and opinion dynamics
+      - rumor containment
+      - information provenance
+
 education:
   - area: Ph.D. in Computer Applied Technology (integrated graduate program)
     institution: University of Chinese Academy of Sciences (UCAS)
@@ -427,8 +420,8 @@ awards:
 
 **Jialing Dai** is an Assistant Professor at the Central University of Finance and Economics. She received her Ph.D. in Computer Applied Technology from the University of Chinese Academy of Sciences in October 2026. She was a visiting researcher at the University of Texas at Dallas from January 2025 to January 2026.
 
-She studies how groups shape the spread of information in social networks and how to choose the nodes that initiate a cascade. In two papers in *Information Sciences*, she and her collaborators modeled group polarization and intergroup debate. For the debate model, they developed a sampling algorithm for a non-submodular optimization objective. In *IEEE Transactions on Networking*, they brought several group effects into a single propagation model and combined graph neural networks with deep reinforcement learning to select seed nodes.
+She studies approximation algorithms for combinatorial optimization and how agents learn decision policies from data. She is also interested in how stochastic gradients affect the training of deep networks.
 
-She also studies approximation algorithms for combinatorial optimization. Her first-author manuscript on orthant-submodular maximization is under review at the *SIAM Journal on Computing* (SICOMP).
+In two papers in *Information Sciences*, she and her collaborators modeled group polarization and intergroup debate. In *IEEE Transactions on Networking*, they combined graph neural networks with deep reinforcement learning to select the nodes where diffusion begins. Her first-author manuscript on orthant-submodular maximization is under review at the *SIAM Journal on Computing* (SICOMP).
 
 I welcome ideas for collaboration on computational modeling, optimization algorithms, or intelligent decision-making.

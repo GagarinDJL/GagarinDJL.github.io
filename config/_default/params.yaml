@@ -18,20 +18,12 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: 'Central University of Finance and Economics'
-    description: 'Jialing Dai is an Assistant Professor at the Central University of Finance and Economics. She develops problem-driven computational models, provable optimization methods, learning-based solvers, and data experiments for real-world decision problems.'
+    description: 'Jialing Dai is an Assistant Professor at the Central University of Finance and Economics. Her research interests span combinatorial optimization, optimization for machine learning, reinforcement learning, and network science.'
     keywords:
-      - Problem-Driven Computational Modeling
-      - Mathematical Modeling
-      - Combinatorial Optimization
-      - Approximation Algorithms
-      - Sampling Algorithms
-      - Coverage Optimization
-      - Reinforcement Learning
-      - Graph Neural Networks
-      - Data-Driven Decision Analytics
-      - Empirical Validation
-      - AI-Generated Content Provenance
-      - Information Systems
+      - Combinatorial Optimization and Algorithm Theory
+      - Optimization for Machine Learning
+      - Reinforcement Learning and Agent Decision-Making
+      - Network Science and Social Computing
     twitter: ''
   analytics:
     google_analytics: ''

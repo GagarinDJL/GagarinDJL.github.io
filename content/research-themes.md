@@ -1,23 +1,24 @@
 ---
 title: Research Themes
 date: 2026-06-04
-summary: How do group discussions and debates between groups shape the spread of information? Jialing Dai studies how to select seed nodes in these settings using approximation algorithms and machine learning. She also studies provenance checkpoints for AI-generated content and resource allocation in organizational networks.
+lastmod: 2026-11-10
+summary: How good is an algorithm’s solution when the optimum is hard to compute? How do stochastic gradients affect training? In a network, how do interactions between groups change which node an agent should select next?
 ---
 
-Jialing Dai studies how interactions among people and groups shape diffusion in networks. She develops models of these interactions, analyzes the optimization problems they produce, and evaluates algorithms on simulated and observed networks. Related research extends these methods to content provenance and resource allocation.
+Jialing Dai translates practical questions into objectives and constraints, analyzes the guarantees an algorithm can offer, and uses data to test model assumptions and algorithm performance.
 
-## Problem Discovery and Formal Modeling
+## Combinatorial Optimization and Algorithm Theory
 
-Her work models how group polarization changes individual preferences and how intergroup debate amplifies competing messages. These models connect observable behavior to a decision problem: which nodes should initiate a cascade?
+Which discrete optimization problems admit efficient approximations under a budget constraint? In her work on intergroup debate, the objective of maximizing net influence is non-submodular. She and her collaborators bounded it above and below with submodular functions and used sampling to obtain a data-dependent approximation guarantee. She also studies what guarantees are possible when each decision involves a choice among several labels. [Paper on intergroup debate]({{< relref "publications/ins-2024-intergroup-debate" >}})
 
-## Provable Optimization and Algorithm Design
+## Optimization for Machine Learning
 
-Group interactions can yield objectives that are neither monotone nor submodular. For intergroup debate, her research uses upper and lower bounds and a sampling algorithm to obtain data-dependent approximations. She also studies approximation algorithms for combinatorial problems with multiple labels.
+She is interested in nonconvex optimization when training deep networks. When gradients are estimated from small batches of examples, how does the resulting noise affect training stability and convergence speed for different optimizers?
 
-## Learning-Enhanced Solvers and Data Experiments
+## Reinforcement Learning and Agent Decision-Making
 
-Her work on group-aware influence maximization combines graph neural networks and deep reinforcement learning to choose seed nodes. Experiments on synthetic and real networks compare the learned policies with sampling methods and structural heuristics.
+When choosing seed nodes one at a time, the value of the next node depends on those already selected. She and her collaborators used graph neural networks to represent the network and deep reinforcement learning to train a selection policy. They compared the learned policy with sampling algorithms and structural heuristics on both synthetic and real networks. [Paper on group-aware seed selection]({{< relref "publications/ton-ug-dcgnn" >}})
 
-## Trustworthy and AI-Enabled Decision Extensions
+## Network Science and Social Computing
 
-For AI-generated content, her research formulates the placement of provenance checkpoints as a coverage problem across multiple scenarios. In organizational networks, she models how competing resources diffuse and affect performance.
+How do group discussions change individual preferences and, in turn, the spread of opinions? She and her collaborators studied group polarization in real-world data and incorporated changes in preferences into a diffusion model. Her interests also include rumor containment and information provenance. In work on tracing AI-generated content, she and her collaborators modeled checkpoint selection as a coverage problem across multiple scenarios. [Paper on group polarization]({{< relref "publications/ins-2022-polarization" >}}) · [Paper on content provenance]({{< relref "publications/aaim-2026-checkpoint-cover" >}})
