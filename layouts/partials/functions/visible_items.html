@@ -3,7 +3,13 @@
 {{ range .items }}
   {{ $onHome := cond (isset . "show_on_homepage") .show_on_homepage $.defaultOnHomepage }}
   {{ if and (ne .show_on_site false) (or (not $.homepage) $onHome) }}
-    {{ $visible = $visible | append . }}
+    {{ $item := . }}
+    {{ if and $.sortByOrder (isset . "order") }}
+      {{/* Hugo reads positive YAML integers as uint64. Sort on a signed integer. */}}
+      {{ $item = merge . (dict "order" (int .order)) }}
+    {{ end }}
+    {{ $visible = $visible | append $item }}
   {{ end }}
 {{ end }}
+{{ if .sortByOrder }}{{ $visible = sort $visible "order" "asc" }}{{ end }}
 {{ return $visible }}

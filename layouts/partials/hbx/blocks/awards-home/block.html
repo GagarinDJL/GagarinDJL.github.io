@@ -13,7 +13,7 @@
   {{ errorf "Could not find author page at `%s`" $person_page_path }}
 {{ end }}
 {{ $person := $person_page.Params }}
-{{ $awards := partial "functions/visible_items" (dict "items" $person.awards "homepage" $page.IsHome) }}
+{{ $awards := partial "functions/visible_items" (dict "items" $person.awards "homepage" $page.IsHome "sortByOrder" true) }}
 
 {{ if $awards }}
 <div class="flex flex-col items-center max-w-6xl mx-auto gap-3 justify-center px-6">
@@ -25,7 +25,7 @@
 <div class="awards-container w-full">
   <div class="awards-two-columns w-full flex justify-center">
     <ul class="list-none p-0 m-0 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 w-full max-w-4xl">
-      {{ range sort $awards "order" }}
+      {{ range $awards }}
       <li class="block">
         <div class="awards-item-wrapper flex items-start gap-3 p-3 rounded-lg transition-all duration-200 hover:bg-gray-50 dark:hover:bg-gray-800/20">
           {{/* Award Icon */}}
