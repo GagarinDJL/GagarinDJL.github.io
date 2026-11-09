@@ -3,7 +3,9 @@
 
 {{ $block := .wcBlock }}
 {{ $page := .wcPage }}
+{{ $projects := partial "functions/visible_items" (dict "items" $block.content.projects "homepage" $page.IsHome "defaultOnHomepage" true) }}
 
+{{ if $projects }}
 <div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6 md:px-0">
   {{ with $block.content.title }}
     <div class="home-section-heading mb-10 md:mb-12 text-3xl font-bold text-gray-900 dark:text-white">
@@ -19,7 +21,7 @@
 
 <div class="flex flex-col items-center px-6">
   <div class="max-w-3xl w-full space-y-4 mt-6 md:mt-8">
-    {{ range $block.content.projects }}
+    {{ range $projects }}
       <div class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6 hover:shadow-md transition-shadow">
         
         {{/* 项目标题 */}}
@@ -51,6 +53,7 @@
     {{ end }}
   </div>
 </div>
+{{ end }}
 
 <style>
 /* Projects Home Block 样式 */

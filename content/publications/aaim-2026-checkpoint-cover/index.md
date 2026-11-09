@@ -9,8 +9,9 @@ author_notes:
   - ""
   - "Corresponding author"
 publication_types: ["paper-conference"]
-publication: "20th International Conference on Algorithmic Aspects in Information and Management (AAIM; Springer LNCS, EI Compendex series)"
-publication_short: ""
+publication: "20th International Conference on Algorithmic Aspects in Information and Management"
+publication_short: "AAIM 2026"
+hide_date: true
 date: "2026-05-06T01:00:00Z"
 summary: "Formulates scenario-robust checkpoint cover for AI-generated content provenance, turning provenance tracing into a robust coverage problem under multiple possible scenarios."
 tags:
@@ -25,4 +26,4 @@ draft: false
 status: accepted
 ---
 
-**Status:** accepted.
+{{< publication-details >}}

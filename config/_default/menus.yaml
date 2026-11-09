@@ -14,21 +14,15 @@ main:
   - name: Research Themes
     url: /research-themes/
     weight: 25
-  - name: Projects
+  - name: Academic Exchange
     url: /#projects
     weight: 30
-  # - name: Teaching
-  #   url: /#teaching
-  #   weight: 30
   - name: Service
     url: /#service
     weight: 40
-  - name: Awards
+  - name: Selected Honors
     url: /#awards
     weight: 60
-  - name: Skills
-    url: /#skills
-    weight: 80
   - name: CV
     url: /uploads/CV-Jialing-Dai-English_homepage.pdf
     params:

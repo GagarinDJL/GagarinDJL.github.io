@@ -36,18 +36,15 @@ zh:
       - name: 研究主题
         url: /zh/research-themes/
         weight: 25
-      - name: 项目
+      - name: 学术交流
         url: /zh/#projects
         weight: 30
       - name: 服务
         url: /zh/#service
         weight: 40
-      - name: 荣誉
+      - name: 主要荣誉
         url: /zh/#awards
         weight: 60
-      - name: 技能
-        url: /zh/#skills
-        weight: 80
       - name: 简历
         url: /uploads/%E6%88%B4%E4%BD%B3%E4%BC%B6_CV_homepage.pdf
         params:

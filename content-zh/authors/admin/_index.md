@@ -103,11 +103,7 @@ education:
     institution_url: https://english.buct.edu.cn/main.htm
     date_start: 2016-09-01
     date_end: 2020-06-30
-    summary_home: |
-      本科就读于信息管理与信息系统专业，GPA 4.0/4.33，算术平均分 92.68/100。
-    summary: |
-      GPA：4.0/4.33。
-      算术平均分：92.68/100。
+    summary: ''
 
 service:
   - category: 学术服务
@@ -116,42 +112,48 @@ service:
         institution: AAIM 2026 - 第 20 届算法管理信息学国际会议
         date_start: 2026-06-19
         date_end: 2026-06-21
+        show_on_site: true
         show_on_homepage: true
         summary: |
-          担任 [AAIM 2026](https://theory.utdallas.edu/AAIM2026/index.html) 程序委员会委员。会议于 2026 年 6 月 19-21 日在美国得克萨斯大学举行。
+          担任 [AAIM 2026](https://theory.utdallas.edu/AAIM2026/index.html) 程序委员会委员。会议于 2026 年 6 月 19 日至 21 日举行。
 
       - position: 期刊与会议审稿人
-        institution: IEEE Transactions on Networking（T-ON）、IEEE T-CSS、WWW Journal
+        institution: IEEE ToN、IEEE TCSS、World Wide Web、ESWA、EAAI
         date_start: 2023-01-01
         date_end: ''
+        show_on_site: true
         show_on_homepage: true
         summary: |
-          为 IEEE Transactions on Networking、IEEE Transactions on Computational Social Systems 和 World Wide Web Journal 等期刊审稿。
+          为 IEEE Transactions on Networking、IEEE Transactions on Computational Social Systems、World Wide Web、Expert Systems with Applications 和 Engineering Applications of Artificial Intelligence 审稿。
       - position: 助教
         institution: 中国科学院大学
         date_start: 2021-09-01
         date_end: 2023-06-30
-        show_on_homepage: true
+        show_on_site: false
+        show_on_homepage: false
         summary: |
           参与《管理中的数学方法与应用》《财务与成本管理》《人因工程》等课程的教学支持、作业批改与学生辅导。
       - position: 朋辈讲师
         institution: 北京化工大学朋辈学业发展中心
         date_start: 2018-09-01
         date_end: 2020-06-30
-        show_on_homepage: true
+        show_on_site: false
+        show_on_homepage: false
         summary: |
           面向本科生开展朋辈课程辅导与学业发展工作坊。
       - position: 研究生项目秘书
         institution: 中国科学院大学工程科学学院
         date_start: 2021-09-01
         date_end: 2023-06-30
-        show_on_homepage: true
+        show_on_site: false
+        show_on_homepage: false
         summary: |
           组织工程管理硕士项目开题、中期和论文答辩，协助研究生招生面试与培养流程管理。
       - position: 图书馆助理
         institution: 中国科学院大学玉泉路图书馆
         date_start: 2021-09-01
         date_end: 2023-06-30
+        show_on_site: false
         show_on_homepage: false
         summary: |
           参与图书馆信息服务、书架整理、借阅流通支持，以及“爱读书”文化活动和年度台历制作。
@@ -162,13 +164,15 @@ service:
         institution: 中国科学院大学工程科学学院
         date_start: 2021-09-01
         date_end: 2022-06-30
-        show_on_homepage: true
+        show_on_site: false
+        show_on_homepage: false
         summary: |
           组织学生会议与校园活动，统筹“流浪猫狗摄影展”等活动，并参与学生信息管理与校园沟通工作。
       - position: 班长
         institution: 中国科学院大学工程科学学院
         date_start: 2021-09-01
         date_end: 2022-06-30
+        show_on_site: false
         show_on_homepage: false
         summary: |
           协调班级会议、学生事务和健康数据管理，支持学院选举等组织沟通工作。
@@ -176,6 +180,7 @@ service:
         institution: 中国科学院大学 9003 班
         date_start: 2020-09-01
         date_end: 2021-07-31
+        show_on_site: false
         show_on_homepage: false
         summary: |
           完成学校心理委员培训，在班级内提供朋辈心理支持。
@@ -183,6 +188,7 @@ service:
         institution: 北京化工大学经济管理学院学生会
         date_start: 2017-09-01
         date_end: 2018-06-30
+        show_on_site: false
         show_on_homepage: false
         summary: |
           组织学生文体活动并参与学院学生工作策划。
@@ -190,6 +196,7 @@ service:
         institution: 北京化工大学经济管理学院
         date_start: 2017-09-01
         date_end: 2018-06-30
+        show_on_site: false
         show_on_homepage: false
         summary: |
           负责志愿服务项目组织与社区活动协调。
@@ -249,10 +256,11 @@ languages:
 
 awards:
   - title: 国家青年人才托举工程博士生专项计划（首批）
-    homepage_title: 国家青年人才托举工程
+    homepage_title: 中国科协青年人才托举工程博士生专项计划
     date: '2024-12-01'
     awarder: 中国科学技术协会
     icon: hero/sparkles
+    show_on_site: true
     show_on_homepage: true
     order: 1
     summary: |
@@ -261,16 +269,24 @@ awards:
     date: '2022-12-01'
     awarder: 中华人民共和国教育部
     icon: hero/academic-cap
+    show_on_site: true
     show_on_homepage: true
     order: 2
     summary: |
       获研究生国家奖学金。
+  - title: ISEM 2021 优秀青年学者论文二等奖
+    date: '2021-12-25'
+    awarder: 国际应急管理学术研讨会（ISEM 2021）
+    icon: hero/document-text
+    show_on_site: true
+    show_on_homepage: true
+    order: 3
 ---
 
 **戴佳伶**现任中央财经大学助理教授，2026 年 10 月于中国科学院大学获工学博士学位，专业为计算机应用技术。她曾于 2025 年 1 月至 2026 年 1 月赴美国得克萨斯大学达拉斯分校（University of Texas at Dallas）开展访问研究。
 
-她的研究从现实问题发现出发，识别其中的可计算结构，并将其抽象为“**形式化建模 - 理论分析 - 算法设计 - 数据实验验证**”的模型与算法问题。已有成果涉及**群体极化**、**跨群争论**、**带符号交互**、**AIGC 内容溯源**和**资源扩散**等问题，这些问题作为研究落点服务于更通用的建模与优化方法。
+她研究社交网络中的群体行为如何改变信息传播，以及如何据此选择传播的起始节点。在 *Information Sciences* 发表的两项工作中，她与合作者分别对群体极化和跨群争论建立传播模型，并针对跨群争论中的非次模优化目标设计采样算法。在 *IEEE Transactions on Networking* 发表的工作中，团队将多种群体效应纳入统一传播模型，结合图神经网络和深度强化学习求解节点选择问题。
 
-目前的论文成果发表于 *IEEE Transactions on Networking*（T-ON）、*Information Sciences* 和 *Expert Systems with Applications*；另有第一作者稿件正在 *Operations Research* 和 ICLR 2027 审稿。《中国管理科学》、*Artificial Intelligence in Agriculture* 及相关国际会议亦发表了她的研究成果。相关工作覆盖模型构造、复杂性与近似分析、采样/覆盖算法、图神经网络、深度强化学习和真实数据验证。
+她也研究组合优化中的近似算法。关于正交次模函数最大化的第一作者稿件正在 *SIAM Journal on Computing*（SICOMP）审稿。
 
 欢迎对计算建模、优化算法或智能决策感兴趣的同行与我联系，一起探讨研究问题、开展合作。

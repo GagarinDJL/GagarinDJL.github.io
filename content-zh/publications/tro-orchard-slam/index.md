@@ -19,8 +19,12 @@ author_notes:
   - ""
 date: "2026-08-14T00:00:00Z"
 publication_types: ["article-journal"]
-publication: "Journal of Field Robotics（中国自动化学会 A 类）, 43(7), 4880–4903"
+publication: "Journal of Field Robotics"
 publication_short: "JFR"
+citation_details: "43(7), 4880–4903"
+venue_metrics:
+  - label: "中国自动化学会 A 类（2024）"
+    url: "https://www.caa.org.cn/Uploads/image/file/20250409/20250409163352_52457.pdf#page=6"
 hugoblox:
   ids:
     doi: 10.1002/rob.70323
@@ -38,4 +42,6 @@ slides: ""
 draft: false
 ---
 
-**文章类型：** Research Article。
+{{< publication-details >}}
+
+**文章类型：** 研究论文。

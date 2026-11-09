@@ -8,3 +8,17 @@ present:
   other: 至今
 see_certificate:
   other: 查看证书
+paper_published: 已发表
+paper_accepted: 已录用
+paper_under_review: 在审
+paper_under_double-anonymous_review: 双匿名评审中
+paper_revision_submitted: 已提交返修
+paper_major_revision_submitted: 大修已提交
+paper_major_revision: 大修中
+paper_minor_revision: 小修中
+paper_revision: 返修中
+paper_under_revision: 返修中
+journal_rating: 期刊评价 ·
+conference_rating: 会议评价 ·
+target_journal_rating: 投稿期刊评价 ·
+target_conference_rating: 投稿会议评价 ·

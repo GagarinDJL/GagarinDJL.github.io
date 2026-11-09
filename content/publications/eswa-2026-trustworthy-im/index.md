@@ -1,6 +1,7 @@
 ---
 title: "Influence Maximization in Online Social Networks: Models, Algorithms, and Trustworthy Decision-Making"
 weight: 40
+hide_date: true
 authors:
   - admin
   - "Peikun Ni"
@@ -16,8 +17,14 @@ author_notes:
   - ""
   - ""
 publication_types: ["article-journal"]
-publication: "Expert Systems With Applications (CAS Zone 1 (Top), JCR Q1, IF 9.4)"
+publication: "Expert Systems with Applications"
 publication_short: "ESWA"
+citation_details: "333 (January 2027), 134131. Published online in August 2026"
+venue_metrics:
+  - label: "2025 Journal Impact Factor 9.4"
+    url: "https://www.niic.nsc.ru/phocadownload/publications/2025/JCR_JournalImpactFactor_2026.pdf#page=26"
+  - label: "CAA A (2024)"
+    url: "https://www.caa.org.cn/Uploads/image/file/20250409/20250409163352_52457.pdf#page=13"
 date: "2026-08-20T00:00:00Z"
 hugoblox:
   ids:
@@ -30,7 +37,7 @@ tags:
   - trustworthy decision making
   - literature synthesis
   - research framing
-featured: false
+featured: true
 links:
   - type: custom
     label: "Full Text"
@@ -40,3 +47,5 @@ projects: []
 slides: ""
 draft: false
 ---
+
+{{< publication-details >}}

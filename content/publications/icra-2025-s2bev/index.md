@@ -1,5 +1,5 @@
 ---
-title: "S$^2$BEV: Lightweight, Robust, and Precise SLAM-Oriented Segmentation Bird Eye’s View Mapping Approach"
+title: "S²BEV: Lightweight, Robust, and Precise SLAM-Oriented Segmentation Bird Eye’s View Mapping Approach"
 weight: 100
 
 # Authors
@@ -32,8 +32,12 @@ date: "2025-05-19T00:00:00Z"
 publication_types: ['paper-conference']
 
 # Publication name and optional abbreviated publication name.
-publication: "IEEE International Conference on Robotics and Automation (CCF B, ICORE A*)"
+publication: "IEEE International Conference on Robotics and Automation"
 publication_short: "ICRA"
+citation_details: "13160–13165"
+venue_metrics:
+  - label: "ICORE A* (2026)"
+    url: "https://portal.core.edu.au/conf-ranks/2051/"
 
 abstract: >-
   As modern agriculture progresses, the swift deployment of accurate maps becomes essential for the autonomous navigation and operation of orchard robots. Traditional mapping techniques often fall short in addressing the challenges posed by orchards, which are characterized by unstructured, dynamically changing environments with complex spatial and temporal dynamics due to seasonal and continuous operations. This paper proposes a new approach to orchard map construction that merges topological maps with semantic SLAM. This integration enables the creation, optimization, and rapid deployment of maps that are not only lightweight and robust but also precise. To evaluate the effectiveness of our method, we performed navigation tests in orchard environments using the newly developed maps. The experimental outcomes demonstrated a significant reduction in CPU usage, with maximum and average reductions of 7.6% and 4.5%, respectively. This approach not only enhances navigation efficiency but also facilitates quicker map deployment, effectively freeing computational resources for other critical tasks.
@@ -78,11 +82,5 @@ projects: []
 #   Otherwise, set `slides: ""`.
 slides: ""
 ---
-<!-- 
-> [!NOTE]
-> Click the _Cite_ button above to demo the feature to enable visitors to import publication metadata into their reference management software.
 
-> [!NOTE]
-> Create your slides in Markdown - click the _Slides_ button to check out the example.
-
-Add the publication's **full text** or **supplementary notes** here. You can use rich formatting such as including [code, math, and images](https://docs.hugoblox.com/content/writing-markdown-latex/). -->
+{{< publication-details >}}
