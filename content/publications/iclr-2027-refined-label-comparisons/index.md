@@ -23,11 +23,6 @@ publishDate: "2026-09-27T00:00:00Z"
 lastmod: "2026-09-27T00:00:00Z"
 status: under review
 featured: true
-links:
-  - type: custom
-    label: "OpenReview"
-    url: "https://openreview.net/forum?id=tYTwlu5dLF"
-    icon: hero/link
 projects: []
 slides: ""
 draft: false

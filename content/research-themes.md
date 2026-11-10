@@ -2,18 +2,22 @@
 title: Research Themes
 date: 2026-06-04
 lastmod: 2026-11-10
-summary: Dai studies how closely an algorithm can approximate the best possible solution. She is also interested in what makes training a deep network stable. In social networks, her work connects the choice of seed nodes with the way groups discuss and share information.
+hide_date: true
+reading_time: false
+summary: Dai studies how closely an algorithm can approximate the best possible solution. She is also interested in the design and convergence of optimizers for deep learning. In social networks, her work connects the choice of seed nodes with the way groups discuss and share information.
 ---
 
 Jialing Dai builds mathematical models of decision problems, derives guarantees for the algorithms that solve them, and tests both the models and the algorithms against data.
 
 ## Combinatorial Optimization and Algorithm Theory
 
-Dai studies approximation algorithms for discrete problems, including those in which each element can take one of several labels. In one application, only a few participants can be chosen to introduce a message into a debate between groups. The aim is to maximize net influence, a non-submodular objective. She and her collaborators used submodular upper and lower bounds to obtain a data-dependent approximation guarantee. They also developed sampling algorithms for settings where different messages compete. [Study of intergroup debate]({{< relref "publications/ins-2024-intergroup-debate" >}})
+Dai studies [polynomial-time approximation algorithms for orthant-submodular maximization]({{< relref "publications/or-2026-orthant-submodular" >}}). This work is under review at the *SIAM Journal on Computing* (SICOMP). In a [manuscript under review at ICLR 2027]({{< relref "publications/iclr-2027-refined-label-comparisons" >}}), she and her collaborators study how to compare candidate labels when maximizing a non-monotone k-submodular function under constraints.
+
+In a model of intergroup debate, how should a few participants be chosen to introduce a message so that its net influence is as large as possible? The objective is non-submodular. She and her collaborators used submodular upper and lower bounds to obtain a data-dependent approximation guarantee. They also developed sampling algorithms for settings where different messages compete. [Study of intergroup debate]({{< relref "publications/ins-2024-intergroup-debate" >}})
 
 ## Optimization for Machine Learning
 
-Optimizers for deep networks typically estimate a gradient from a small batch of examples at each step. Dai is interested in how noise in those estimates affects the stability of training and the rate at which different optimizers converge on nonconvex objectives.
+Her interests include algorithm design and convergence in stochastic and nonconvex optimization. For deep learning, she is particularly interested in how the choice of optimizer affects training stability and convergence.
 
 ## Reinforcement Learning and Agent Decision-Making
 
